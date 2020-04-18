@@ -1854,7 +1854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_light: {fileID: 5655210801863400697}
-  m_lightSourceType: 0
+  m_lightSourceType: 1
 --- !u!1 &5655210801863400696
 GameObject:
   m_ObjectHideFlags: 0

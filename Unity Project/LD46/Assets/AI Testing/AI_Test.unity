@@ -1047,6 +1047,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 334332281}
+    - target: {fileID: 5655210800529052361, guid: 339baca91225e40499fc7097a73b569b,
+        type: 3}
+      propertyPath: m_lightSourceType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5655210800529052365, guid: 339baca91225e40499fc7097a73b569b,
         type: 3}
       propertyPath: m_Mesh
