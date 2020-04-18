@@ -2,28 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class SpotlightColliderScaler : MonoBehaviour
+public class PointLightColliderScaler : MonoBehaviour
 {
-   
     public bool m_realTimeUpdate = true;
-    [Range(0.1f, 1.0f) ]
-    public float m_radialToleranceScale = 0.75f;
     [Range(0.1f, 1.0f)]
     public float m_rangeToleranceScale = 0.9f;
 
+
     private const float REF_RANGE = 10;
-    private const float REF_RADIUS = 2.679491924311f;
 
     void UpdateScaling()
     {
-        Light light = GetComponent<Light>();   
-
-        float lengthScale = m_rangeToleranceScale * light.range / REF_RANGE;
-        float widthScale = m_radialToleranceScale * light.range * Mathf.Tan(Mathf.Deg2Rad * light.spotAngle / 2.0f) / REF_RADIUS;
-
-        transform.localScale = new Vector3(widthScale, widthScale, lengthScale);
+        Light light = GetComponent<Light>();
+        float scale = m_rangeToleranceScale * light.range / REF_RANGE;
+        transform.localScale = new Vector3(scale, scale, scale);
     }
 
     // Start is called before the first frame update
@@ -40,7 +32,7 @@ public class SpotlightColliderScaler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(m_realTimeUpdate)
+        if (m_realTimeUpdate)
         {
             UpdateScaling();
         }

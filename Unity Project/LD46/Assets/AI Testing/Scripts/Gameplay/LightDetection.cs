@@ -15,7 +15,7 @@ public class LightDetection : MonoBehaviour
 
     public bool QueryFlags(LightSourceType i_mask)
     {
-        return System.Convert.ToBoolean(m_lightFlags & (uint)i_mask);
+        return System.Convert.ToBoolean(m_lightFlags & ((uint)i_mask + 1));
     }
 
     private void Start()
@@ -44,7 +44,15 @@ public class LightDetection : MonoBehaviour
             }
         }
 
-       
+
+       if(QueryFlags(LightSourceType.Enviromental))
+            Debug.Log("envo light");
+
+
+        if (QueryFlags(LightSourceType.Player))
+            Debug.Log("player light");
+
+
     }
 
 
@@ -101,11 +109,11 @@ public class LightDetection : MonoBehaviour
 
         if(!env)
         {
-            m_lightFlags &= ~(uint)LightSourceType.Enviromental;
-        }   
-        if(!player)
+            m_lightFlags &= ~((uint)LightSourceType.Enviromental + 1);
+        }
+        if (!player)
         {
-            m_lightFlags &= ~(uint)LightSourceType.Player;
+            m_lightFlags &= ~((uint)LightSourceType.Player + 1);
         }
     }
 
@@ -116,7 +124,7 @@ public class LightDetection : MonoBehaviour
             LightSource lightSource = other.gameObject.GetComponent<LightSource>();
             m_collidingLights.Add(lightSource);
             //Update our mask
-            m_lightFlags |= (uint)lightSource.m_lightSourceType;
+            m_lightFlags |= ((uint)lightSource.m_lightSourceType + 1);
             UpdateSeenState();
         }
     }
@@ -127,6 +135,7 @@ public class LightDetection : MonoBehaviour
         {
             m_collidingLights.Remove(other.gameObject.GetComponent<LightSource>());
             UpdateSeenState();
+            RefreshMask();
         }
     }
 
