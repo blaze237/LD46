@@ -6,20 +6,22 @@ public class LightDetection : MonoBehaviour
 {
     public float m_MinLightIntensity;
 
-    private HashSet<Light> m_collidingLights = new HashSet<Light>();
+    private HashSet<LightSource> m_collidingLights = new HashSet<LightSource>();
     private bool m_seen = false;
+    private Renderer m_rend;
+
+    private void Start()
+    {
+        m_rend = GetComponent<Renderer>();
+    }
 
     private void Update()
     {
         //Check if we are lit up by any of the lights we are colliding with
-        foreach(Light lightSource in m_collidingLights)
+        foreach(LightSource lightSource in m_collidingLights)
         {
             //Check if light intensity is sufficient 
-            bool litUp = CheckLightIntensity(lightSource);
-
-            //If light is spotlight, check if within light cone
-            litUp = litUp && CheckInLightCone(lightSource);
-            //Check if were in shadow?
+            bool litUp = CheckLightIntensity(lightSource.m_light);
 
             if(litUp)
             {
@@ -28,39 +30,8 @@ public class LightDetection : MonoBehaviour
                 break;
             }
         }
+
        
-    }
-
-    bool CheckInLightCone(Light i_light)
-    {    
-
-        if(i_light.type != LightType.Spot)
-        {
-            return true;
-        }
-
-        //Get max radius of light cone
-        float maxSpotRad = i_light.range * Mathf.Tan(Mathf.Deg2Rad * i_light.spotAngle);
-
-        //Check we are on the right side of the cone
-        float dist = Vector3.Dot(transform.position - i_light.transform.position, i_light.transform.forward);
-        if(dist < 0)
-        {
-            return false;
-        }
-        if(dist > i_light.range)
-        {
-            return false;
-        }
-
-        //What is the radius of the cone at this distance
-        float radius = (dist / i_light.range) * maxSpotRad;
-
-
-        //Get orthogonal distance of our position from cone center to see if we lie within cone radius at this distance
-        float orthDist = ((transform.position - i_light.transform.position) - dist * i_light.transform.forward).magnitude;
-
-        return orthDist < radius;
     }
 
 
@@ -101,7 +72,7 @@ public class LightDetection : MonoBehaviour
     {
         if(other.CompareTag("LightSource"))
         {
-            m_collidingLights.Add(other.gameObject.GetComponent<Light>());
+            m_collidingLights.Add(other.gameObject.GetComponent<LightSource>());
             UpdateSeenState();
         }
     }
@@ -110,7 +81,7 @@ public class LightDetection : MonoBehaviour
     {
         if (other.CompareTag("LightSource"))
         {
-            m_collidingLights.Remove(other.gameObject.GetComponent<Light>());
+            m_collidingLights.Remove(other.gameObject.GetComponent<LightSource>());
             UpdateSeenState();
         }
     }
