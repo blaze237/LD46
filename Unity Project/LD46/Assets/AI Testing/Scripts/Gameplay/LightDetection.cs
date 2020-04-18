@@ -7,12 +7,25 @@ public class LightDetection : MonoBehaviour
     public float m_MinLightIntensity;
 
     private HashSet<LightSource> m_collidingLights = new HashSet<LightSource>();
-    private bool m_seen = false;
+    private bool m_illuminated = false;
     private Renderer m_rend;
+    private uint m_lightFlags = 0;
+
+
+
+    public bool QueryFlags(LightSourceType i_mask)
+    {
+        return System.Convert.ToBoolean(m_lightFlags & (uint)i_mask);
+    }
 
     private void Start()
     {
         m_rend = GetComponent<Renderer>();
+    }
+
+    public bool IsIlluminated()
+    {
+        return m_illuminated;
     }
 
     private void Update()
@@ -25,7 +38,7 @@ public class LightDetection : MonoBehaviour
 
             if(litUp)
             {
-                m_seen = true;
+                m_illuminated = true;
                 Debug.Log("seen");
                 break;
             }
@@ -65,14 +78,45 @@ public class LightDetection : MonoBehaviour
 
     private void UpdateSeenState()
     {
-        m_seen = m_collidingLights.Count != 0;
+        m_illuminated = m_collidingLights.Count != 0;
+    }
+
+    private void RefreshMask()
+    {
+        //Check through the list of lights we're illuminated by to see if we need to update the mask (might not need this for player lights if only ever one anyway)
+        bool env = false;
+        bool player = false;
+        foreach (LightSource light in m_collidingLights)
+        {
+            if(light.m_lightSourceType == LightSourceType.Enviromental)
+            {
+                env = true;
+            }
+            else if (light.m_lightSourceType == LightSourceType.Player)
+            {
+                player = true;
+            }
+        }
+
+
+        if(!env)
+        {
+            m_lightFlags &= ~(uint)LightSourceType.Enviromental;
+        }   
+        if(!player)
+        {
+            m_lightFlags &= ~(uint)LightSourceType.Player;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("LightSource"))
         {
-            m_collidingLights.Add(other.gameObject.GetComponent<LightSource>());
+            LightSource lightSource = other.gameObject.GetComponent<LightSource>();
+            m_collidingLights.Add(lightSource);
+            //Update our mask
+            m_lightFlags |= (uint)lightSource.m_lightSourceType;
             UpdateSeenState();
         }
     }
