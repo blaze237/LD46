@@ -8,14 +8,17 @@ public class PointLightColliderScaler : MonoBehaviour
     [Range(0.1f, 1.0f)]
     public float m_rangeToleranceScale = 0.9f;
 
-
     private const float REF_RANGE = 10;
+
+    private UnityEngine.AI.NavMeshObstacle navmeshObstabcle;
+
 
     void UpdateScaling()
     {
         Light light = GetComponent<Light>();
         float scale = m_rangeToleranceScale * light.range / REF_RANGE;
         transform.localScale = new Vector3(scale, scale, scale);
+        navmeshObstabcle.radius = scale * REF_RANGE;
     }
 
     // Start is called before the first frame update
@@ -26,6 +29,7 @@ public class PointLightColliderScaler : MonoBehaviour
             Debug.Log("Scale must be unity");
         }
 
+        navmeshObstabcle = GetComponent<UnityEngine.AI.NavMeshObstacle>();
         UpdateScaling();
     }
 
