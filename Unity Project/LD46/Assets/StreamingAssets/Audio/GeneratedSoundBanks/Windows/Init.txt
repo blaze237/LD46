@@ -1,5 +1,28 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	4164838345	Space			\Default Work Unit\Space	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Space			
+	1183803292	Far	Space			
+	1451272583	Close	Space			
+	2849147824	Medium	Space			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	558096689	Medium	Space	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\KarenSteps		
+	963756941	Far	Space	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\KarenSteps		
+	1039322180	Close	Space	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\KarenSteps		
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	77978275	Ambient			\Default Work Unit\Master Audio Bus\Ambient	
+	2242381963	Enemies			\Default Work Unit\Master Audio Bus\Enemies	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	4113933398	Zombies			\Default Work Unit\Master Audio Bus\Zombies	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2225273953	KarenSteps			\Default Work Unit\Master Audio Bus\KarenSteps	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2098638826	Underground_Parking1	Wwise Matrix Reverb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
