@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID PLAY_ZOMBIE_LARGE = 2540355032U;
         static const AkUniqueID PLAY_ZOMBIE_MEDIUM = 1868838038U;
         static const AkUniqueID PLAY_ZOMBIE_SMALL = 833498416U;
+        static const AkUniqueID PLAY_ZOMBIEDAN_GROWL = 1725534455U;
         static const AkUniqueID STOP_CITY_BED = 210502101U;
     } // namespace EVENTS
 

@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e19df6b06041ac45af6b15541fcec94c
     GuidInternal: 
-    m_lastTime: -8586143831651366674
+    m_lastTime: -8586143791483149183
     List:
     - name: MainSoundbank
       guid: 8727a24824fec740ba0a5068735d19c5
@@ -106,7 +106,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 829577d609f7104fa394a56611643c90
     GuidInternal: 
-    m_lastTime: -8586143832820843564
+    m_lastTime: -8586143791483179185
     List:
     - name: Play_16___May_Contain_Metal
       guid: 413e1f0646d20f4d94ce423b67516cae
@@ -213,6 +213,18 @@ MonoBehaviour:
       - ElementName: Play_Zombie_Small
         ObjectType: 3
       Path: Default Work Unit\Play_Zombie_Small
+      maxAttenuation: 60
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ZombieDan_Growl
+      guid: f41b406ef1a3b54185644d7d38934568
+      id: 1725534455
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_ZombieDan_Growl
+        ObjectType: 3
+      Path: Default Work Unit\Play_ZombieDan_Growl
       maxAttenuation: 60
       maxDuration: -1
       minDuration: -1

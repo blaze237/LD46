@@ -3,7 +3,7 @@
 	<RootPaths>
 		<ProjectRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\</ProjectRoot>
 		<SourceFilesRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<SoundBanksRoot>C:\Users\ReBorn002\Documents\GitHub\New folder\Unity Project\LD46\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
@@ -201,6 +201,58 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1725534455" Name="Play_ZombieDan_Growl" ObjectPath="\Events\Default Work Unit\Play_ZombieDan_Growl" MaxAttenuation="60.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="75008352" Language="SFX">
+							<ShortName>Zombie_Dan_Vo04.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Vo04_10C4C929.wem</Path>
+						</File>
+						<File Id="94812700" Language="SFX">
+							<ShortName>Zombie_Dan_Breath05.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath05_10C4C929.wem</Path>
+						</File>
+						<File Id="202083177" Language="SFX">
+							<ShortName>Zombie_Dan_Vo03.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Vo03_10C4C929.wem</Path>
+						</File>
+						<File Id="303842946" Language="SFX">
+							<ShortName>Zombie_Dan_Vo02.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Vo02_10C4C929.wem</Path>
+						</File>
+						<File Id="339986252" Language="SFX">
+							<ShortName>Zombie_Dan_Breath03.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath03_10C4C929.wem</Path>
+						</File>
+						<File Id="599785755" Language="SFX">
+							<ShortName>Zombie_Dan_Breath02.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath02_10C4C929.wem</Path>
+						</File>
+						<File Id="778438487" Language="SFX">
+							<ShortName>Zombie_Dan_Growl03.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Growl03_10C4C929.wem</Path>
+						</File>
+						<File Id="825543494" Language="SFX">
+							<ShortName>Zombie_Dan_Breath01.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath01_10C4C929.wem</Path>
+						</File>
+						<File Id="905713032" Language="SFX">
+							<ShortName>Zombie_Dan_Growl02.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Growl02_10C4C929.wem</Path>
+						</File>
+						<File Id="909396024" Language="SFX">
+							<ShortName>Zombie_Dan_Growl01.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Growl01_10C4C929.wem</Path>
+						</File>
+						<File Id="970133362" Language="SFX">
+							<ShortName>Zombie_Dan_Breath04.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath04_10C4C929.wem</Path>
+						</File>
+						<File Id="1065340141" Language="SFX">
+							<ShortName>Zombie_Dan_Vo01.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Vo01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="210502101" Name="Stop_City_Bed" ObjectPath="\Events\Default Work Unit\Stop_City_Bed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedAuxBusses>
@@ -211,9 +263,25 @@
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-003.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-003_10C4C929.wem</Path>
 				</File>
+				<File Id="16020796" Language="SFX">
+					<ShortName>Zombie_Dan_Attack02.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Attack02_10C4C929.wem</Path>
+				</File>
+				<File Id="75008352" Language="SFX">
+					<ShortName>Zombie_Dan_Vo04.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Vo04_10C4C929.wem</Path>
+				</File>
+				<File Id="94812700" Language="SFX">
+					<ShortName>Zombie_Dan_Breath05.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Breath05_10C4C929.wem</Path>
+				</File>
 				<File Id="192654587" Language="SFX">
 					<ShortName>Heavy_Groan.wav</ShortName>
 					<Path>SFX\Heavy_Groan_10C4C929.wem</Path>
+				</File>
+				<File Id="202083177" Language="SFX">
+					<ShortName>Zombie_Dan_Vo03.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Vo03_10C4C929.wem</Path>
 				</File>
 				<File Id="234651633" Language="SFX">
 					<ShortName>Growl_Low_03.wav</ShortName>
@@ -227,9 +295,17 @@
 					<ShortName>SFX_Zombies_SmallWheezy-003.wav</ShortName>
 					<Path>SFX\SFX_Zombies_SmallWheezy-003_10C4C929.wem</Path>
 				</File>
+				<File Id="303842946" Language="SFX">
+					<ShortName>Zombie_Dan_Vo02.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Vo02_10C4C929.wem</Path>
+				</File>
 				<File Id="326925916" Language="SFX">
 					<ShortName>SFX_Zombies_Breathws-002.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Breathws-002_10C4C929.wem</Path>
+				</File>
+				<File Id="339986252" Language="SFX">
+					<ShortName>Zombie_Dan_Breath03.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Breath03_10C4C929.wem</Path>
 				</File>
 				<File Id="348424282" Language="SFX">
 					<ShortName>SFX_Zombies_Breathws-001.wav</ShortName>
@@ -243,9 +319,17 @@
 					<ShortName>CracklingCandle01.WAV</ShortName>
 					<Path>SFX\CracklingCandle01_10C4C929.wem</Path>
 				</File>
+				<File Id="371315687" Language="SFX">
+					<ShortName>Zombie_Dan_Attack03.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Attack03_10C4C929.wem</Path>
+				</File>
 				<File Id="375541479" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-001.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-001_10C4C929.wem</Path>
+				</File>
+				<File Id="403026170" Language="SFX">
+					<ShortName>Zombie_Dan_Attack06.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Attack06_10C4C929.wem</Path>
 				</File>
 				<File Id="425963128" Language="SFX">
 					<ShortName>Growl_Low_Distorted_01.wav</ShortName>
@@ -279,9 +363,21 @@
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-007.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-007_10C4C929.wem</Path>
 				</File>
+				<File Id="599785755" Language="SFX">
+					<ShortName>Zombie_Dan_Breath02.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Breath02_10C4C929.wem</Path>
+				</File>
 				<File Id="625413609" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-010.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-010_10C4C929.wem</Path>
+				</File>
+				<File Id="628433307" Language="SFX">
+					<ShortName>Zombie_Dan_Attack04.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Attack04_10C4C929.wem</Path>
+				</File>
+				<File Id="650368793" Language="SFX">
+					<ShortName>Zombie_Dan_Attack01.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Attack01_10C4C929.wem</Path>
 				</File>
 				<File Id="724929602" Language="SFX">
 					<ShortName>SFX_Ambiant_City_Snippets.wav</ShortName>
@@ -295,6 +391,10 @@
 					<ShortName>SFX_Zombies_MediumGrowl.wav</ShortName>
 					<Path>SFX\SFX_Zombies_MediumGrowl_10C4C929.wem</Path>
 				</File>
+				<File Id="778438487" Language="SFX">
+					<ShortName>Zombie_Dan_Growl03.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Growl03_10C4C929.wem</Path>
+				</File>
 				<File Id="787282806" Language="SFX">
 					<ShortName>SFX_Zombies_LargeLow.wav</ShortName>
 					<Path>SFX\SFX_Zombies_LargeLow_10C4C929.wem</Path>
@@ -302,6 +402,10 @@
 				<File Id="811396828" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-009.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-009_10C4C929.wem</Path>
+				</File>
+				<File Id="825543494" Language="SFX">
+					<ShortName>Zombie_Dan_Breath01.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Breath01_10C4C929.wem</Path>
 				</File>
 				<File Id="858875697" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-012.wav</ShortName>
@@ -311,6 +415,14 @@
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-005.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-005_10C4C929.wem</Path>
 				</File>
+				<File Id="905713032" Language="SFX">
+					<ShortName>Zombie_Dan_Growl02.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Growl02_10C4C929.wem</Path>
+				</File>
+				<File Id="909396024" Language="SFX">
+					<ShortName>Zombie_Dan_Growl01.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Growl01_10C4C929.wem</Path>
+				</File>
 				<File Id="932819294" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-014.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-014_10C4C929.wem</Path>
@@ -319,13 +431,25 @@
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-011.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-011_10C4C929.wem</Path>
 				</File>
+				<File Id="970133362" Language="SFX">
+					<ShortName>Zombie_Dan_Breath04.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Breath04_10C4C929.wem</Path>
+				</File>
 				<File Id="1010657181" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-006.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-006_10C4C929.wem</Path>
 				</File>
+				<File Id="1012086124" Language="SFX">
+					<ShortName>Zombie_Dan_Attack05.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Attack05_10C4C929.wem</Path>
+				</File>
 				<File Id="1063564733" Language="SFX">
 					<ShortName>SFX_Ambiant_City_Bed.wav</ShortName>
 					<Path>SFX\SFX_Ambiant_City_Bed_10C4C929.wem</Path>
+				</File>
+				<File Id="1065340141" Language="SFX">
+					<ShortName>Zombie_Dan_Vo01.wav</ShortName>
+					<Path>SFX\Zombie_Dan_Vo01_10C4C929.wem</Path>
 				</File>
 				<File Id="1073694619" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-004.wav</ShortName>
