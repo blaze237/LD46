@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 422262}
   - component: {fileID: 3338216}
   - component: {fileID: 2303442}
+  - component: {fileID: 6458439503080402389}
   m_Layer: 0
   m_Name: SA_Bld_Building_Plants_01
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6458439503080402389
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: dd938844ff7284f4bb7895d5fb90913b, type: 3}
 --- !u!1 &145670
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 462432}
   - component: {fileID: 3300978}
   - component: {fileID: 2316900}
+  - component: {fileID: 3745217059743842211}
   m_Layer: 0
   m_Name: SA_Bld_Building_Damaged_01
   m_TagString: Untagged
@@ -159,3 +175,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3745217059743842211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.127964, y: 19.471788, z: 13.440296}
+  m_Center: {x: -0.007965088, y: 9.392924, z: 0.0398798}
