@@ -12,14 +12,119 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097e43ca83824234ebc009702a854513, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedItems: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 33642524150bad48a89b866eab46a4e7
+    GuidInternal: 
+    m_lastTime: -8586144069186428094
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 78d8e6fbfa307843beec5a7e8ddb6bce
+    GuidInternal: 
+    m_lastTime: -8586144069186598104
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: e19df6b06041ac45af6b15541fcec94c
+    GuidInternal: 
+    m_lastTime: -8586144061097695445
+    List:
+    - name: MainSoundbank
+      guid: 8727a24824fec740ba0a5068735d19c5
+      id: 534561221
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MainSoundbank
+        ObjectType: 7
+      Path: Default Work Unit\MainSoundbank
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 829577d609f7104fa394a56611643c90
+    GuidInternal: 
+    m_lastTime: -8586144063561716379
+    List:
+    - name: Play_AmbientTest
+      guid: 89a743dfb15c90419e18f039043c8987
+      id: 4029336046
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_AmbientTest
+        ObjectType: 3
+      Path: Default Work Unit\Play_AmbientTest
+      maxAttenuation: 0
+      maxDuration: 41.877335
+      minDuration: 41.877335
+    - name: Play_ItemTest
+      guid: 47a6f3fc13d07d43bd2b9c2401490b46
+      id: 1408766231
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_ItemTest
+        ObjectType: 3
+      Path: Default Work Unit\Play_ItemTest
+      maxAttenuation: 0
+      maxDuration: 17.647165
+      minDuration: 17.647165
+    - name: Play_PlayerTest
+      guid: b24d41013e773e4c8385434d79370f28
+      id: 3141342825
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_PlayerTest
+        ObjectType: 3
+      Path: Default Work Unit\Play_PlayerTest
+      maxAttenuation: 0
+      maxDuration: 26.453333
+      minDuration: 26.453333
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: a500d0edf62fa44d8e3634f3e1d29465
+    GuidInternal: 
+    m_lastTime: -8586144069186548101
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 1093c1b73741c94b98cdc61c93505f1c
+    GuidInternal: 
+    m_lastTime: -8586144069186558102
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: c3a35795b2736940a6c7b29314d8bce0
+    GuidInternal: 
+    m_lastTime: -8586144069186568102
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 0726654b3c652941887a3bc8ec2e5c94
+    GuidInternal: 
+    m_lastTime: -8586144069186498098
+    List: []
+  ExpandedItems:
+  - /LD2020
+  - /LD2020/Events
+  - /LD2020/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
