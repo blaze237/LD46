@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 483732}
   - component: {fileID: 3387892}
   - component: {fileID: 2393088}
+  - component: {fileID: 1623377000365831387}
   m_Layer: 0
   m_Name: SA_Bld_TownHouseLarge_Growth_01
   m_TagString: Untagged
@@ -158,6 +159,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1623377000365831387
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 04aa6e58563c66849a09813d4ad0700a, type: 3}
 --- !u!1 &175874
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +184,7 @@ GameObject:
   - component: {fileID: 470908}
   - component: {fileID: 3372638}
   - component: {fileID: 2335136}
+  - component: {fileID: 8394082545310126395}
   m_Layer: 0
   m_Name: SA_Bld_TownHouseLarge_01
   m_TagString: Untagged
@@ -239,3 +255,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8394082545310126395
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 04aa6e58563c66849a09813d4ad0700a, type: 3}

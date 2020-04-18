@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 418776}
   - component: {fileID: 3390736}
   - component: {fileID: 2324310}
+  - component: {fileID: 4391688638663164381}
   m_Layer: 0
   m_Name: SA_Veh_Clean_SheriffCar
   m_TagString: Untagged
@@ -241,6 +242,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4391688638663164381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3261147, y: 2.2987847, z: 7.1982956}
+  m_Center: {x: 0, y: 1.5093968, z: 0}
 --- !u!1 &188726
 GameObject:
   m_ObjectHideFlags: 0
