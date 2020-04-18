@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1408766231	Play_ItemTest			\Default Work Unit\Play_ItemTest	
+	3141342825	Play_PlayerTest			\Default Work Unit\Play_PlayerTest	
+	4029336046	Play_AmbientTest			\Default Work Unit\Play_AmbientTest	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	368267345	CracklingCandle01	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\CracklingCandle01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\AmbientTest\CracklingCandle01		8040512
+	467159636	LiquidNitrogen001	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\LiquidNitrogen001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\ItemTest\LiquidNitrogen001		3113024
+	537716121	ClockAtHome	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\ClockAtHome_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerTest\ClockAtHome		5079104
+
