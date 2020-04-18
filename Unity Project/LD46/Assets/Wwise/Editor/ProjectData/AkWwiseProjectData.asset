@@ -24,8 +24,45 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 78d8e6fbfa307843beec5a7e8ddb6bce
     GuidInternal: 
-    m_lastTime: -8586144069186598104
+    m_lastTime: -8586143845815586821
     List:
+    - name: Ambient
+      guid: 926d255d03e0e74eb2f765f05b937e06
+      id: 77978275
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Ambient
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Ambient
+    - name: Enemies
+      guid: e7cbd361f5ddc74f9778d425c90d60b6
+      id: 2242381963
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Ambient
+        ObjectType: 2
+      - ElementName: Zombies
+        ObjectType: 2
+      - ElementName: Enemies
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Ambient\Zombies\Enemies
+    - name: KarenSteps
+      guid: b418bc85f851c043a8b4214433bc66c9
+      id: 2225273953
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: KarenSteps
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\KarenSteps
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -35,12 +72,25 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: Zombies
+      guid: 8cecad13368fbd48b4dae173bbb97c29
+      id: 4113933398
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Ambient
+        ObjectType: 2
+      - ElementName: Zombies
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Ambient\Zombies
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: e19df6b06041ac45af6b15541fcec94c
     GuidInternal: 
-    m_lastTime: -8586144061097695445
+    m_lastTime: -8586143831651366674
     List:
     - name: MainSoundbank
       guid: 8727a24824fec740ba0a5068735d19c5
@@ -56,8 +106,20 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 829577d609f7104fa394a56611643c90
     GuidInternal: 
-    m_lastTime: -8586144063561716379
+    m_lastTime: -8586143832820843564
     List:
+    - name: Play_16___May_Contain_Metal
+      guid: 413e1f0646d20f4d94ce423b67516cae
+      id: 3033383690
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_16___May_Contain_Metal
+        ObjectType: 3
+      Path: Default Work Unit\Play_16___May_Contain_Metal
+      maxAttenuation: 100
+      maxDuration: 64.401566
+      minDuration: 64.401566
     - name: Play_AmbientTest
       guid: 89a743dfb15c90419e18f039043c8987
       id: 4029336046
@@ -70,6 +132,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 41.877335
       minDuration: 41.877335
+    - name: Play_City_Bed
+      guid: 9e712be0583023489cfc3b237586c4c0
+      id: 1966587683
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_City_Bed
+        ObjectType: 3
+      Path: Default Work Unit\Play_City_Bed
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_ItemTest
       guid: 47a6f3fc13d07d43bd2b9c2401490b46
       id: 1408766231
@@ -94,27 +168,158 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 26.453333
       minDuration: 26.453333
+    - name: Play_Walking_Highheel
+      guid: d6e1e12970bd6f4d900648c653bd9568
+      id: 3555340024
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Walking_Highheel
+        ObjectType: 3
+      Path: Default Work Unit\Play_Walking_Highheel
+      maxAttenuation: 60
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Zombie_Large
+      guid: 8172029cac1d0a4b9969bcbb64f7e366
+      id: 2540355032
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Zombie_Large
+        ObjectType: 3
+      Path: Default Work Unit\Play_Zombie_Large
+      maxAttenuation: 60
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Zombie_Medium
+      guid: c4a56090b96efe4aac9079a409123851
+      id: 1868838038
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Zombie_Medium
+        ObjectType: 3
+      Path: Default Work Unit\Play_Zombie_Medium
+      maxAttenuation: 60
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Zombie_Small
+      guid: d24bd96746e58545be5c2116b6df2925
+      id: 833498416
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Zombie_Small
+        ObjectType: 3
+      Path: Default Work Unit\Play_Zombie_Small
+      maxAttenuation: 60
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_City_Bed
+      guid: 29244333d04a854cbebed07cbd2fdaf2
+      id: 210502101
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_City_Bed
+        ObjectType: 3
+      Path: Default Work Unit\Stop_City_Bed
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: a500d0edf62fa44d8e3634f3e1d29465
     GuidInternal: 
-    m_lastTime: -8586144069186548101
-    List: []
+    m_lastTime: -8586143850821693154
+    List:
+    - name: DistanceToListener
+      guid: d0899d24e903b646909f28b49db89e23
+      id: 2352475335
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DistanceToListener
+        ObjectType: 13
+      Path: Default Work Unit\DistanceToListener
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 1093c1b73741c94b98cdc61c93505f1c
     GuidInternal: 
-    m_lastTime: -8586144069186558102
-    List: []
+    m_lastTime: -8586143860539889003
+    List:
+    - name: Space
+      guid: a08f6950789502418816d88777734d7b
+      id: 4164838345
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Space
+        ObjectType: 9
+      Path: Default Work Unit\Space
+      values:
+      - name: Close
+        guid: f5196faaec7aa84186ead5de4455bb72
+        id: 1451272583
+        PathAndIcons:
+        - ElementName: Close
+          ObjectType: 8
+      - name: Far
+        guid: 91c1de1a9ae3ef49bceaa79465b6c3b7
+        id: 1183803292
+        PathAndIcons:
+        - ElementName: Far
+          ObjectType: 8
+      - name: Medium
+        guid: cb0bd6a24d041341a1b8667a2269b8c1
+        id: 2849147824
+        PathAndIcons:
+        - ElementName: Medium
+          ObjectType: 8
+      - name: None
+        guid: 409715333e7d944a98e92eeaeacfe6f1
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: c3a35795b2736940a6c7b29314d8bce0
     GuidInternal: 
-    m_lastTime: -8586144069186568102
-    List: []
+    m_lastTime: -8586143907149964947
+    List:
+    - name: Soundtrack
+      guid: 22b61f2816653e40a8ac57f059152255
+      id: 2082426231
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Soundtrack
+        ObjectType: 11
+      Path: Default Work Unit\Soundtrack
+      values:
+      - name: Frontend
+        guid: 9d5ea2fa4875d842b8579cde1192be9d
+        id: 4212191649
+        PathAndIcons:
+        - ElementName: Frontend
+          ObjectType: 10
+      - name: Level01
+        guid: 68ba21db2f28164d98359eba8eb28fb5
+        id: 3152323980
+        PathAndIcons:
+        - ElementName: Level01
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -126,7 +331,5 @@ MonoBehaviour:
   - /LD2020
   - /LD2020/Events
   - /LD2020/Events/Default Work Unit
-  - /LD2020/SoundBanks
-  - /LD2020/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
