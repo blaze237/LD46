@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 488006}
   - component: {fileID: 3364710}
   - component: {fileID: 2340944}
+  - component: {fileID: 7605754062756360105}
   m_Layer: 0
   m_Name: SA_Bld_Shop_Damaged_01
   m_TagString: Untagged
@@ -80,6 +81,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7605754062756360105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.703862, y: 13.988747, z: 10.160383}
+  m_Center: {x: -0.11948919, y: 6.490239, z: 0.26075435}
 --- !u!1 &198714
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +105,7 @@ GameObject:
   - component: {fileID: 417884}
   - component: {fileID: 3341442}
   - component: {fileID: 2385942}
+  - component: {fileID: 4998143308557329728}
   m_Layer: 0
   m_Name: SA_Bld_Shop_Growth_01
   m_TagString: Untagged
@@ -159,3 +174,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4998143308557329728
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 26bb4e593a68c8645819a49130429f18, type: 3}

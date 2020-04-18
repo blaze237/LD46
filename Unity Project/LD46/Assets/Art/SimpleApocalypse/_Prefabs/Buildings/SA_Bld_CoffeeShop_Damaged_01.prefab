@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 467298}
   - component: {fileID: 3344754}
   - component: {fileID: 2306036}
+  - component: {fileID: 61392740324040333}
   m_Layer: 0
   m_Name: SA_Bld_CoffeeShop_Damaged_01
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &61392740324040333
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: fb05055bdf7d393469f036a23dbcc0f7, type: 3}
 --- !u!1 &196452
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +106,7 @@ GameObject:
   - component: {fileID: 463928}
   - component: {fileID: 3319182}
   - component: {fileID: 2332660}
+  - component: {fileID: 2775979825034584699}
   m_Layer: 0
   m_Name: SA_Bld_CoffeeShop_Growth_01
   m_TagString: Untagged
@@ -159,3 +175,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2775979825034584699
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: fb05055bdf7d393469f036a23dbcc0f7, type: 3}

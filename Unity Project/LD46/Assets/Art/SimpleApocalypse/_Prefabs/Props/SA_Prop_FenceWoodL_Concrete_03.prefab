@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 457390}
   - component: {fileID: 3329698}
   - component: {fileID: 2340778}
+  - component: {fileID: 8460277612383203399}
   m_Layer: 0
   m_Name: SA_Prop_FenceWoodL_Concrete_03
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8460277612383203399
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5614395, y: 6.5439205, z: 5.4683075}
+  m_Center: {x: 1.6556969, y: 3.0541258, z: 2.7341614}
