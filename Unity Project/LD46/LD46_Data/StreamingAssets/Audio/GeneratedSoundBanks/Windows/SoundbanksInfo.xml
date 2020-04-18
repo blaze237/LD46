@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\</ProjectRoot>
+		<SourceFilesRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="534561221" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MainSoundbank</ObjectPath>
+			<ShortName>MainSoundbank</ShortName>
+			<Path>MainSoundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4029336046" Name="Play_AmbientTest" ObjectPath="\Events\Default Work Unit\Play_AmbientTest" DurationType="OneShot" DurationMin="41.877335" DurationMax="41.877335">
+					<IncludedMemoryFiles>
+						<File Id="368267345" Language="SFX">
+							<ShortName>CracklingCandle01.WAV</ShortName>
+							<Path>SFX\CracklingCandle01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1408766231" Name="Play_ItemTest" ObjectPath="\Events\Default Work Unit\Play_ItemTest" DurationType="OneShot" DurationMin="17.647165" DurationMax="17.647165">
+					<IncludedMemoryFiles>
+						<File Id="467159636" Language="SFX">
+							<ShortName>LiquidNitrogen001.WAV</ShortName>
+							<Path>SFX\LiquidNitrogen001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3141342825" Name="Play_PlayerTest" ObjectPath="\Events\Default Work Unit\Play_PlayerTest" DurationType="OneShot" DurationMin="26.453333" DurationMax="26.453333">
+					<IncludedMemoryFiles>
+						<File Id="537716121" Language="SFX">
+							<ShortName>ClockAtHome.WAV</ShortName>
+							<Path>SFX\ClockAtHome_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
