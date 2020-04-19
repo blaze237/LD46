@@ -3,20 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum LightSourceType : uint
+
+public enum LightEffectType : int
 {
-    Player,
-    Enviromental
+    SlowDown,
+    Stop,
+    Burn,
 }
 
 public class LightSource : MonoBehaviour
 {
     public Light m_light;
-    public LightSourceType m_lightSourceType = LightSourceType.Enviromental;
+    public LightEffectType m_lightSourceType = LightEffectType.Stop;
+
     public bool control = false;
 
 
-    public delegate void LightEnableEvent(LightSourceType i_type);
+    public delegate void LightEnableEvent(LightEffectType i_type);
     public event LightEnableEvent m_lightEnableEventHandler;
 
     //public event EventHandler m_lightEnableEventHandler;

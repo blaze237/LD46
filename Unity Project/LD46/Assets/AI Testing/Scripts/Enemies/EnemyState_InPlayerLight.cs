@@ -9,7 +9,7 @@ public class EnemyState_InPlayerLight : NavAgentState
     private float m_tSinceStateStart = 0;
     private LightDetection m_lightDetectionSystem;
 
-    public EnemyState_InPlayerLight(StateMachine sMachine, EnemyAI owner) : base(sMachine, owner.GetComponent<NavMeshAgent>())
+    public EnemyState_InPlayerLight(StateMachine sMachine, EnemyAI owner) : base(sMachine, owner.GetNavMeshAgent())
     {
         this.m_owner = owner;
         m_lightDetectionSystem = m_owner.GetComponent<LightDetection>();
@@ -32,7 +32,7 @@ public class EnemyState_InPlayerLight : NavAgentState
         }
 
         //If player light, then move into frozen state
-        if (!m_lightDetectionSystem.QueryFlags(LightSourceType.Player))
+        if (!m_lightDetectionSystem.QueryFlags(LightEffectType.Burn))
         {
             Debug.Log("Im FREE");
             m_sMachine.SetState(new EnemyState_Chase(m_sMachine, m_owner));
