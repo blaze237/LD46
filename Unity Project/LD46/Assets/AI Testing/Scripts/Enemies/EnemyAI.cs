@@ -31,11 +31,27 @@ public class EnemyAI : MonoBehaviour
     private LightDetection m_lightDetectionSystem;
     private bool m_reachedTower = false;
 
+    public event EventHandler m_enemyDeathEventHandler;
+
+
+
     void OnDrawGizmos()
     {
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, m_seekRadius);
+    }
+
+
+    public virtual void Spawn(Vector3 pos)
+    {
+
+        //In order to set the enemies position freely, we must temporarily disable the object to prevent its position snapping according to navmesh
+        gameObject.SetActive(false);
+        transform.position = pos;
+        gameObject.SetActive(true);
+
+        Debug.Log("INITIALISE HEALTH");
     }
 
     // Start is called before the first frame update
@@ -61,6 +77,11 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         m_agent.speed = m_baseNavSpeed;
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            m_enemyDeathEventHandler?.Invoke(this, new EventArgs());
+        }
 
         //Check for the presence of light
         if (m_lightDetectionSystem.IsIlluminated())

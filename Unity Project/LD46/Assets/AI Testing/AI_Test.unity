@@ -474,6 +474,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202351532}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &219989011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219989012}
+  - component: {fileID: 219989013}
+  m_Layer: 0
+  m_Name: EnemyPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219989012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219989011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1709373291}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219989013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219989011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f19fc44a747034c815d7faf9bbaba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  karenPrefab_playerOnly: {fileID: 301372005}
+  karenPrefab_playerAndTower: {fileID: 783329537}
+  initialPoolSize: 25
 --- !u!1 &247208748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,9 +1556,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coffeePrefab: {fileID: 336908929768596582, guid: 7d57db9d35c6b70428aa472f692fafad,
     type: 3}
-  batteryPrefab: {fileID: 0}
-  toolPrefab: {fileID: 0}
-  fuelPrefab: {fileID: 0}
+  batteryPrefab: {fileID: 336908929768596582, guid: 44818e4429879fe47add424ec2810076,
+    type: 3}
+  toolPrefab: {fileID: 336908929768596582, guid: df1c88969452e9a429157fd770b4564a,
+    type: 3}
+  fuelPrefab: {fileID: 336908929768596582, guid: db89c4910e6e19f4297057de167f4a9c,
+    type: 3}
   initialPoolSize: 25
 --- !u!4 &875105719
 Transform:
@@ -1806,7 +1855,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pickupType: 0
-  m_pickupSpawnFrequency: 30
+  m_pickupSpawnFrequency: 1
+  randomType: 1
 --- !u!4 &1103756046
 Transform:
   m_ObjectHideFlags: 0
@@ -1827,7 +1877,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-10970
+  m_Name: pb_Mesh-43746
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2324,9 +2374,55 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 875105719}
+  - {fileID: 219989012}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1829211798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1829211799}
+  - component: {fileID: 1829211800}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1829211799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829211798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.2274046, y: 1.3099779, z: -16.253117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829211800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829211798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e29576c286a074da49fee522c4b67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyType: 0
+  m_spawnFrequency: 1
 --- !u!1 &1876998846
 GameObject:
   m_ObjectHideFlags: 0

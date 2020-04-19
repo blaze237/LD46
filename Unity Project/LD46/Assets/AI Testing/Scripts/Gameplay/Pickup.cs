@@ -9,7 +9,9 @@ public enum PickupType
     Coffee,
     Battery,
     Fuel,
-    Tool
+    Tool,
+
+    s_SIZE
 }
 
 public class Pickup : MonoBehaviour

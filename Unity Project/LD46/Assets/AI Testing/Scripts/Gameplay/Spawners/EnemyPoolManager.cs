@@ -20,8 +20,8 @@ public class EnemyPoolManager : MonoBehaviour
 
     public int initialPoolSize = 25;
     //Each type stored in its own pool
-    ObjectPool<Pickup> pool_playerOnly;
-    ObjectPool<Pickup> pool_playerAndTower;
+    ObjectPool<EnemyAI> pool_playerOnly;
+    ObjectPool<EnemyAI> pool_playerAndTower;
 
 
 
@@ -40,15 +40,15 @@ public class EnemyPoolManager : MonoBehaviour
 
 
         //Create our pools
-        pool_playerOnly = new ObjectPool<Pickup>(karenPrefab_playerOnly, initialPoolSize);
-        pool_playerAndTower = new ObjectPool<Pickup>(karenPrefab_playerAndTower, initialPoolSize);
+        pool_playerOnly = new ObjectPool<EnemyAI>(karenPrefab_playerOnly, initialPoolSize);
+        pool_playerAndTower = new ObjectPool<EnemyAI>(karenPrefab_playerAndTower, initialPoolSize);
 
 
 
     }
 
     //Determine the correct pool to get object of requested type from
-    public Pickup GetPickup(EnemyType type)
+    public EnemyAI GetEnemy(EnemyType type)
     {
         switch (type)
         {

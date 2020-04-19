@@ -26,32 +26,32 @@ public class EnemySpawnPoint : MonoBehaviour
     }
 
 
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    m_tSinceCollected = m_pickupSpawnFrequency;
-    //}
+    // Start is called before the first frame update
+    void Start()
+    {
+        m_tSinceKilled = m_spawnFrequency;
+    }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (m_pickupCollected)
-    //    {
-    //        m_tSinceCollected += Time.deltaTime;
+    // Update is called once per frame
+    void Update()
+    {
+        if (m_enenmyKilled)
+        {
+            m_tSinceKilled += Time.deltaTime;
 
+            if (m_tSinceKilled >= m_spawnFrequency)
+            {
+                //Spawn a pickup
+                EnemyAI enemy = EnemyPoolManager.instance.GetEnemy(m_enemyType);
+                enemy.Spawn(transform.position);
 
-    //        if (m_tSinceCollected >= m_pickupSpawnFrequency)
-    //        {
-    //            //Spawn a pickup
-    //            Pickup pickup = PickupPoolManager.instance.GetPickup(m_pickupType);
-    //            pickup.transform.position = transform.position;
-    //            pickup.m_pickupCollectedEventHandler += OnPickupCollected;
+                enemy.m_enemyDeathEventHandler += OnEnemyKilled;
 
-    //            m_pickupCollected = false;
-    //            m_tSinceCollected = 0;
-    //        }
-    //    }
+                m_enenmyKilled = false;
+                m_tSinceKilled = 0;
+            }
+        }
 
-    //}
+    }
 
 }

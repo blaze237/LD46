@@ -7,6 +7,7 @@ public class PickupSpawnPoint : MonoBehaviour
 {
     public PickupType m_pickupType;
     public float m_pickupSpawnFrequency = 30;
+    public bool randomType = false;
 
     private bool m_pickupCollected = true;
     private float m_tSinceCollected = 0;
@@ -43,7 +44,30 @@ public class PickupSpawnPoint : MonoBehaviour
             if(m_tSinceCollected >= m_pickupSpawnFrequency)
             {
                 //Spawn a pickup
-                Pickup pickup = PickupPoolManager.instance.GetPickup(m_pickupType);
+                PickupType type = m_pickupType;
+
+                if(randomType)
+                {
+                    int ind = UnityEngine.Random.Range(0, (int)PickupType.s_SIZE);
+
+                    switch(ind)
+                    {
+                        case 0:
+                            type = PickupType.Coffee;
+                            break;
+                        case 1:
+                            type = PickupType.Fuel;
+                            break;
+                        case 2:
+                            type = PickupType.Battery;
+                            break;
+                        case 3:
+                            type = PickupType.Tool;
+                            break;
+                    }
+                }
+                               
+                Pickup pickup = PickupPoolManager.instance.GetPickup(type);
                 pickup.transform.position = transform.position;
                 pickup.m_pickupCollectedEventHandler += OnPickupCollected;
 

@@ -23,7 +23,7 @@ public class EnemyState_Chase : NavAgentState
         float dist2Player = Player.instance.Get2DDistToPlayer(m_owner.transform.position);// Mathf.Abs((Utils.Project2D(Player.instance.transform.position) - Utils.Project2D(m_owner.transform.position)).magnitude);
         //float dist2Tower = Tower.instance.Get2DDistToTower(m_owner.transform.position); //Mathf.Abs((Utils.Project2D(Tower.instance.transform.position) - Utils.Project2D(m_owner.transform.position)).magnitude);
 
-        if (dist2Player <= m_owner.m_seekRadius) //Allways prefer the player to the tower
+        if (!m_owner.m_seeksTower || dist2Player <= m_owner.m_seekRadius) //Allways prefer the player to the tower
         {
             m_curGoalType = EnemyGoalType.Player;
             return Player.instance.transform.position;
