@@ -15,6 +15,9 @@ public class SpotlightColliderScaler : MonoBehaviour
 
     private const float REF_RANGE = 10;
     private const float REF_RADIUS = 2.679491924311f;
+    public UnityEngine.AI.NavMeshObstacle navmeshObstabcle;
+    public LayerMask m_layerMask;
+
 
     void UpdateScaling()
     {
@@ -24,6 +27,22 @@ public class SpotlightColliderScaler : MonoBehaviour
         float widthScale = m_radialToleranceScale * light.range * Mathf.Tan(Mathf.Deg2Rad * light.spotAngle / 2.0f) / REF_RADIUS;
 
         transform.localScale = new Vector3(widthScale, widthScale, lengthScale);
+
+        //Raycast out in the direction of the light to see if we hit the ground, if we do, then place our navmesh obstacle here with sufficient radius
+        if(navmeshObstabcle != null)
+        {
+            RaycastHit hit;
+            // Does the ray intersect any objects excluding the player layer
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, light.range, m_layerMask))
+            {
+                float obstacleRadius = (hit.distance * Mathf.Tan(Mathf.Deg2Rad * light.spotAngle / 2.0f));
+                Vector3 obstaclePos = transform.InverseTransformPoint(hit.point);
+                navmeshObstabcle.radius = obstacleRadius;
+                navmeshObstabcle.center = obstaclePos;
+
+            }
+        }
+
     }
 
     // Start is called before the first frame update
