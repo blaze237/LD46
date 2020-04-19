@@ -16,6 +16,11 @@ public class EnemyState_Chase : NavAgentState
         m_lightDetectionSystem = m_owner.GetComponent<LightDetection>();
     }
 
+    private Vector2 GetXZPos(Vector3 i_pos)
+    {
+        return new Vector2(i_pos.x, i_pos.z);
+    }
+
     public override void Enter()
     {
         m_agent.SetDestination(Player.instance.transform.position);
@@ -26,7 +31,7 @@ public class EnemyState_Chase : NavAgentState
         }
     }
 
-    public override void Execute(float time)
+    public override void Execute(float i_dt)
     {
         //Check for the presence of light
         if(m_lightDetectionSystem.IsIlluminated())
@@ -35,20 +40,20 @@ public class EnemyState_Chase : NavAgentState
             if(m_lightDetectionSystem.QueryFlags(LightSourceType.Player))
             {
                 Debug.Log("PLAYER IS SHINING ON ME");
+                m_sMachine.SetState(new EnemyState_InPlayerLight(m_sMachine, m_owner));
             }
-            //If enviromental light, just scream but carry on trying to navigate(wont be able to nav into light which will be marked as an obstacle)
+            //If enviromental light, just talk but carry on trying to navigate(wont be able to nav into light which will be marked as an obstacle)
             if (m_lightDetectionSystem.QueryFlags(LightSourceType.Enviromental))
             {
                 Debug.Log("Enviroment IS SHINING ON ME");
-
             }
         }
 
         m_agent.SetDestination(Player.instance.transform.position);
 
         //Face model towards the player
-        //   var modelDir = Player.instance.getXZPos() - ownerEnemyRef.getXZPos();
-        // owner.transform.forward = Utils.project3D(modelDir);
+        var modelDir = GetXZPos(Player.instance.transform.position) - GetXZPos(m_owner.transform.position);
+        m_owner.transform.forward = Utils.Project3D(modelDir);
 
         //If player leaves wake radius, then stop following and attacking
         if (Vector3.Distance(Player.instance.transform.position, m_owner.transform.position) >= m_owner.m_seekRadius)

@@ -17,7 +17,7 @@ public class EnemyState_Idle : NavAgentState
       
     }
 
-    public override void Execute(float time)
+    public override void Execute(float i_dt)
     {
         if (Vector3.Distance(Player.instance.transform.position, m_agent.transform.position) <= m_owner.m_seekRadius)
         {

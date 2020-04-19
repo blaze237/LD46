@@ -9,6 +9,9 @@ public class EnemyAI : MonoBehaviour
     //How close should they get before starting their voice lines
     public float m_speechRadius = 5;
 
+    public float m_tTillDeathFromLight = 5f;
+
+
     public bool m_useLosCheck = false;
     //Y offset to apply before doing los checks to player. Needed for enemy avatars whos root is at the base of the model
     public float m_losVerticalOffset = 0;
@@ -31,7 +34,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_sMachine.Update(Time.time);
+        m_sMachine.Update(Time.deltaTime);
     }
 
 
