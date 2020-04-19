@@ -43,9 +43,9 @@ public class StateMachine
         curState.Enter();
     }
 
-    public void Update(float i_time)
+    public void Update(float i_dt)
     {
         if (curState != null)
-            curState.Execute(i_time);
+            curState.Execute(i_dt);
     }
 }

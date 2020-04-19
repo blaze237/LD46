@@ -7,7 +7,7 @@ public class LightDetection : MonoBehaviour
     public float m_MinLightIntensity;
 
     private HashSet<LightSource> m_collidingLights = new HashSet<LightSource>();
-    private bool m_illuminated = false;
+    //private bool m_illuminated = false;
     private Renderer m_rend;
     private uint m_lightFlags = 0;
 
@@ -25,34 +25,23 @@ public class LightDetection : MonoBehaviour
 
     public bool IsIlluminated()
     {
-        return m_illuminated;
+        return m_lightFlags != 0;
     }
 
-    private void Update()
+    public void OnLightSourceEnableEvent(LightSourceType i_type)
     {
-        //Check if we are lit up by any of the lights we are colliding with
-        foreach(LightSource lightSource in m_collidingLights)
+        switch(i_type)
         {
-            //Check if light intensity is sufficient 
-            bool litUp = CheckLightIntensity(lightSource.m_light);
-
-            if(litUp)
-            {
-                m_illuminated = true;
-                Debug.Log("seen");
+            case LightSourceType.Player:
+                RefreshPlayerFlag();
                 break;
-            }
+            case LightSourceType.Enviromental:
+                RefreshEnvFlag();
+                break;
+            default:
+                RefreshAllFlags();
+                break;
         }
-
-
-       if(QueryFlags(LightSourceType.Enviromental))
-            Debug.Log("envo light");
-
-
-        if (QueryFlags(LightSourceType.Player))
-            Debug.Log("player light");
-
-
     }
 
 
@@ -74,6 +63,7 @@ public class LightDetection : MonoBehaviour
     //Determine the intensity of light hitting us
     bool CheckLightIntensity(Light i_light)
     {
+
         float dist = (transform.position - i_light.transform.position).magnitude;
         float normalizedDist = dist / i_light.range;
         float atten = Saturate(1.0f / (1.0f + 25.0f * normalizedDist * normalizedDist) * Saturate((1.0f - normalizedDist) * 5.0f));
@@ -84,36 +74,57 @@ public class LightDetection : MonoBehaviour
     }
 
 
-    private void UpdateSeenState()
-    {
-        m_illuminated = m_collidingLights.Count != 0;
-    }
 
-    private void RefreshMask()
+    private void RefreshAllFlags()
     {
         //Check through the list of lights we're illuminated by to see if we need to update the mask (might not need this for player lights if only ever one anyway)
         bool env = false;
         bool player = false;
+        m_lightFlags = 0;
         foreach (LightSource light in m_collidingLights)
         {
-            if(light.m_lightSourceType == LightSourceType.Enviromental)
+            if(light.m_lightSourceType == LightSourceType.Enviromental && light.IsEnabled())
             {
+                m_lightFlags |= ((uint)LightSourceType.Enviromental + 1);
                 env = true;
             }
-            else if (light.m_lightSourceType == LightSourceType.Player)
+            else if (light.m_lightSourceType == LightSourceType.Player && light.IsEnabled())
             {
+                m_lightFlags |= ((uint)LightSourceType.Player + 1);
                 player = true;
             }
+
+            if(player && env)
+            {
+                return;
+            }
         }
+    }
+
+    private void RefreshEnvFlag()
+    {
+        m_lightFlags &= ~((uint)LightSourceType.Enviromental + 1);
+        foreach (LightSource light in m_collidingLights)
+        {
+            if (light.m_lightSourceType == LightSourceType.Enviromental && light.IsEnabled())
+            {
+                m_lightFlags |= ((uint)LightSourceType.Enviromental + 1);
+                return;
+            }
+        } 
+    }
 
 
-        if(!env)
+    private void RefreshPlayerFlag()
+    {
+        m_lightFlags &= ~((uint)LightSourceType.Player + 1);
+        foreach (LightSource light in m_collidingLights)
         {
-            m_lightFlags &= ~((uint)LightSourceType.Enviromental + 1);
-        }
-        if (!player)
-        {
-            m_lightFlags &= ~((uint)LightSourceType.Player + 1);
+            if (light.m_lightSourceType == LightSourceType.Player && light.IsEnabled())
+            {
+                m_lightFlags |= ((uint)LightSourceType.Player + 1);
+                return;
+            }
         }
     }
 
@@ -125,7 +136,8 @@ public class LightDetection : MonoBehaviour
             m_collidingLights.Add(lightSource);
             //Update our mask
             m_lightFlags |= ((uint)lightSource.m_lightSourceType + 1);
-            UpdateSeenState();
+            //Subscribe to enable events on the light source
+            lightSource.m_lightEnableEventHandler += OnLightSourceEnableEvent;
         }
     }
 
@@ -133,9 +145,11 @@ public class LightDetection : MonoBehaviour
     {
         if (other.CompareTag("LightSource"))
         {
-            m_collidingLights.Remove(other.gameObject.GetComponent<LightSource>());
-            UpdateSeenState();
-            RefreshMask();
+            LightSource lightSource = other.gameObject.GetComponent<LightSource>();
+            m_collidingLights.Remove(lightSource);
+            RefreshAllFlags();
+            //Unubscribe to enable events on the light source
+            lightSource.m_lightEnableEventHandler -= OnLightSourceEnableEvent;
         }
     }
 
