@@ -1855,6 +1855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_light: {fileID: 4711345218979916416}
   m_lightSourceType: 1
+  control: 0
 --- !u!1 &4711345218979916417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,19 +1901,19 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.95325, b: 0.745, a: 1}
-  m_Intensity: 21
+  m_Intensity: 5
   m_Range: 9.9
-  m_SpotAngle: 84.4
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 60
+  m_InnerSpotAngle: 6
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: 0
+    m_NormalBias: 0
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
