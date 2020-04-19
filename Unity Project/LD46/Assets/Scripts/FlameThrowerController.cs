@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FlameThrowerController : MonoBehaviour
 {
-    [SerializeField] GameObject flamePrefab;
+
+    [SerializeField] GameObject flamesPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +19,15 @@ public class FlameThrowerController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("HELLO");
-        if (other.name == "Karen")
+        if (other.gameObject.tag == "Karen")
         {
-            GameObject fire = Instantiate(flamePrefab, other.transform.position, Quaternion.identity);
-            Destroy(fire, 2f);
+            GameObject flames = Instantiate(flamesPrefab, other.transform.position, Quaternion.identity, other.transform);
+            Destroy(flames, 3f);
+            other.GetComponent<HealthController>().DealDamage(100);
         }
     }
+
+
 }
