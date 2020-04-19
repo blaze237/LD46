@@ -1931,7 +1931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6152894346822829813
 Transform:
   m_ObjectHideFlags: 0
@@ -2166,6 +2166,30 @@ PrefabInstance:
     - target: {fileID: 19801364, guid: 8c1f1e09e6c9ed947bdbd6914ae8f9bc, type: 3}
       propertyPath: CollisionModule.collisionMessages
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801364, guid: 8c1f1e09e6c9ed947bdbd6914ae8f9bc, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801364, guid: 8c1f1e09e6c9ed947bdbd6914ae8f9bc, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801364, guid: 8c1f1e09e6c9ed947bdbd6914ae8f9bc, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801364, guid: 8c1f1e09e6c9ed947bdbd6914ae8f9bc, type: 3}
+      propertyPath: SizeModule.y.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801364, guid: 8c1f1e09e6c9ed947bdbd6914ae8f9bc, type: 3}
+      propertyPath: SizeModule.z.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801364, guid: 8c1f1e09e6c9ed947bdbd6914ae8f9bc, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c1f1e09e6c9ed947bdbd6914ae8f9bc, type: 3}

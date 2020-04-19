@@ -464,7 +464,24 @@ MonoBehaviour:
     type: 3}
   karenScreamAudioSource: {fileID: 123530200}
   karenScreamAudioClips:
+  - {fileID: 8300000, guid: 5d58efd5c26e73341a3bb7f1f1457cc0, type: 3}
+  - {fileID: 8300000, guid: 26bdf6976a01464488e8a61783d9f47f, type: 3}
+  - {fileID: 8300000, guid: da80b0b80ef243d439f7562da5d6bd15, type: 3}
   - {fileID: 8300000, guid: 1b36a9533837caf43be04b72623a280d, type: 3}
+  - {fileID: 8300000, guid: cf0cd58464a751e49a6b4edf0d1c6a17, type: 3}
+  - {fileID: 8300000, guid: 90c4dbaf83019224c80ba7e215eab748, type: 3}
+  - {fileID: 8300000, guid: 9862836f728eed746b43fbd60e29a447, type: 3}
+  - {fileID: 8300000, guid: 78ba5173bebfdd04a937cb935a8022c9, type: 3}
+  - {fileID: 8300000, guid: 5e99baebb8deb26498a899b3a607c971, type: 3}
+  - {fileID: 8300000, guid: a8a0771b0e5a53a4b869c216010a9305, type: 3}
+  - {fileID: 8300000, guid: 4a590319ee58bd24b9de437bc64322e2, type: 3}
+  - {fileID: 8300000, guid: 27e368af79d234145bf8b1d7ce578f33, type: 3}
+  - {fileID: 8300000, guid: 94bc5f341d68ca440b56af14c9b0c05f, type: 3}
+  - {fileID: 8300000, guid: a10968a282779914ba664300512f2fd4, type: 3}
+  - {fileID: 8300000, guid: 38b179ebe06d8804881f9a0764a24bdb, type: 3}
+  - {fileID: 8300000, guid: 0b010a33394956f48a8a95bf2b2a8fa8, type: 3}
+  - {fileID: 8300000, guid: 62df0c5fd718611438bf4d82cb40c82e, type: 3}
+  - {fileID: 8300000, guid: aabf3e6929161e24789e8518cf2388cb, type: 3}
 --- !u!1 &6181446691360681096
 GameObject:
   m_ObjectHideFlags: 0
