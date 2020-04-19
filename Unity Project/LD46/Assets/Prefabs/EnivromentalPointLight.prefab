@@ -34191,6 +34191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_light: {fileID: 3429087214200496142}
   m_lightSourceType: 1
+  control: 0
 --- !u!114 &3429087214780655250
 MonoBehaviour:
   m_ObjectHideFlags: 0

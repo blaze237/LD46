@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 473578}
   - component: {fileID: 3382548}
   - component: {fileID: 2333606}
+  - component: {fileID: 6430135628910315896}
   m_Layer: 0
   m_Name: SA_Env_Court
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6430135628910315896
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 1, z: 45.5}
+  m_Center: {x: -15, y: -0.5, z: -22.75}

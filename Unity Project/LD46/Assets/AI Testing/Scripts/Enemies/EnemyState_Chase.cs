@@ -7,14 +7,37 @@ public class EnemyState_Chase : NavAgentState
 {
     private EnemyAI m_owner;
     private Animator animator;
-    private LightDetection m_lightDetectionSystem;
+    EnemyGoalType m_curGoalType = EnemyGoalType.Player;
+    private Vector3 m_cachedTowerGoalPoint;
 
-    public EnemyState_Chase(StateMachine sMachine, EnemyAI owner) : base(sMachine, owner.GetComponent<NavMeshAgent>())
+
+    public EnemyState_Chase(StateMachine sMachine, EnemyAI owner) : base(sMachine, owner.GetNavMeshAgent())
     {
         this.m_owner = owner;
         animator = owner.GetComponent<Animator>();
-        m_lightDetectionSystem = m_owner.GetComponent<LightDetection>();
     }
+
+
+    private Vector3 GetGoalPos()
+    {
+        float dist2Player = Player.instance.Get2DDistToPlayer(m_owner.transform.position);// Mathf.Abs((Utils.Project2D(Player.instance.transform.position) - Utils.Project2D(m_owner.transform.position)).magnitude);
+        //float dist2Tower = Tower.instance.Get2DDistToTower(m_owner.transform.position); //Mathf.Abs((Utils.Project2D(Tower.instance.transform.position) - Utils.Project2D(m_owner.transform.position)).magnitude);
+
+        if (dist2Player <= m_owner.m_seekRadius) //Allways prefer the player to the tower
+        {
+            m_curGoalType = EnemyGoalType.Player;
+            return Player.instance.transform.position;
+        }
+
+        //If goal type has just been set to tower, then need to find an attatch pos on the tower else just use the one allready found
+        if (m_curGoalType != EnemyGoalType.Tower)
+        {
+            m_cachedTowerGoalPoint = Tower.instance.GetAttatchPoint();
+        }
+        m_curGoalType = EnemyGoalType.Tower;
+        return m_cachedTowerGoalPoint;
+    }
+
 
     public override void Enter()
     {
@@ -26,44 +49,42 @@ public class EnemyState_Chase : NavAgentState
         }
     }
 
-    public override void Execute(float time)
+    public override void Execute(float i_dt)
     {
-        //Check for the presence of light
-        if(m_lightDetectionSystem.IsIlluminated())
+        
+
+        //Who is closer, the player or the tower?
+        Vector3 goal = GetGoalPos();
+                             
+        m_agent.SetDestination(goal);
+
+        //Face model towards the target
+        Vector3 viewTarget = m_curGoalType == EnemyGoalType.Player ? Player.instance.transform.position : Tower.instance.transform.position;
+        var modelDir = Utils.Project2D(viewTarget) - Utils.Project2D(m_owner.transform.position);
+        if (modelDir != Vector2.zero)
         {
-            //If player light, then move into frozen state
-            if(m_lightDetectionSystem.QueryFlags(LightSourceType.Player))
-            {
-                Debug.Log("PLAYER IS SHINING ON ME");
-            }
-            //If enviromental light, just scream but carry on trying to navigate(wont be able to nav into light which will be marked as an obstacle)
-            if (m_lightDetectionSystem.QueryFlags(LightSourceType.Enviromental))
-            {
-                Debug.Log("Enviroment IS SHINING ON ME");
-
-            }
+            m_owner.transform.forward = Utils.Project3D(modelDir);
         }
-
-        m_agent.SetDestination(Player.instance.transform.position);
-
-        //Face model towards the player
-        //   var modelDir = Player.instance.getXZPos() - ownerEnemyRef.getXZPos();
-        // owner.transform.forward = Utils.project3D(modelDir);
-
-        //If player leaves wake radius, then stop following and attacking
-        if (Vector3.Distance(Player.instance.transform.position, m_owner.transform.position) >= m_owner.m_seekRadius)
+        //If player leaves wake radius, then stop following and attacking if we arent a tower seeker
+        if (Vector3.Distance(Player.instance.transform.position, m_owner.transform.position) >= m_owner.m_seekRadius && !m_owner.m_seeksTower)
         {
             m_sMachine.SetState(new EnemyState_Idle(m_sMachine, m_owner));
         }
-        //If reach min distance to player, begin to talk (maybe they should slow down and reach their arms out or something?)
-        else if (Vector3.Distance(Player.instance.transform.position, m_owner.transform.position) <= m_owner.m_seekRadius)
+
+        //If goal type is player, move to attack state when reach min dist to player
+        if (m_curGoalType == EnemyGoalType.Player && Vector3.Distance(Player.instance.transform.position, m_owner.transform.position) <= m_owner.m_playerAttackAnimRadius)
         {
-            
+            m_sMachine.SetState(new EnemyState_Attack(m_sMachine, m_owner, m_curGoalType));
+        }
+        //Similar for tower
+        else if(m_curGoalType == EnemyGoalType.Tower && m_owner.HasReachedTower())
+        {
+            m_sMachine.SetState(new EnemyState_Attack(m_sMachine, m_owner, m_curGoalType));
         }
     }
 
     public override void Exit()
     {
-
+        m_agent.speed = m_owner.GetBaseNavSpeed();
     }
 }

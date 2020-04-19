@@ -7,7 +7,7 @@ public class EnemyState_Idle : NavAgentState
 {
     private EnemyAI m_owner;
 
-    public EnemyState_Idle(StateMachine sMachine, EnemyAI owner) : base(sMachine, owner.GetComponent<NavMeshAgent>())
+    public EnemyState_Idle(StateMachine sMachine, EnemyAI owner) : base(sMachine, owner.GetNavMeshAgent())
     {
         this.m_owner = owner;
     }
@@ -17,9 +17,9 @@ public class EnemyState_Idle : NavAgentState
       
     }
 
-    public override void Execute(float time)
+    public override void Execute(float i_dt)
     {
-        if (Vector3.Distance(Player.instance.transform.position, m_agent.transform.position) <= m_owner.m_seekRadius)
+        if (Vector2.Distance(Utils.Project2D(Player.instance.transform.position), Utils.Project2D(m_agent.transform.position)) <= m_owner.m_seekRadius)
         {
             m_sMachine.SetState(new EnemyState_Chase(m_sMachine, m_owner));
         }
