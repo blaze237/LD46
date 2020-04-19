@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" SchemaVersion="97">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{3F496636-B505-4F3B-9800-83F4A525C41B}" WorkUnitID="{06651077-A3B0-4E7C-9BD3-0C329B6FCCC1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="KarenSteps" ID="{85BC18B4-51F8-43C0-A8B4-214433BC66C9}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-18</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Underground_Parking1" ID="{8DA66AA3-6CA0-41A0-B7A2-BB6FCABFCDA8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Space" ID="{50698FA0-9578-4102-8816-D88777734D7B}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Medium" ID="{A2D60BCB-044D-4113-A1B8-667A2269B8C1}"/>
+										<CustomState Name="" ID="{1AB49ABF-48D1-4715-AF61-EB6FF09904B8}" ShortID="558096689">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-19"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Close" ID="{AA6F19F5-7AEC-41A8-86EA-D5DE4455BB72}"/>
+										<CustomState Name="" ID="{97439B31-E484-43BC-BA7A-C00715415706}" ShortID="1039322180">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-49"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Far" ID="{1ADEC191-E39A-49EF-BCEA-A79465B6C3B7}"/>
+										<CustomState Name="" ID="{D2E5CF4F-7F95-4F5B-BCDA-21A676691018}" ShortID="963756941">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-7"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</AuxBus>
+						<Bus Name="Ambient" ID="{5D256D92-E003-4EE7-B2F7-65F05B937E06}"/>
+						<Bus Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}"/>
+						<Bus Name="Enemies" ID="{61D3CBE7-DDF5-4FC7-9778-D425C90D60B6}"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

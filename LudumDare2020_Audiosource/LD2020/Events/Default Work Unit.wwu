@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D6779582-F709-4F10-A394-A56611643C90}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{D6779582-F709-4F10-A394-A56611643C90}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_AmbientTest" ID="{DF43A789-5CB1-4190-9E18-F039043C8987}">
+					<ChildrenList>
+						<Action Name="" ID="{805B4D2B-0A86-4791-9B17-DBED1CA88907}" ShortID="461095598">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Candle" ID="{2A7643D5-BCB1-47D8-9C48-EAFECB38D619}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ItemTest" ID="{FCF3A647-D013-437D-BD2B-9C2401490B46}">
+					<ChildrenList>
+						<Action Name="" ID="{2A3918A3-6E4F-4B15-8EFF-34CB9147FC8D}" ShortID="604378883">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ItemTest" ID="{F73E5C56-AF71-4EFF-8FF2-DFE95AB76096}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PlayerTest" ID="{01414DB2-773E-4C3E-8385-434D79370F28}">
+					<ChildrenList>
+						<Action Name="" ID="{31F08154-4F9E-447F-BE16-70AB40C03989}" ShortID="689551398">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerTest" ID="{A21541A4-7EB2-42A1-9861-C35B35C6B128}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_16___May_Contain_Metal" ID="{061F3E41-D246-4D0F-94CE-423B67516CAE}">
+					<ChildrenList>
+						<Action Name="" ID="{934521D2-69BA-44A2-ACC0-4E521E2EDEF1}" ShortID="338572880">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="16 - May Contain Metal" ID="{F36861EA-4F5B-485B-A9AB-8E7A5D27D9C8}" WorkUnitID="{73C3664A-623B-4404-88ED-4920F45BB54A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Zombie_Large" ID="{9C027281-1DAC-4B0A-9969-BCBB64F7E366}">
+					<ChildrenList>
+						<Action Name="" ID="{AC3D2173-CD60-4845-AD9C-43A4DE674B82}" ShortID="767685035">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Zombie_Large" ID="{5DC67A7E-68E6-4E90-B8EB-9638E8C5B46E}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4E88C493-6263-4B16-B0B4-E0744F7EB881}" ShortID="1041427860">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="13"/>
+								<Property Name="Pitch" Type="int32" Value="-660"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieBreaths" ID="{B21C8289-1820-4B31-A240-E637F53F692A}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{805EF879-75A8-408F-BE30-E518118B3586}" ShortID="827989346">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieBreaths" ID="{B21C8289-1820-4B31-A240-E637F53F692A}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Zombie_Medium" ID="{9060A5C4-6EB9-4AFE-AC90-79A409123851}">
+					<ChildrenList>
+						<Action Name="" ID="{BA7B99FA-78BA-4362-9509-EE7A634E8230}" ShortID="464683895">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Zombie_Medium" ID="{BA6B5F16-A061-44E3-ADC3-305034C1D044}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CCFABCA7-34AF-4110-ADC1-9133B20E3645}" ShortID="253327102">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{401BA2CE-E0B3-4338-9251-15316CFCF2FA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
+													<Property Name="Min" Type="Real64" Value="-4"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieBreaths" ID="{B21C8289-1820-4B31-A240-E637F53F692A}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C2854B5D-CF6B-4388-BDA1-12FC40375A3F}" ShortID="738271153">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="13"/>
+								<Property Name="Pitch" Type="int32" Value="-200">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DF8D0C74-64E6-4109-A3EA-6058E08CA5ED}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="51"/>
+													<Property Name="Min" Type="Real64" Value="-51"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieBreaths" ID="{B21C8289-1820-4B31-A240-E637F53F692A}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Zombie_Small" ID="{67D94BD2-E546-4585-BE5C-2116B6DF2925}">
+					<ChildrenList>
+						<Action Name="" ID="{BE9C9DD6-1803-42BB-9C92-59CFA70F71AE}" ShortID="159044191">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Zombie_Small" ID="{634A2036-DD0B-4034-8AC6-8231D6F0D640}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ECD39AB6-E260-4297-8B96-EC4E5CFB017F}" ShortID="710730563">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieBreaths" ID="{B21C8289-1820-4B31-A240-E637F53F692A}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Walking_Highheel" ID="{29E1E1D6-BD70-4D6F-9006-48C653BD9568}">
+					<ChildrenList>
+						<Action Name="" ID="{21D61B5B-0930-4FEA-B3CE-3B47F0F84081}" ShortID="945629754">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Walking_Highheel" ID="{B53805FE-577D-4273-AB9E-6DD0EC6D2B4D}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_City_Bed" ID="{E02B719E-3058-4823-9CFC-3B237586C4C0}">
+					<ChildrenList>
+						<Action Name="" ID="{A56C2C4C-F7A1-4F15-AEC0-0AE8470C4777}" ShortID="666931038">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="City_Bed" ID="{42EB76BA-113B-4E72-B13F-ED6766B9CC16}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_City_Bed" ID="{33432429-4AD0-4C85-BEBE-D07CBD2FDAF2}">
+					<ChildrenList>
+						<Action Name="" ID="{2F1A5C4D-9FFB-4288-A187-132936A8C7F8}" ShortID="728347291">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="City_Bed" ID="{42EB76BA-113B-4E72-B13F-ED6766B9CC16}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ZombieDan_Growl" ID="{6E401BF4-A3F1-41B5-8564-4D7D38934568}">
+					<ChildrenList>
+						<Action Name="" ID="{77E29DF6-D206-4C0E-9232-8555729FA32C}" ShortID="478860520">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieDan_Growl" ID="{572F9A80-C57B-497A-B231-4FAE9F5F97AF}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{49C8AAF7-1ABE-42D6-AD26-2BBAE043E44C}" ShortID="866394964">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="3.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieDan_Breath" ID="{C11937D5-3CC7-48F3-B0A8-C9139809EBFC}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AC676BF0-2A8D-4E6B-97DB-195596884D25}" ShortID="322563770">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="20"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieDan_VO" ID="{56076D76-9B04-4919-8950-100B4023E9A8}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

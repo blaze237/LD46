@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e19df6b06041ac45af6b15541fcec94c
     GuidInternal: 
-    m_lastTime: -8586143791483149183
+    m_lastTime: -8586143788832827593
     List:
     - name: MainSoundbank
       guid: 8727a24824fec740ba0a5068735d19c5
@@ -341,7 +341,6 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /LD2020
-  - /LD2020/Events
-  - /LD2020/Events/Default Work Unit
+  - /LD2020/Switches
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

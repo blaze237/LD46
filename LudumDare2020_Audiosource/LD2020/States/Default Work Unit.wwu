@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B7C19310-4137-4BC9-98CD-C61C93505F1C}" SchemaVersion="97">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{B7C19310-4137-4BC9-98CD-C61C93505F1C}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Space" ID="{50698FA0-9578-4102-8816-D88777734D7B}">
+					<ChildrenList>
+						<State Name="None" ID="{33159740-7D3E-4A94-98E9-2EEAEACFE6F1}"/>
+						<State Name="Far" ID="{1ADEC191-E39A-49EF-BCEA-A79465B6C3B7}"/>
+						<State Name="Medium" ID="{A2D60BCB-044D-4113-A1B8-667A2269B8C1}"/>
+						<State Name="Close" ID="{AA6F19F5-7AEC-41A8-86EA-D5DE4455BB72}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

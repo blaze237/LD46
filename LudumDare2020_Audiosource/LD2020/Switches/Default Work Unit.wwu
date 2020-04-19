@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9557A3C3-73B2-4069-A6C7-B29314D8BCE0}" SchemaVersion="97">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{9557A3C3-73B2-4069-A6C7-B29314D8BCE0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Soundtrack" ID="{281FB622-6516-403E-A8AC-57F059152255}">
+					<ChildrenList>
+						<Switch Name="Frontend" ID="{FAA25E9D-7548-42D8-B857-9CDE1192BE9D}"/>
+						<Switch Name="Level01" ID="{DB21BA68-282F-4D16-9835-9EBA8EB28FB5}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

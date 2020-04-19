@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B0F69DE1-4160-45AC-AF6B-15541FCEC94C}" SchemaVersion="97">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{B0F69DE1-4160-45AC-AF6B-15541FCEC94C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="MainSoundbank" ID="{48A22787-FE24-40C7-BA0A-5068735D19C5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AmbientTest" ID="{DF43A789-5CB1-4190-9E18-F039043C8987}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ZombieDan_Growl" ID="{6E401BF4-A3F1-41B5-8564-4D7D38934568}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ItemTest" ID="{FCF3A647-D013-437D-BD2B-9C2401490B46}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="KarenSteps" ID="{85BC18B4-51F8-43C0-A8B4-214433BC66C9}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{73C3664A-623B-4404-88ED-4920F45BB54A}" WorkUnitID="{73C3664A-623B-4404-88ED-4920F45BB54A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Zombie_Small" ID="{67D94BD2-E546-4585-BE5C-2116B6DF2925}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ZombieDan" ID="{50A4E154-3CD6-46C9-8C1B-68519775BD3D}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_City_Bed" ID="{E02B719E-3058-4823-9CFC-3B237586C4C0}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemies" ID="{43820627-BB7D-493A-91BD-4CD63A83DB6F}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Zombie_Medium" ID="{9060A5C4-6EB9-4AFE-AC90-79A409123851}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Zombie_Large" ID="{9C027281-1DAC-4B0A-9969-BCBB64F7E366}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PlayerTest" ID="{01414DB2-773E-4C3E-8385-434D79370F28}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_City_Bed" ID="{33432429-4AD0-4C85-BEBE-D07CBD2FDAF2}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_16___May_Contain_Metal" ID="{061F3E41-D246-4D0F-94CE-423B67516CAE}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Walking_Highheel" ID="{29E1E1D6-BD70-4D6F-9006-48C653BD9568}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{1B520A94-7C08-4E6F-998B-336AD33439C2}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Zombies" ID="{5FED2283-562A-4EA4-B091-7CD046AB11DC}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{D6779582-F709-4F10-A394-A56611643C90}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
