@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 33642524150bad48a89b866eab46a4e7
     GuidInternal: 
-    m_lastTime: -8586144069186428094
+    m_lastTime: -8586142819448036405
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 78d8e6fbfa307843beec5a7e8ddb6bce
     GuidInternal: 
-    m_lastTime: -8586143845815586821
+    m_lastTime: -8586142819458043796
     List:
     - name: Ambient
       guid: 926d255d03e0e74eb2f765f05b937e06
@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e19df6b06041ac45af6b15541fcec94c
     GuidInternal: 
-    m_lastTime: -8586143788832827593
+    m_lastTime: -8586142819448091416
     List:
     - name: MainSoundbank
       guid: 8727a24824fec740ba0a5068735d19c5
@@ -106,7 +106,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 829577d609f7104fa394a56611643c90
     GuidInternal: 
-    m_lastTime: -8586143791483179185
+    m_lastTime: -8586142819463569873
     List:
     - name: Play_16___May_Contain_Metal
       guid: 413e1f0646d20f4d94ce423b67516cae
@@ -245,7 +245,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a500d0edf62fa44d8e3634f3e1d29465
     GuidInternal: 
-    m_lastTime: -8586143850821693154
+    m_lastTime: -8586142819463554872
     List:
     - name: DistanceToListener
       guid: d0899d24e903b646909f28b49db89e23
@@ -261,7 +261,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 1093c1b73741c94b98cdc61c93505f1c
     GuidInternal: 
-    m_lastTime: -8586143860539889003
+    m_lastTime: -8586142819448066405
     List:
     - name: Space
       guid: a08f6950789502418816d88777734d7b
@@ -305,7 +305,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c3a35795b2736940a6c7b29314d8bce0
     GuidInternal: 
-    m_lastTime: -8586143907149964947
+    m_lastTime: -8586142819448056411
     List:
     - name: Soundtrack
       guid: 22b61f2816653e40a8ac57f059152255
@@ -337,10 +337,12 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0726654b3c652941887a3bc8ec2e5c94
     GuidInternal: 
-    m_lastTime: -8586144069186498098
+    m_lastTime: -8586142819448046407
     List: []
   ExpandedItems:
   - /LD2020
+  - /LD2020/Events
+  - /LD2020/Events/Default Work Unit
   - /LD2020/Switches
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class Tower : MonoBehaviour
     public int fuel = 100;
     public float m_minDistToAttack = 0.3f;
     public Transform[] m_attackAttatchPoints;
+    public delegate void damageEvent();
+    public event damageEvent damageEventHandler;
     
     //Only one tower per level also im tired and this makes it easier
     public static Tower instance = null;
@@ -42,8 +45,9 @@ public class Tower : MonoBehaviour
     public void AddDamage(int dmg)
     {
         m_health -= dmg;
-
-        if(m_health <= 0)
+        //Update the count and probability in the 4 particle systems
+        damageEventHandler?.Invoke();
+        if (m_health <= 0)
         {
             Debug.Log("GAME OVER!");
         }

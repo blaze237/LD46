@@ -7,6 +7,7 @@ TagManager:
   - LightSource
   - Scenary
   - TowerAttatch
+  - Sparks
   layers:
   - Default
   - TransparentFX
