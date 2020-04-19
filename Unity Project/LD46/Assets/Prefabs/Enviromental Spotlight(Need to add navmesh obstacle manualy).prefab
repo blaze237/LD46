@@ -1966,9 +1966,10 @@ MonoBehaviour:
   m_realTimeUpdate: 1
   m_radialToleranceScale: 0.75
   m_rangeToleranceScale: 0.9
+  navmeshObstabcle: {fileID: 8800441366496998160}
   m_layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!208 &8800441366496998160
 NavMeshObstacle:
   m_ObjectHideFlags: 0
