@@ -50,7 +50,7 @@ public class EnemyState_Attack : NavAgentState
             }
 
         }
-        //If goal is player, just play anim and keep walking towards the player
+        //If goal is player, just play anim and keep walking towards the player (make enemies deal damage, its not instant death)
         else
         {
             m_agent.SetDestination(Player.instance.transform.position);

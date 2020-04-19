@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e2990278aeba98a4991a8ad038366a65
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - coffeePrefab: {fileID: 336908929768596582, guid: 7d57db9d35c6b70428aa472f692fafad,
+      type: 3}
+  - batteryPrefab: {fileID: 336908929768596582, guid: 44818e4429879fe47add424ec2810076,
+      type: 3}
+  - toolPrefab: {instanceID: 0}
+  - fuelPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
