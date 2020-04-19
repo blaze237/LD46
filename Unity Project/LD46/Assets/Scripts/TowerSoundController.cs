@@ -18,12 +18,13 @@ public class TowerSoundController : MonoBehaviour
     {
         for(int i = 0; i < 3; i++)
         {
-            newParticleCount[i] += particles[i].GetComponent<ParticleSystem>().particleCount;
+            newParticleCount[i] = particles[i].GetComponent<ParticleSystem>().particleCount;
             if(curParticleCount[i] < newParticleCount[i])
             {
                 MyEvent.Post(sounds[i]);
+                Debug.Log("Play Sound");
+                curParticleCount[i] = newParticleCount[i];
             }
-            curParticleCount[i] = newParticleCount[i];
         }
     }
 
