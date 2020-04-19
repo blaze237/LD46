@@ -5,7 +5,8 @@ using UnityEngine;
 public class TowerSoundController : MonoBehaviour
 {
     public GameObject[] particles, sounds;
-    private int[] curParticleCount, newParticleCount;
+    private int[] curParticleCount = new int[4];
+    private int[] newParticleCount = new int[4];
     public AK.Wwise.Event MyEvent;
 
     void Start()
