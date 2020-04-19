@@ -23,6 +23,10 @@ public class Player : MonoBehaviour
 
     }
 
+    public float Get2DDistToPlayer( Vector3 pos)
+    {
+        return Mathf.Abs((Utils.Project2D(transform.position) - Utils.Project2D(pos)).magnitude);
+    }
 
     // Start is called before the first frame update
     void Start()
