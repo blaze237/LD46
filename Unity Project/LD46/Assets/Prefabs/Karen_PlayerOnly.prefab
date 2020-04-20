@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 8328893296500458033}
   - component: {fileID: 8328893296500457999}
   - component: {fileID: 1323007607}
+  - component: {fileID: 8229454412039506722}
   m_Layer: 0
   m_Name: Karen_PlayerOnly
   m_TagString: Untagged
@@ -292,8 +293,8 @@ MonoBehaviour:
   m_seekRadius: 13.47
   m_playerAttackAnimRadius: 2.2
   m_speechRadius: 5
-  m_flameDmgPS: 33
-  m_playerDamage: 20
+  m_flameDmgPS: 100
+  m_playerDamage: 15
   m_lightSlowdownCurve:
     serializedVersion: 2
     m_Curve:
@@ -319,7 +320,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_seeksTower: 0
-  m_towerDamage: 5
+  m_towerDamage: 1
   m_attackRate: 1
   pickupSpawnChance: 0.5
   m_animator: {fileID: 8328893296509956534}
@@ -331,6 +332,21 @@ MonoBehaviour:
     type: 3}
   karenScreamAudioClips:
   - {fileID: 8300000, guid: 5d58efd5c26e73341a3bb7f1f1457cc0, type: 3}
+  - {fileID: 8300000, guid: 26bdf6976a01464488e8a61783d9f47f, type: 3}
+  - {fileID: 8300000, guid: 1b36a9533837caf43be04b72623a280d, type: 3}
+  - {fileID: 8300000, guid: cf0cd58464a751e49a6b4edf0d1c6a17, type: 3}
+  - {fileID: 8300000, guid: 90c4dbaf83019224c80ba7e215eab748, type: 3}
+  - {fileID: 8300000, guid: 9862836f728eed746b43fbd60e29a447, type: 3}
+  - {fileID: 8300000, guid: 78ba5173bebfdd04a937cb935a8022c9, type: 3}
+  - {fileID: 8300000, guid: 5e99baebb8deb26498a899b3a607c971, type: 3}
+  - {fileID: 8300000, guid: a8a0771b0e5a53a4b869c216010a9305, type: 3}
+  - {fileID: 8300000, guid: 4a590319ee58bd24b9de437bc64322e2, type: 3}
+  - {fileID: 8300000, guid: 27e368af79d234145bf8b1d7ce578f33, type: 3}
+  - {fileID: 8300000, guid: 94bc5f341d68ca440b56af14c9b0c05f, type: 3}
+  - {fileID: 8300000, guid: a10968a282779914ba664300512f2fd4, type: 3}
+  - {fileID: 8300000, guid: 38b179ebe06d8804881f9a0764a24bdb, type: 3}
+  - {fileID: 8300000, guid: 0b010a33394956f48a8a95bf2b2a8fa8, type: 3}
+  - {fileID: 8300000, guid: 62df0c5fd718611438bf4d82cb40c82e, type: 3}
 --- !u!114 &8328893296500457999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +374,20 @@ CapsuleCollider:
   m_Height: 2.97
   m_Direction: 1
   m_Center: {x: 0, y: 1.67, z: 0}
+--- !u!136 &8229454412039506722
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8328893296500458032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8328893296500458080
 GameObject:
   m_ObjectHideFlags: 0

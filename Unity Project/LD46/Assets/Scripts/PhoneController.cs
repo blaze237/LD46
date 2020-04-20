@@ -23,7 +23,7 @@ public class PhoneController : MonoBehaviour
     bool flameThrowerOutPlaying = false;
 
     [SerializeField] TextMeshProUGUI batteryPercentageText;
-    [SerializeField] float batteryPercentage = 100;
+    public float batteryPercentage = 100;
     [SerializeField] float batteryDrainTorch;
     [SerializeField] float batteryDrainFlameThrower;
 

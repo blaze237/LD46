@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory
 {
@@ -32,7 +33,7 @@ public class Player : MonoBehaviour
     public delegate void InventoryAddEvent();
     public event InventoryAddEvent m_inventoryAddEvent;
     public event EventHandler<InventoryUseEvent> m_inventoryUseEvent;
-
+    public PhoneController phone;
 
     public KeyCode m_toolsKey;
     public KeyCode m_fuelKey;
@@ -61,15 +62,13 @@ public class Player : MonoBehaviour
         switch(i_type)
         {
             case PickupType.Battery:
-                if(m_inventory.m_spareBattery)
+                if(phone.batteryPercentage == 100)
                 {
-                    Debug.Log("Cant hold anymore");
                     return false;
                 }
                 else
                 {
-                    m_inventory.m_spareBattery = true;
-                    m_inventoryAddEvent?.Invoke();
+                    phone.batteryPercentage += 66;
                     return true;
                 }
                 break;
@@ -124,6 +123,9 @@ public class Player : MonoBehaviour
         if(m_health <= 0)
         {
             m_deathEventHandler?.Invoke();
+
+            SceneManager.LoadScene(1);
+
         }
     }
 
