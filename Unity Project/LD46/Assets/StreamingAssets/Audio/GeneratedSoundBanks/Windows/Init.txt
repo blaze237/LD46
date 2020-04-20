@@ -13,16 +13,22 @@ Custom State	ID	Name	State Group	Owner		Notes
 	1039322180	Close	Space	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\KarenSteps		
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	77978275	Ambient			\Default Work Unit\Master Audio Bus\Ambient	
-	2242381963	Enemies			\Default Work Unit\Master Audio Bus\Enemies	
+	77978275	Ambient			\Default Work Unit\Master Audio Bus\SFX\Ambient	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	2151963051	Items			\Default Work Unit\Master Audio Bus\SFX\Items	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	4113933398	Zombies			\Default Work Unit\Master Audio Bus\Zombies	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+	4113933398	Zombies			\Default Work Unit\Master Audio Bus\SFX\Zombies	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2225273953	KarenSteps			\Default Work Unit\Master Audio Bus\KarenSteps	
+	2827677392	GeneralVerb			\Default Work Unit\Master Audio Bus\GeneralVerb	
 
 Effect plug-ins	ID	Name	Type				Notes
+	41163952	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
+	826038173	Wwise_Peak_Limiter_(Custom)	Wwise Peak Limiter			
 	2098638826	Underground_Parking1	Wwise Matrix Reverb			
+	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

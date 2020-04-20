@@ -1,15 +1,23 @@
 Event	ID	Name			Wwise Object Path	Notes
 	210502101	Stop_City_Bed			\Default Work Unit\Stop_City_Bed	
+	581921785	Play_Pickup_Coffee			\Default Work Unit\Play_Pickup_Coffee	
+	732558559	Play_FlamingBarrel_Loop			\Default Work Unit\Play_FlamingBarrel_Loop	
 	833498416	Play_Zombie_Small			\Default Work Unit\Play_Zombie_Small	
+	881265840	Play_RepairTower			\Default Work Unit\Play_RepairTower	
+	1100482298	Play_Phone_BatteryDead			\Default Work Unit\Play_Phone_BatteryDead	
 	1408766231	Play_ItemTest			\Default Work Unit\Play_ItemTest	
 	1725534455	Play_ZombieDan_Growl			\Default Work Unit\Play_ZombieDan_Growl	
 	1868838038	Play_Zombie_Medium			\Default Work Unit\Play_Zombie_Medium	
 	1966587683	Play_City_Bed			\Default Work Unit\Play_City_Bed	
 	2540355032	Play_Zombie_Large			\Default Work Unit\Play_Zombie_Large	
-	3033383690	Play_16___May_Contain_Metal			\Default Work Unit\Play_16___May_Contain_Metal	
 	3141342825	Play_PlayerTest			\Default Work Unit\Play_PlayerTest	
+	3202284035	Play_Pickup_Petrol			\Default Work Unit\Play_Pickup_Petrol	
 	3555340024	Play_Walking_Highheel			\Default Work Unit\Play_Walking_Highheel	
-	4029336046	Play_AmbientTest			\Default Work Unit\Play_AmbientTest	
+	3692090582	Play_Generator_Loop			\Default Work Unit\Play_Generator_Loop	
+	3711381197	Play_Music_Level01			\Default Work Unit\Play_Music_Level01	
+	3824269441	Stop_FlamingBarrel_Loop			\Default Work Unit\Stop_FlamingBarrel_Loop	
+	3837069120	Play_Phone_LowBattery			\Default Work Unit\Play_Phone_LowBattery	
+	4135255572	Play_Pickup_Battery			\Default Work Unit\Play_Pickup_Battery	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	4164838345	Space			\Default Work Unit\Space	
@@ -27,74 +35,89 @@ Custom State	ID	Name	State Group	Owner		Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2352475335	DistanceToListener			\Default Work Unit\DistanceToListener	
+	3613647679	m_health			\Default Work Unit\m_health	
 
 Modulator LFO	ID	Name			Wwise Object Path	Notes
 	134506193	Modulator LFO (Custom)				
 	794180488	Modulator LFO (Custom)				
+	1025699781	Modulator LFO (Custom)				
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	77978275	Ambient			\Default Work Unit\Master Audio Bus\Ambient	
-	2242381963	Enemies			\Default Work Unit\Master Audio Bus\Enemies	
+	77978275	Ambient			\Default Work Unit\Master Audio Bus\SFX\Ambient	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	2151963051	Items			\Default Work Unit\Master Audio Bus\SFX\Items	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	4113933398	Zombies			\Default Work Unit\Master Audio Bus\Zombies	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+	4113933398	Zombies			\Default Work Unit\Master Audio Bus\SFX\Zombies	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2225273953	KarenSteps			\Default Work Unit\Master Audio Bus\KarenSteps	
+	2827677392	GeneralVerb			\Default Work Unit\Master Audio Bus\GeneralVerb	
 
 Effect plug-ins	ID	Name	Type				Notes
+	41163952	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
+	826038173	Wwise_Peak_Limiter_(Custom)	Wwise Peak Limiter			
 	2098638826	Underground_Parking1	Wwise Matrix Reverb			
+	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	5115319	SFX_Zombies_Karen_Footsteps_Highheel-003	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-003		121724
-	16020796	Zombie_Dan_Attack02	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack02		337416
-	75008352	Zombie_Dan_Vo04	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Vo04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_VO\Zombie_Dan_Vo04		1066220
-	94812700	Zombie_Dan_Breath05	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath05		314188
-	192654587	Heavy_Groan	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Heavy_Groan_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Medium\Heavy_Groan		283036
-	202083177	Zombie_Dan_Vo03	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Vo03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_VO\Zombie_Dan_Vo03		658816
-	234651633	Growl_Low_03	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Growl_Low_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_L\Zombie_Large\Growl_Low_03		331508
-	292196221	SFX_Zombies_Karen_Footsteps_Highheel-013	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-013_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-013		112660
-	298892388	SFX_Zombies_SmallWheezy-003	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_SmallWheezy-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\SFX_Zombies_SmallWheezy-003		221748
-	303842946	Zombie_Dan_Vo02	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Vo02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_VO\Zombie_Dan_Vo02		652744
-	326925916	SFX_Zombies_Breathws-002	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Breathws-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieBreaths\SFX_Zombies_Breathws-002		441064
-	339986252	Zombie_Dan_Breath03	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath03		309612
-	348424282	SFX_Zombies_Breathws-001	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Breathws-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieBreaths\SFX_Zombies_Breathws-001		548488
-	348510821	Regular_Groan	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Regular_Groan_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\Regular_Groan		193588
-	368267345	CracklingCandle01	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\CracklingCandle01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Candle\CracklingCandle01		8040512
-	371315687	Zombie_Dan_Attack03	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack03		145020
-	375541479	SFX_Zombies_Karen_Footsteps_Highheel-001	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-001		120644
-	403026170	Zombie_Dan_Attack06	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack06		181316
-	425963128	Growl_Low_Distorted_01	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Growl_Low_Distorted_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_L\Zombie_Large\Growl_Low_Distorted_01		343376
-	467159636	LiquidNitrogen001	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\LiquidNitrogen001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\ItemTest\LiquidNitrogen001		3113024
-	469163079	SFX_Zombies_Karen_Footsteps_Highheel-008	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-008		68820
-	526832504	SFX_Zombies_SmallWheezy-002	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_SmallWheezy-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\SFX_Zombies_SmallWheezy-002		292344
-	528755332	SFX_Zombies_Karen_Footsteps_Highheel-002	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-002		115812
-	537716121	ClockAtHome	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\ClockAtHome_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerTest\ClockAtHome		5079104
-	550358003	SFX_Zombies_SmallWheezy-004	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_SmallWheezy-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\SFX_Zombies_SmallWheezy-004		276856
-	582025657	SFX_Zombies_Karen_Footsteps_Highheel-007	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-007		118012
-	599785755	Zombie_Dan_Breath02	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath02		414948
-	625413609	SFX_Zombies_Karen_Footsteps_Highheel-010	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-010		116360
-	628433307	Zombie_Dan_Attack04	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack04		161476
-	650368793	Zombie_Dan_Attack01	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack01		226840
-	724929602	SFX_Ambiant_City_Snippets	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_City_Snippets_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\City_Bed\City_Bed_InsideBuilding\SFX_Ambiant_City_Snippets		10384780
-	747442835	SFX_Zombies_SmallWheezy-001	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_SmallWheezy-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\SFX_Zombies_SmallWheezy-001		278748
-	762929217	SFX_Zombies_MediumGrowl	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_MediumGrowl_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Medium\SFX_Zombies_MediumGrowl		201264
-	778438487	Zombie_Dan_Growl03	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Growl03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Growl\Zombie_Dan_Growl03		241860
-	787282806	SFX_Zombies_LargeLow	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_LargeLow_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_L\Zombie_Large\SFX_Zombies_LargeLow		264664
-	811396828	SFX_Zombies_Karen_Footsteps_Highheel-009	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-009		98104
-	825543494	Zombie_Dan_Breath01	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath01		217760
-	858875697	SFX_Zombies_Karen_Footsteps_Highheel-012	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-012_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-012		108132
-	877864922	SFX_Zombies_Karen_Footsteps_Highheel-005	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-005		102376
-	905713032	Zombie_Dan_Growl02	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Growl02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Growl\Zombie_Dan_Growl02		531404
-	909396024	Zombie_Dan_Growl01	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Growl01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Growl\Zombie_Dan_Growl01		266352
-	932819294	SFX_Zombies_Karen_Footsteps_Highheel-014	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-014_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-014		80640
-	933526619	SFX_Zombies_Karen_Footsteps_Highheel-011	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-011_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-011		111604
-	970133362	Zombie_Dan_Breath04	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath04		415728
-	1010657181	SFX_Zombies_Karen_Footsteps_Highheel-006	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-006		124680
-	1012086124	Zombie_Dan_Attack05	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack05		235940
-	1063564733	SFX_Ambiant_City_Bed	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_City_Bed_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\City_Bed\City_Bed_Ambient\SFX_Ambiant_City_Bed		10404924
-	1065340141	Zombie_Dan_Vo01	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Vo01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_VO\Zombie_Dan_Vo01		402256
-	1073694619	SFX_Zombies_Karen_Footsteps_Highheel-004	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-004		129768
-
-Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	382291619	16 - May Contain Metal	G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\16 - May Contain Metal_D79FB2B7.wem	382291619.wem	\Interactive Music Hierarchy\Default Work Unit\Soundtrack\Frontend\16 - May Contain Metal\16 - May Contain Metal	
+	5115319	SFX_Zombies_Karen_Footsteps_Highheel-003	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-003		121724
+	16020796	Zombie_Dan_Attack02	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack02		337416
+	75008352	Zombie_Dan_Vo04	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Vo04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_VO\Zombie_Dan_Vo04		1066220
+	94812700	Zombie_Dan_Breath05	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath05		314188
+	100973030	SFX_Pickup_Battery	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Pickup_Battery_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Pickup_Battery\SFX_Pickup_Battery		165140
+	126944523	SFX_Phone_LowBattery	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Phone_LowBattery_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Phone\Phone_LowBattery\SFX_Phone_LowBattery		240704
+	189853645	SFX_Phone_BAtteryDead	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Phone_BAtteryDead_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Phone\Phone_BatteryDead\SFX_Phone_BAtteryDead		387012
+	192654587	Heavy_Groan	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Heavy_Groan_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Medium\Heavy_Groan		283036
+	202083177	Zombie_Dan_Vo03	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Vo03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_VO\Zombie_Dan_Vo03		658816
+	234651633	Growl_Low_03	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Growl_Low_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_L\Zombie_Large\Growl_Low_03		331508
+	292196221	SFX_Zombies_Karen_Footsteps_Highheel-013	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-013_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-013		112660
+	298892388	SFX_Zombies_SmallWheezy-003	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_SmallWheezy-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\SFX_Zombies_SmallWheezy-003		221748
+	303842946	Zombie_Dan_Vo02	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Vo02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_VO\Zombie_Dan_Vo02		652744
+	320893332	SFX_Ambiant_Tower_CloseHum	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_Tower_CloseHum_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Generator\SFX_Ambiant_Tower_CloseHum		2909884
+	326925916	SFX_Zombies_Breathws-002	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Breathws-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieBreaths\SFX_Zombies_Breathws-002		441064
+	339986252	Zombie_Dan_Breath03	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath03		309612
+	348424282	SFX_Zombies_Breathws-001	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Breathws-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieBreaths\SFX_Zombies_Breathws-001		548488
+	348510821	Regular_Groan	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Regular_Groan_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\Regular_Groan		193588
+	357996694	SFX_Pickup_Petrol01	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Pickup_Petrol01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Pickup_Petrol\SFX_Pickup_Petrol01		176464
+	371315687	Zombie_Dan_Attack03	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack03		145020
+	375541479	SFX_Zombies_Karen_Footsteps_Highheel-001	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-001		120644
+	403026170	Zombie_Dan_Attack06	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack06		181316
+	425963128	Growl_Low_Distorted_01	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Growl_Low_Distorted_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_L\Zombie_Large\Growl_Low_Distorted_01		343376
+	469163079	SFX_Zombies_Karen_Footsteps_Highheel-008	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-008		68820
+	526832504	SFX_Zombies_SmallWheezy-002	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_SmallWheezy-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\SFX_Zombies_SmallWheezy-002		292344
+	528755332	SFX_Zombies_Karen_Footsteps_Highheel-002	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-002		115812
+	537716121	ClockAtHome	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\ClockAtHome_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerTest\ClockAtHome		5079104
+	539067718	SFX_Ambiant_Tower_FarPulse	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_Tower_FarPulse_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Generator\SFX_Ambiant_Tower_FarPulse		2910664
+	550358003	SFX_Zombies_SmallWheezy-004	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_SmallWheezy-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\SFX_Zombies_SmallWheezy-004		276856
+	582025657	SFX_Zombies_Karen_Footsteps_Highheel-007	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-007		118012
+	599785755	Zombie_Dan_Breath02	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath02		414948
+	625413609	SFX_Zombies_Karen_Footsteps_Highheel-010	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-010		116360
+	628433307	Zombie_Dan_Attack04	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack04		161476
+	648530964	SFX_Pickup_Petrol02	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Pickup_Petrol02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Pickup_Petrol\SFX_Pickup_Petrol02		132364
+	650368793	Zombie_Dan_Attack01	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack01		226840
+	673415670	SFX_Ambiant_GeneratorRepair	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_GeneratorRepair_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\RepairTower\SFX_Ambiant_GeneratorRepair		283392
+	724929602	SFX_Ambiant_City_Snippets	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_City_Snippets_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\City_Bed\City_Bed_InsideBuilding\SFX_Ambiant_City_Snippets		10384780
+	747442835	SFX_Zombies_SmallWheezy-001	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_SmallWheezy-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Small\SFX_Zombies_SmallWheezy-001		278748
+	762929217	SFX_Zombies_MediumGrowl	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_MediumGrowl_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_Medium\SFX_Zombies_MediumGrowl		201264
+	778438487	Zombie_Dan_Growl03	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Growl03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Growl\Zombie_Dan_Growl03		241860
+	787282806	SFX_Zombies_LargeLow	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_LargeLow_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Zombie_L\Zombie_Large\SFX_Zombies_LargeLow		264664
+	794325641	SFX_Ambiant_Tower_MediumHum	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_Tower_MediumHum_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Generator\SFX_Ambiant_Tower_MediumHum		2910664
+	796793075	SFX_Ambiant_FlameBarrel	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_FlameBarrel_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\FlamingBarrel\SFX_Ambiant_FlameBarrel		2910664
+	811396828	SFX_Zombies_Karen_Footsteps_Highheel-009	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-009		98104
+	825543494	Zombie_Dan_Breath01	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath01		217760
+	858875697	SFX_Zombies_Karen_Footsteps_Highheel-012	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-012_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-012		108132
+	877864922	SFX_Zombies_Karen_Footsteps_Highheel-005	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-005		102376
+	905713032	Zombie_Dan_Growl02	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Growl02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Growl\Zombie_Dan_Growl02		531404
+	909396024	Zombie_Dan_Growl01	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Growl01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Growl\Zombie_Dan_Growl01		266352
+	920163750	SFX_Pickup_Coffee	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Pickup_Coffee_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Pickup_Coffee\SFX_Pickup_Coffee		65224
+	932819294	SFX_Zombies_Karen_Footsteps_Highheel-014	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-014_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-014		80640
+	933526619	SFX_Zombies_Karen_Footsteps_Highheel-011	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-011_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-011		111604
+	970133362	Zombie_Dan_Breath04	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Breath04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Breath\Zombie_Dan_Breath04		415728
+	1010657181	SFX_Zombies_Karen_Footsteps_Highheel-006	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-006		124680
+	1012086124	Zombie_Dan_Attack05	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Attack05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_Attack\Zombie_Dan_Attack05		235940
+	1058532448	MainThemeMaster	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\MainThemeMaster_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Soundtrack\Level01\MainThemeMaster1st\MainThemeMaster		22519212
+	1063564733	SFX_Ambiant_City_Bed	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Ambiant_City_Bed_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\City_Bed\City_Bed_Ambient\SFX_Ambiant_City_Bed		10404924
+	1065340141	Zombie_Dan_Vo01	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\Zombie_Dan_Vo01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\ZombieDan\ZombieDan_VO\Zombie_Dan_Vo01		402256
+	1073694619	SFX_Zombies_Karen_Footsteps_Highheel-004	C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\SFX\SFX_Zombies_Karen_Footsteps_Highheel-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Zombies\Karen\Walking_Highheel\SFX_Zombies_Karen_Footsteps_Highheel-004		129768
 
