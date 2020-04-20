@@ -159,27 +159,21 @@ public class EnemyAI : MonoBehaviour
 
         m_agent.speed = m_baseNavSpeed;
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            OnDeath();
-            
-        }
-
         //Check for the presence of light
         if (m_lightDetectionSystem.IsIlluminated())
         {
             //If player light, then move into frozen state
             if (m_lightDetectionSystem.QueryFlags(LightEffectType.Burn))
             {
-                OnDeath();
 
-                //m_tSinceDmg += Time.deltaTime;
-                //if(m_tSinceDmg >= 1)
-                //{
-                //    TakeDamage();
-                //    m_tSinceDmg = 0;
-                //}
-                
+
+                m_tSinceDmg += Time.deltaTime;
+                if (m_tSinceDmg >= 1)
+                {
+                    TakeDamage();
+                    m_tSinceDmg = 0;
+                }
+
             }
             else if (m_lightDetectionSystem.QueryFlags(LightEffectType.Stop))
             {
