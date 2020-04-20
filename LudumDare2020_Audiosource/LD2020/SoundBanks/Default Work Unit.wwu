@@ -9,6 +9,7 @@
 						<ObjectRef Name="Play_Zombie" ID="{738973D7-6C46-413E-8FFA-AF3435F08CAC}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ZombieDan_Growl" ID="{6E401BF4-A3F1-41B5-8564-4D7D38934568}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Pickup_Petrol" ID="{7D5A2B77-F2D2-4202-9B0D-70A179119B3E}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Interactive Music Hierarchy" ID="{49FED366-B530-42A8-993B-924873AAB707}" WorkUnitID="{49FED366-B530-42A8-993B-924873AAB707}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Zombies" ID="{98B94D20-7A5F-4336-AA95-01824953964A}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ItemTest" ID="{FCF3A647-D013-437D-BD2B-9C2401490B46}" WorkUnitID="{D6779582-F709-4F10-A394-A56611643C90}" Origin="Manual" Filter="7"/>

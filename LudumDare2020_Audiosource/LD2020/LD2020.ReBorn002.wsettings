@@ -90,7 +90,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_11_0" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_11_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_12_0" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value="SmbDcztiBESI7Ukg9Fu1Suw8Kc0v4i9En9n0erYzEP/tEdUeYZp5Tb78E+OMVINE"/>
+				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value="PMCgvd02tEOOVNA9cbGmnUpmw3M7YgREiO1JIPRbtUrsPCnNL+IvRJ/Z9Hq2MxD/wwKktVJCyEaSrwsFFPX/9dMbeHnGm9hIqIDNWhoO/G/tEdUeYZp5Tb78E+OMVINEfyz/WmhYFE6Yx+XQKqunKQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_13_0" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_13_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_14_0" Type="string" Value=""/>
@@ -106,13 +106,13 @@
 				<Property Name="ProjectExplorer\x64_Expanded_19_0" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_19_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_1_0" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="2KQUFaYdKkGhfnXKDCFJ83jY5vv6MHhDvuxafo3ba84="/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_0" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_0" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_2_0" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="5yheri1e20SEAqN1z7wimlThpFDWPMlGjBtoUZd1vT38a7J1eWKeSJ54+fU7HH6HJwaCQ327OkmRvUzWOoPbbw93m5xET2JJmiZtR4+xNhKJghyyIBgxS6JA5jf1P2kqlApSGwh8b06ZizNq0zQ5woMi7V8qVqROsJF80EarEdw="/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_0" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="gpV31gn3EE+jlKVmEWQ8kA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_0" Type="string" Value=""/>
@@ -122,15 +122,18 @@
 				<Property Name="ProjectExplorer\x64_Expanded_6_0" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value="4Z32sGBBrEWvaxVUH87JTA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_0" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value="pQDQ7fYvpE2ONjTz4dKUZQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_0" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
-				<Property Name="RTPC\GameParameterSimValue\{249D89D0-03E9-46B6-909F-28B49DB89E23}" Type="Real64" Value="0"/>
+				<Property Name="RTPC\GameParameterSimValue\{07560890-5A98-425B-84F9-B6947A3FEA1F}" Type="Real64" Value="100"/>
+				<Property Name="RTPC\GameParameterSimValue\{249D89D0-03E9-46B6-909F-28B49DB89E23}" Type="Real64" Value="63"/>
+				<Property Name="SettingsUserOverride" Type="bool" Value="True"/>
 				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value="4Z32sGBBrEWvaxVUH87JTA=="/>
-				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
+				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True"/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
-						<Value Platform="Windows">C:\Users\ReBorn002\Documents\GitHub\New folder\Unity Project\LD46\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Windows">..\..\Unity Project\LD46\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
@@ -153,6 +156,7 @@
 						<Value Platform="Windows"></Value>
 					</ValueList>
 				</Property>
+				<Property Name="Soundcaster\PreviousSession" Type="string" Value="{4BC7C5CC-C6E7-44B3-A5A9-8664314192EE}"/>
 			</PropertyList>
 		</UserProjectSettings>
 	</UserProjectSettingsInfo>

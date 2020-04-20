@@ -3,7 +3,7 @@
 	<RootPaths>
 		<ProjectRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\</ProjectRoot>
 		<SourceFilesRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\Unity Project\LD46\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<SoundBanksRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
@@ -16,7 +16,7 @@
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1966587683" Name="Play_City_Bed" ObjectPath="\Events\Default Work Unit\Play_City_Bed" DurationType="Infinite">
+				<Event Id="1966587683" Name="Play_City_Bed" ObjectPath="\Events\Default Work Unit\Play_City_Bed">
 					<IncludedMemoryFiles>
 						<File Id="724929602" Language="SFX">
 							<ShortName>SFX_Ambiant_City_Snippets.wav</ShortName>
@@ -28,7 +28,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="732558559" Name="Play_FlamingBarrel_Loop" ObjectPath="\Events\Default Work Unit\Play_FlamingBarrel_Loop" MaxAttenuation="100.000000" DurationType="Infinite">
+				<Event Id="732558559" Name="Play_FlamingBarrel_Loop" ObjectPath="\Events\Default Work Unit\Play_FlamingBarrel_Loop">
 					<IncludedMemoryFiles>
 						<File Id="796793075" Language="SFX">
 							<ShortName>SFX_Ambiant_FlameBarrel.wav</ShortName>
@@ -36,7 +36,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3692090582" Name="Play_Generator_Loop" ObjectPath="\Events\Default Work Unit\Play_Generator_Loop" MaxAttenuation="100.000000" DurationType="Infinite">
+				<Event Id="3692090582" Name="Play_Generator_Loop" ObjectPath="\Events\Default Work Unit\Play_Generator_Loop">
 					<IncludedMemoryFiles>
 						<File Id="320893332" Language="SFX">
 							<ShortName>SFX_Ambiant_Tower_CloseHum.wav</ShortName>
@@ -52,7 +52,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1408766231" Name="Play_ItemTest" ObjectPath="\Events\Default Work Unit\Play_ItemTest" MaxAttenuation="100.000000" DurationType="Infinite">
+				<Event Id="1408766231" Name="Play_ItemTest" ObjectPath="\Events\Default Work Unit\Play_ItemTest">
 					<IncludedMemoryFiles>
 						<File Id="796793075" Language="SFX">
 							<ShortName>SFX_Ambiant_FlameBarrel.wav</ShortName>
@@ -60,7 +60,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3711381197" Name="Play_Music_Level01" ObjectPath="\Events\Default Work Unit\Play_Music_Level01" DurationType="Infinite">
+				<Event Id="3711381197" Name="Play_Music_Level01" ObjectPath="\Events\Default Work Unit\Play_Music_Level01">
 					<IncludedMemoryFiles>
 						<File Id="1058532448" Language="SFX">
 							<ShortName>MainThemeMaster.wav</ShortName>
@@ -68,7 +68,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1100482298" Name="Play_Phone_BatteryDead" ObjectPath="\Events\Default Work Unit\Play_Phone_BatteryDead" DurationType="OneShot" DurationMin="2.193583" DurationMax="2.193583">
+				<Event Id="1100482298" Name="Play_Phone_BatteryDead" ObjectPath="\Events\Default Work Unit\Play_Phone_BatteryDead">
 					<IncludedMemoryFiles>
 						<File Id="189853645" Language="SFX">
 							<ShortName>SFX_Phone_BAtteryDead.wav</ShortName>
@@ -76,7 +76,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3837069120" Name="Play_Phone_LowBattery" ObjectPath="\Events\Default Work Unit\Play_Phone_LowBattery" DurationType="OneShot" DurationMin="1.364172" DurationMax="1.364172">
+				<Event Id="3837069120" Name="Play_Phone_LowBattery" ObjectPath="\Events\Default Work Unit\Play_Phone_LowBattery">
 					<IncludedMemoryFiles>
 						<File Id="126944523" Language="SFX">
 							<ShortName>SFX_Phone_LowBattery.wav</ShortName>
@@ -84,7 +84,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4135255572" Name="Play_Pickup_Battery" ObjectPath="\Events\Default Work Unit\Play_Pickup_Battery" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.909164" DurationMax="0.963226">
+				<Event Id="4135255572" Name="Play_Pickup_Battery" ObjectPath="\Events\Default Work Unit\Play_Pickup_Battery">
 					<IncludedMemoryFiles>
 						<File Id="100973030" Language="SFX">
 							<ShortName>SFX_Pickup_Battery.wav</ShortName>
@@ -92,7 +92,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="581921785" Name="Play_Pickup_Coffee" ObjectPath="\Events\Default Work Unit\Play_Pickup_Coffee" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.329087" DurationMax="0.348656">
+				<Event Id="581921785" Name="Play_Pickup_Coffee" ObjectPath="\Events\Default Work Unit\Play_Pickup_Coffee">
 					<IncludedMemoryFiles>
 						<File Id="920163750" Language="SFX">
 							<ShortName>SFX_Pickup_Coffee.wav</ShortName>
@@ -100,7 +100,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3202284035" Name="Play_Pickup_Petrol" ObjectPath="\Events\Default Work Unit\Play_Pickup_Petrol" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.741386" DurationMax="1.000000">
+				<Event Id="3202284035" Name="Play_Pickup_Petrol" ObjectPath="\Events\Default Work Unit\Play_Pickup_Petrol">
 					<IncludedMemoryFiles>
 						<File Id="357996694" Language="SFX">
 							<ShortName>SFX_Pickup_Petrol01.wav</ShortName>
@@ -112,7 +112,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3141342825" Name="Play_PlayerTest" ObjectPath="\Events\Default Work Unit\Play_PlayerTest" DurationType="OneShot" DurationMin="26.453333" DurationMax="26.453333">
+				<Event Id="3141342825" Name="Play_PlayerTest" ObjectPath="\Events\Default Work Unit\Play_PlayerTest">
 					<IncludedMemoryFiles>
 						<File Id="537716121" Language="SFX">
 							<ShortName>ClockAtHome.WAV</ShortName>
@@ -120,7 +120,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="881265840" Name="Play_RepairTower" ObjectPath="\Events\Default Work Unit\Play_RepairTower" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="1.559542" DurationMax="1.629530">
+				<Event Id="881265840" Name="Play_RepairTower" ObjectPath="\Events\Default Work Unit\Play_RepairTower">
 					<IncludedMemoryFiles>
 						<File Id="673415670" Language="SFX">
 							<ShortName>SFX_Ambiant_GeneratorRepair.wav</ShortName>
@@ -128,7 +128,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3555340024" Name="Play_Walking_Highheel" ObjectPath="\Events\Default Work Unit\Play_Walking_Highheel" MaxAttenuation="60.000000" DurationType="Infinite">
+				<Event Id="3555340024" Name="Play_Walking_Highheel" ObjectPath="\Events\Default Work Unit\Play_Walking_Highheel">
 					<IncludedMemoryFiles>
 						<File Id="5115319" Language="SFX">
 							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-003.wav</ShortName>
@@ -188,8 +188,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="246154100" Name="Play_Zombie" ObjectPath="\Events\Default Work Unit\Play_Zombie" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2540355032" Name="Play_Zombie_Large" ObjectPath="\Events\Default Work Unit\Play_Zombie_Large" MaxAttenuation="60.000000" DurationType="Infinite">
+				<Event Id="246154100" Name="Play_Zombie" ObjectPath="\Events\Default Work Unit\Play_Zombie"/>
+				<Event Id="2540355032" Name="Play_Zombie_Large" ObjectPath="\Events\Default Work Unit\Play_Zombie_Large">
 					<IncludedMemoryFiles>
 						<File Id="234651633" Language="SFX">
 							<ShortName>Growl_Low_03.wav</ShortName>
@@ -213,7 +213,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1868838038" Name="Play_Zombie_Medium" ObjectPath="\Events\Default Work Unit\Play_Zombie_Medium" MaxAttenuation="60.000000" DurationType="Infinite">
+				<Event Id="1868838038" Name="Play_Zombie_Medium" ObjectPath="\Events\Default Work Unit\Play_Zombie_Medium">
 					<IncludedMemoryFiles>
 						<File Id="192654587" Language="SFX">
 							<ShortName>Heavy_Groan.wav</ShortName>
@@ -233,7 +233,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="833498416" Name="Play_Zombie_Small" ObjectPath="\Events\Default Work Unit\Play_Zombie_Small" MaxAttenuation="60.000000" DurationType="Infinite">
+				<Event Id="833498416" Name="Play_Zombie_Small" ObjectPath="\Events\Default Work Unit\Play_Zombie_Small">
 					<IncludedMemoryFiles>
 						<File Id="298892388" Language="SFX">
 							<ShortName>SFX_Zombies_SmallWheezy-003.wav</ShortName>
@@ -265,7 +265,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1725534455" Name="Play_ZombieDan_Growl" ObjectPath="\Events\Default Work Unit\Play_ZombieDan_Growl" MaxAttenuation="60.000000" DurationType="Infinite">
+				<Event Id="1725534455" Name="Play_ZombieDan_Growl" ObjectPath="\Events\Default Work Unit\Play_ZombieDan_Growl">
 					<IncludedMemoryFiles>
 						<File Id="75008352" Language="SFX">
 							<ShortName>Zombie_Dan_Vo04.wav</ShortName>
@@ -317,7 +317,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2362011631" Name="Play_Zombies" ObjectPath="\Events\Default Work Unit\Play_Zombies" MaxAttenuation="60.000000" DurationType="Infinite">
+				<Event Id="2362011631" Name="Play_Zombies" ObjectPath="\Events\Default Work Unit\Play_Zombies">
 					<IncludedMemoryFiles>
 						<File Id="5115319" Language="SFX">
 							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-003.wav</ShortName>
@@ -497,8 +497,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="210502101" Name="Stop_City_Bed" ObjectPath="\Events\Default Work Unit\Stop_City_Bed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3824269441" Name="Stop_FlamingBarrel_Loop" ObjectPath="\Events\Default Work Unit\Stop_FlamingBarrel_Loop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="210502101" Name="Stop_City_Bed" ObjectPath="\Events\Default Work Unit\Stop_City_Bed"/>
+				<Event Id="3824269441" Name="Stop_FlamingBarrel_Loop" ObjectPath="\Events\Default Work Unit\Stop_FlamingBarrel_Loop"/>
 			</IncludedEvents>
 			<IncludedAuxBusses>
 				<AuxBus Id="2225273953" Name="KarenSteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\KarenSteps"/>
