@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df42de9b64d8fb41b2f0a566b1574e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phone: {fileID: 6687594287916254440}
   m_toolsKey: 49
   m_fuelKey: 50
   m_batteryKey: 51
@@ -880,12 +881,12 @@ PrefabInstance:
     - target: {fileID: -2535777748110689137, guid: 7dcd09cb4a1a06647917cc578ab717f8,
         type: 3}
       propertyPath: batteryDrainTorch
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -2535777748110689137, guid: 7dcd09cb4a1a06647917cc578ab717f8,
         type: 3}
       propertyPath: batteryDrainFlameThrower
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 488165473, guid: 7dcd09cb4a1a06647917cc578ab717f8, type: 3}
       propertyPath: m_Layer
@@ -982,6 +983,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 444076806859261109, guid: 7dcd09cb4a1a06647917cc578ab717f8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e02ca817925db14ca49c92da7e119ad,
+        type: 3}
     - target: {fileID: 444076806859261111, guid: 7dcd09cb4a1a06647917cc578ab717f8,
         type: 3}
       propertyPath: m_Layer
@@ -1180,3 +1187,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 866891879}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6687594287916254440 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -2535777748110689137, guid: 7dcd09cb4a1a06647917cc578ab717f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 866891879}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafa760006695e247bc4e11f486287d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
