@@ -69,17 +69,20 @@ public class EnemyState_Chase : NavAgentState
         if (Vector3.Distance(Player.instance.transform.position, m_owner.transform.position) >= m_owner.m_seekRadius && !m_owner.m_seeksTower)
         {
             m_sMachine.SetState(new EnemyState_Idle(m_sMachine, m_owner));
+            m_agent.isStopped = true;
         }
 
         //If goal type is player, move to attack state when reach min dist to player
         if (m_curGoalType == EnemyGoalType.Player && Vector3.Distance(Player.instance.transform.position, m_owner.transform.position) <= m_owner.m_playerAttackAnimRadius)
         {
             m_sMachine.SetState(new EnemyState_Attack(m_sMachine, m_owner, m_curGoalType));
+            m_agent.isStopped = true;
         }
         //Similar for tower
         else if(m_curGoalType == EnemyGoalType.Tower && m_owner.HasReachedTower())
         {
             m_sMachine.SetState(new EnemyState_Attack(m_sMachine, m_owner, m_curGoalType));
+            m_agent.isStopped = true;
         }
     }
 

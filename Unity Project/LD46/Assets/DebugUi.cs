@@ -24,7 +24,8 @@ public class DebugUi : MonoBehaviour
     {
         Inventory inventory = Player.instance.GetInventory();
 
-        txt.SetText("Tools: " + inventory.m_tools + "\nFuel: " + inventory.m_fuelCans + "\nSpareBattery: " + (inventory.m_spareBattery ? "Y" : "N"));
+        txt.SetText("Tools: " + inventory.m_tools + "\nFuel: " + inventory.m_fuelCans + "\nSpareBattery: " + (inventory.m_spareBattery ? "Y" : "N") + "\nHealth: " + Player.instance.GetHealth() + "\nTowerH: " + Tower.instance.m_health + "\nTowerF: " + Tower.instance.m_fuel);
+
      //   txt.
     }
 }

@@ -22,7 +22,7 @@ public class EnemySpawnPoint : MonoBehaviour
     public void OnEnemyKilled(object sender, EventArgs eventArgs)
     {
         m_enenmyKilled = true;
-        ((Pickup)sender).m_pickupCollectedEventHandler -= OnEnemyKilled;
+        ((EnemyAI)sender).m_enemyDeathEventHandler -= OnEnemyKilled;
     }
 
 

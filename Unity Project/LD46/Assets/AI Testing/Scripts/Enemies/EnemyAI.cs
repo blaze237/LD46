@@ -13,15 +13,18 @@ public class EnemyAI : MonoBehaviour
 {
     //How close can player get before the enemy will begin to seek out the player
     public float m_seekRadius = 10;
-    public float m_playerAttackAnimRadius = 5;
+    public float m_playerAttackAnimRadius = 1.5f;
     //How close should they get before starting their voice lines
     public float m_speechRadius = 5;
     public float m_tTillDeathFromLight = 5f;
     public AnimationCurve m_lightSlowdownCurve;
     public bool m_seeksTower = false;
-    public int m_towerDamage = 2;
+    public int m_towerDamage = 5;
+    public int m_playerDamage = 10;
     public float m_attackRate = 1;
+    public float pickupSpawnChance = 0.5f;
 
+    private int health = 100;
     public bool m_useLosCheck = false;
     //Y offset to apply before doing los checks to player. Needed for enemy avatars whos root is at the base of the model
     public float m_losVerticalOffset = 0;
@@ -40,6 +43,7 @@ public class EnemyAI : MonoBehaviour
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, m_seekRadius);
+        Gizmos.DrawWireSphere(transform.position, m_playerAttackAnimRadius);
     }
 
 
@@ -49,9 +53,9 @@ public class EnemyAI : MonoBehaviour
         //In order to set the enemies position freely, we must temporarily disable the object to prevent its position snapping according to navmesh
         gameObject.SetActive(false);
         transform.position = pos;
+        health = 100;
         gameObject.SetActive(true);
 
-        Debug.Log("INITIALISE HEALTH");
     }
 
     // Start is called before the first frame update
@@ -73,6 +77,37 @@ public class EnemyAI : MonoBehaviour
 
     }
 
+    void OnDeath()
+    {
+        float spwnChance = UnityEngine.Random.Range(0.0f, 1.0f);
+        if (spwnChance <= pickupSpawnChance)
+        {
+            //Chance to spawn a random pickup on enemy death
+            PickupType type = PickupType.Coffee;
+
+            int ind = UnityEngine.Random.Range(0, (int)PickupType.s_SIZE);
+            switch (ind)
+            {
+                case 0:
+                    type = PickupType.Coffee;
+                    break;
+                case 1:
+                    type = PickupType.Fuel;
+                    break;
+                case 2:
+                    type = PickupType.Battery;
+                    break;
+                case 3:
+                    type = PickupType.Tool;
+                    break;
+            }
+
+
+            Pickup pickup = PickupPoolManager.instance.GetPickup(type);
+            pickup.transform.position = transform.position;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -80,7 +115,9 @@ public class EnemyAI : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.P))
         {
+            OnDeath();
             m_enemyDeathEventHandler?.Invoke(this, new EventArgs());
+            gameObject.SetActive(false);
         }
 
         //Check for the presence of light

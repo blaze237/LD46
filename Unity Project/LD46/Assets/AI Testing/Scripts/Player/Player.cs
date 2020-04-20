@@ -46,6 +46,11 @@ public class Player : MonoBehaviour
     private bool m_nearTower = false;
 
 
+    public int GetHealth()
+    {
+        return m_health;
+    }
+
     public Inventory GetInventory()
     {
         return m_inventory;
@@ -58,6 +63,7 @@ public class Player : MonoBehaviour
             case PickupType.Battery:
                 if(m_inventory.m_spareBattery)
                 {
+                    Debug.Log("Cant hold anymore");
                     return false;
                 }
                 else
@@ -71,6 +77,7 @@ public class Player : MonoBehaviour
                 if(m_health != 0)
                 {
                     m_health += m_healthPackValue;
+                    m_health = Mathf.Min(m_health, 100);
                     m_inventoryAddEvent?.Invoke();
                     return true;
                 }
@@ -88,6 +95,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Cant hold anymore");
                     return false;
                 }
                 break;
@@ -100,6 +108,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Cant hold anymore");
                     return false;
                 }
                 break;
@@ -152,19 +161,50 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(m_toolsKey) && m_inventory.m_tools > 0)
             {
-                --m_inventory.m_tools;
-                m_inventoryUseEvent?.Invoke(this, new InventoryUseEvent(PickupType.Tool));
+                if (Tower.instance.AddHealth())
+                {
+                    --m_inventory.m_tools;
+                    m_inventoryUseEvent?.Invoke(this, new InventoryUseEvent(PickupType.Tool));
+                }
+                else
+                {
+                    Debug.Log("Tower at max health");
+                }
             }
             if (Input.GetKeyDown(m_fuelKey) & m_inventory.m_fuelCans > 0)
             {
-                --m_inventory.m_fuelCans;
-                m_inventoryUseEvent?.Invoke(this, new InventoryUseEvent(PickupType.Fuel));
+                if (Tower.instance.AddFuel())
+                {
+                    --m_inventory.m_fuelCans;
+                    m_inventoryUseEvent?.Invoke(this, new InventoryUseEvent(PickupType.Fuel));
+                }
+                else
+                {
+                    Debug.Log("Tower at max fuel");
+                }
             }
         }
         if (Input.GetKeyDown(m_batteryKey) && m_inventory.m_spareBattery)
         {
             m_inventory.m_spareBattery = false;
             m_inventoryUseEvent?.Invoke(this, new InventoryUseEvent(PickupType.Battery));
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("TowerUseRange"))
+        {
+            m_nearTower = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("TowerUseRange"))
+        {
+            m_nearTower = false;
         }
     }
 }

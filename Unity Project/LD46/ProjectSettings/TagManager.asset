@@ -9,6 +9,7 @@ TagManager:
   - TowerAttatch
   - Sparks
   - Scenery
+  - TowerUseRange
   layers:
   - Default
   - TransparentFX

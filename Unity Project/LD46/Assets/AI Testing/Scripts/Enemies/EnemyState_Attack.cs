@@ -23,10 +23,11 @@ public class EnemyState_Attack : NavAgentState
 
     public override void Execute(float i_dt)
     {
+        m_tSinceDmgDealt += i_dt;
+
         //If goal is tower, do some damage to it and keep walking till reach min dist
-        if(m_goalType == EnemyGoalType.Tower)
+        if (m_goalType == EnemyGoalType.Tower)
         {
-            m_tSinceDmgDealt += i_dt;
 
             if (Mathf.Abs((Utils.Project2D(Tower.instance.transform.position) - Utils.Project2D(m_owner.transform.position)).magnitude) > Tower.instance.m_minDistToAttack)
             {
@@ -53,15 +54,25 @@ public class EnemyState_Attack : NavAgentState
         //If goal is player, just play anim and keep walking towards the player (make enemies deal damage, its not instant death)
         else
         {
-            m_agent.SetDestination(Player.instance.transform.position);
-
+            //Face model towards the target
+            Vector3 viewTarget =  Player.instance.transform.position;
+            var modelDir = Utils.Project2D(viewTarget) - Utils.Project2D(m_owner.transform.position);
+            if (modelDir != Vector2.zero)
+            {
+                m_owner.transform.forward = Utils.Project3D(modelDir);
+            }
 
             //Player has escaped attack radius
             if (Player.instance.Get2DDistToPlayer(m_owner.transform.position) > m_owner.m_playerAttackAnimRadius)
             {
                 m_sMachine.SetState(new EnemyState_Chase(m_sMachine, m_owner));
             }
-
+            if (m_tSinceDmgDealt > m_owner.m_attackRate)
+            {
+                // m_agent.SetDestination(Player.instance.transform.position);
+                Player.instance.DoDamage(m_owner.m_playerDamage);
+                m_tSinceDmgDealt = 0;
+            }
 
         }
 
