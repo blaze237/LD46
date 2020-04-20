@@ -112,6 +112,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4711345218979916416, guid: 052a796d82bf929478551466b3154c9e,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711345218979916416, guid: 052a796d82bf929478551466b3154c9e,
+        type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4711345218979916417, guid: 052a796d82bf929478551466b3154c9e,
         type: 3}
       propertyPath: m_Name

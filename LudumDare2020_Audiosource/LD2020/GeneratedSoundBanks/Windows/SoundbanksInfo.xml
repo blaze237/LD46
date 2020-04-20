@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\</ProjectRoot>
-		<SourceFilesRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>G:\Unity\GameJam\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles>
-		<File Id="382291619" Language="SFX">
-			<ShortName>16 - May Contain Metal.wav</ShortName>
-			<Path>SFX\16 - May Contain Metal_D79FB2B7.wem</Path>
-		</File>
-	</StreamedFiles>
+	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
 		<SoundBank Id="534561221" Language="SFX">
@@ -21,22 +16,6 @@
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3033383690" Name="Play_16___May_Contain_Metal" ObjectPath="\Events\Default Work Unit\Play_16___May_Contain_Metal" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="64.401566" DurationMax="64.401566">
-					<ReferencedStreamedFiles>
-						<File Id="382291619" Language="SFX">
-							<ShortName>16 - May Contain Metal.wav</ShortName>
-							<Path>SFX\16 - May Contain Metal_D79FB2B7.wem</Path>
-						</File>
-					</ReferencedStreamedFiles>
-				</Event>
-				<Event Id="4029336046" Name="Play_AmbientTest" ObjectPath="\Events\Default Work Unit\Play_AmbientTest" DurationType="OneShot" DurationMin="41.877335" DurationMax="41.877335">
-					<IncludedMemoryFiles>
-						<File Id="368267345" Language="SFX">
-							<ShortName>CracklingCandle01.WAV</ShortName>
-							<Path>SFX\CracklingCandle01_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
 				<Event Id="1966587683" Name="Play_City_Bed" ObjectPath="\Events\Default Work Unit\Play_City_Bed" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="724929602" Language="SFX">
@@ -49,11 +28,87 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1408766231" Name="Play_ItemTest" ObjectPath="\Events\Default Work Unit\Play_ItemTest" DurationType="OneShot" DurationMin="17.647165" DurationMax="17.647165">
+				<Event Id="732558559" Name="Play_FlamingBarrel_Loop" ObjectPath="\Events\Default Work Unit\Play_FlamingBarrel_Loop" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="467159636" Language="SFX">
-							<ShortName>LiquidNitrogen001.WAV</ShortName>
-							<Path>SFX\LiquidNitrogen001_10C4C929.wem</Path>
+						<File Id="796793075" Language="SFX">
+							<ShortName>SFX_Ambiant_FlameBarrel.wav</ShortName>
+							<Path>SFX\SFX_Ambiant_FlameBarrel_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3692090582" Name="Play_Generator_Loop" ObjectPath="\Events\Default Work Unit\Play_Generator_Loop" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="320893332" Language="SFX">
+							<ShortName>SFX_Ambiant_Tower_CloseHum.wav</ShortName>
+							<Path>SFX\SFX_Ambiant_Tower_CloseHum_D79FB2B7.wem</Path>
+						</File>
+						<File Id="539067718" Language="SFX">
+							<ShortName>SFX_Ambiant_Tower_FarPulse.wav</ShortName>
+							<Path>SFX\SFX_Ambiant_Tower_FarPulse_10C4C929.wem</Path>
+						</File>
+						<File Id="794325641" Language="SFX">
+							<ShortName>SFX_Ambiant_Tower_MediumHum.wav</ShortName>
+							<Path>SFX\SFX_Ambiant_Tower_MediumHum_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1408766231" Name="Play_ItemTest" ObjectPath="\Events\Default Work Unit\Play_ItemTest" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="796793075" Language="SFX">
+							<ShortName>SFX_Ambiant_FlameBarrel.wav</ShortName>
+							<Path>SFX\SFX_Ambiant_FlameBarrel_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3711381197" Name="Play_Music_Level01" ObjectPath="\Events\Default Work Unit\Play_Music_Level01" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1058532448" Language="SFX">
+							<ShortName>MainThemeMaster.wav</ShortName>
+							<Path>SFX\MainThemeMaster_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1100482298" Name="Play_Phone_BatteryDead" ObjectPath="\Events\Default Work Unit\Play_Phone_BatteryDead" DurationType="OneShot" DurationMin="2.193583" DurationMax="2.193583">
+					<IncludedMemoryFiles>
+						<File Id="189853645" Language="SFX">
+							<ShortName>SFX_Phone_BAtteryDead.wav</ShortName>
+							<Path>SFX\SFX_Phone_BAtteryDead_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3837069120" Name="Play_Phone_LowBattery" ObjectPath="\Events\Default Work Unit\Play_Phone_LowBattery" DurationType="OneShot" DurationMin="1.364172" DurationMax="1.364172">
+					<IncludedMemoryFiles>
+						<File Id="126944523" Language="SFX">
+							<ShortName>SFX_Phone_LowBattery.wav</ShortName>
+							<Path>SFX\SFX_Phone_LowBattery_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4135255572" Name="Play_Pickup_Battery" ObjectPath="\Events\Default Work Unit\Play_Pickup_Battery" DurationType="OneShot" DurationMin="0.909164" DurationMax="0.963226">
+					<IncludedMemoryFiles>
+						<File Id="100973030" Language="SFX">
+							<ShortName>SFX_Pickup_Battery.wav</ShortName>
+							<Path>SFX\SFX_Pickup_Battery_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="581921785" Name="Play_Pickup_Coffee" ObjectPath="\Events\Default Work Unit\Play_Pickup_Coffee" DurationType="OneShot" DurationMin="0.358872" DurationMax="0.380212">
+					<IncludedMemoryFiles>
+						<File Id="920163750" Language="SFX">
+							<ShortName>SFX_Pickup_Coffee.wav</ShortName>
+							<Path>SFX\SFX_Pickup_Coffee_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3202284035" Name="Play_Pickup_Petrol" ObjectPath="\Events\Default Work Unit\Play_Pickup_Petrol" DurationType="OneShot" DurationMin="0.741386" DurationMax="1.000000">
+					<IncludedMemoryFiles>
+						<File Id="357996694" Language="SFX">
+							<ShortName>SFX_Pickup_Petrol01.wav</ShortName>
+							<Path>SFX\SFX_Pickup_Petrol01_10C4C929.wem</Path>
+						</File>
+						<File Id="648530964" Language="SFX">
+							<ShortName>SFX_Pickup_Petrol02.wav</ShortName>
+							<Path>SFX\SFX_Pickup_Petrol02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -62,6 +117,14 @@
 						<File Id="537716121" Language="SFX">
 							<ShortName>ClockAtHome.WAV</ShortName>
 							<Path>SFX\ClockAtHome_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="881265840" Name="Play_RepairTower" ObjectPath="\Events\Default Work Unit\Play_RepairTower" DurationType="OneShot" DurationMin="1.559542" DurationMax="1.629530">
+					<IncludedMemoryFiles>
+						<File Id="673415670" Language="SFX">
+							<ShortName>SFX_Ambiant_GeneratorRepair.wav</ShortName>
+							<Path>SFX\SFX_Ambiant_GeneratorRepair_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -275,6 +338,18 @@
 					<ShortName>Zombie_Dan_Breath05.wav</ShortName>
 					<Path>SFX\Zombie_Dan_Breath05_10C4C929.wem</Path>
 				</File>
+				<File Id="100973030" Language="SFX">
+					<ShortName>SFX_Pickup_Battery.wav</ShortName>
+					<Path>SFX\SFX_Pickup_Battery_10C4C929.wem</Path>
+				</File>
+				<File Id="126944523" Language="SFX">
+					<ShortName>SFX_Phone_LowBattery.wav</ShortName>
+					<Path>SFX\SFX_Phone_LowBattery_10C4C929.wem</Path>
+				</File>
+				<File Id="189853645" Language="SFX">
+					<ShortName>SFX_Phone_BAtteryDead.wav</ShortName>
+					<Path>SFX\SFX_Phone_BAtteryDead_10C4C929.wem</Path>
+				</File>
 				<File Id="192654587" Language="SFX">
 					<ShortName>Heavy_Groan.wav</ShortName>
 					<Path>SFX\Heavy_Groan_10C4C929.wem</Path>
@@ -299,6 +374,10 @@
 					<ShortName>Zombie_Dan_Vo02.wav</ShortName>
 					<Path>SFX\Zombie_Dan_Vo02_10C4C929.wem</Path>
 				</File>
+				<File Id="320893332" Language="SFX">
+					<ShortName>SFX_Ambiant_Tower_CloseHum.wav</ShortName>
+					<Path>SFX\SFX_Ambiant_Tower_CloseHum_D79FB2B7.wem</Path>
+				</File>
 				<File Id="326925916" Language="SFX">
 					<ShortName>SFX_Zombies_Breathws-002.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Breathws-002_10C4C929.wem</Path>
@@ -315,9 +394,9 @@
 					<ShortName>Regular_Groan.wav</ShortName>
 					<Path>SFX\Regular_Groan_10C4C929.wem</Path>
 				</File>
-				<File Id="368267345" Language="SFX">
-					<ShortName>CracklingCandle01.WAV</ShortName>
-					<Path>SFX\CracklingCandle01_10C4C929.wem</Path>
+				<File Id="357996694" Language="SFX">
+					<ShortName>SFX_Pickup_Petrol01.wav</ShortName>
+					<Path>SFX\SFX_Pickup_Petrol01_10C4C929.wem</Path>
 				</File>
 				<File Id="371315687" Language="SFX">
 					<ShortName>Zombie_Dan_Attack03.wav</ShortName>
@@ -335,10 +414,6 @@
 					<ShortName>Growl_Low_Distorted_01.wav</ShortName>
 					<Path>SFX\Growl_Low_Distorted_01_10C4C929.wem</Path>
 				</File>
-				<File Id="467159636" Language="SFX">
-					<ShortName>LiquidNitrogen001.WAV</ShortName>
-					<Path>SFX\LiquidNitrogen001_10C4C929.wem</Path>
-				</File>
 				<File Id="469163079" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-008.wav</ShortName>
 					<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-008_10C4C929.wem</Path>
@@ -354,6 +429,10 @@
 				<File Id="537716121" Language="SFX">
 					<ShortName>ClockAtHome.WAV</ShortName>
 					<Path>SFX\ClockAtHome_10C4C929.wem</Path>
+				</File>
+				<File Id="539067718" Language="SFX">
+					<ShortName>SFX_Ambiant_Tower_FarPulse.wav</ShortName>
+					<Path>SFX\SFX_Ambiant_Tower_FarPulse_10C4C929.wem</Path>
 				</File>
 				<File Id="550358003" Language="SFX">
 					<ShortName>SFX_Zombies_SmallWheezy-004.wav</ShortName>
@@ -375,9 +454,17 @@
 					<ShortName>Zombie_Dan_Attack04.wav</ShortName>
 					<Path>SFX\Zombie_Dan_Attack04_10C4C929.wem</Path>
 				</File>
+				<File Id="648530964" Language="SFX">
+					<ShortName>SFX_Pickup_Petrol02.wav</ShortName>
+					<Path>SFX\SFX_Pickup_Petrol02_10C4C929.wem</Path>
+				</File>
 				<File Id="650368793" Language="SFX">
 					<ShortName>Zombie_Dan_Attack01.wav</ShortName>
 					<Path>SFX\Zombie_Dan_Attack01_10C4C929.wem</Path>
+				</File>
+				<File Id="673415670" Language="SFX">
+					<ShortName>SFX_Ambiant_GeneratorRepair.wav</ShortName>
+					<Path>SFX\SFX_Ambiant_GeneratorRepair_10C4C929.wem</Path>
 				</File>
 				<File Id="724929602" Language="SFX">
 					<ShortName>SFX_Ambiant_City_Snippets.wav</ShortName>
@@ -398,6 +485,14 @@
 				<File Id="787282806" Language="SFX">
 					<ShortName>SFX_Zombies_LargeLow.wav</ShortName>
 					<Path>SFX\SFX_Zombies_LargeLow_10C4C929.wem</Path>
+				</File>
+				<File Id="794325641" Language="SFX">
+					<ShortName>SFX_Ambiant_Tower_MediumHum.wav</ShortName>
+					<Path>SFX\SFX_Ambiant_Tower_MediumHum_10C4C929.wem</Path>
+				</File>
+				<File Id="796793075" Language="SFX">
+					<ShortName>SFX_Ambiant_FlameBarrel.wav</ShortName>
+					<Path>SFX\SFX_Ambiant_FlameBarrel_D79FB2B7.wem</Path>
 				</File>
 				<File Id="811396828" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-009.wav</ShortName>
@@ -422,6 +517,10 @@
 				<File Id="909396024" Language="SFX">
 					<ShortName>Zombie_Dan_Growl01.wav</ShortName>
 					<Path>SFX\Zombie_Dan_Growl01_10C4C929.wem</Path>
+				</File>
+				<File Id="920163750" Language="SFX">
+					<ShortName>SFX_Pickup_Coffee.wav</ShortName>
+					<Path>SFX\SFX_Pickup_Coffee_10C4C929.wem</Path>
 				</File>
 				<File Id="932819294" Language="SFX">
 					<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-014.wav</ShortName>
