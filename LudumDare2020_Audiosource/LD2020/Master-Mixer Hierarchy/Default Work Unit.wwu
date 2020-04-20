@@ -4,9 +4,35 @@
 		<WorkUnit Name="Default Work Unit" ID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{3F496636-B505-4F3B-9800-83F4A525C41B}" WorkUnitID="{06651077-A3B0-4E7C-9BD3-0C329B6FCCC1}"/>
+						</Reference>
+						<Reference Name="Effect0">
+							<Custom>
+								<Effect Name="Wwise_Peak_Limiter_(Custom)" ID="{62E1B501-199F-4BE3-AB65-24E3F91958DD}" ShortID="826038173" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+									<PropertyList>
+										<Property Name="Ratio" Type="Real32" Value="10.8"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
+						<Reference Name="Effect1">
+							<Custom>
+								<Effect Name="Wwise_Parametric_EQ_(Custom)" ID="{7BE048A7-5AF6-4583-BB93-D206FBE8892C}" ShortID="41163952" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<PropertyList>
+										<Property Name="GainBand2" Type="Real32" Value="1"/>
+										<Property Name="GainBand3" Type="Real32" Value="1"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -57,9 +83,67 @@
 								</CustomStateList>
 							</StateInfo>
 						</AuxBus>
-						<Bus Name="Ambient" ID="{5D256D92-E003-4EE7-B2F7-65F05B937E06}"/>
-						<Bus Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}"/>
-						<Bus Name="Enemies" ID="{61D3CBE7-DDF5-4FC7-9778-D425C90D60B6}"/>
+						<Bus Name="Music" ID="{4EC8286F-6BE9-4FF6-A7DD-63C95BC0A6F9}"/>
+						<AuxBus Name="GeneralVerb" ID="{EFE14AF8-3CAC-4FF4-8816-FA6EAD3A3291}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Room_Medium_High_Absorbtion" ID="{E22DBBB6-7656-4B93-A28D-C003FD416889}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<Bus Name="SFX" ID="{97255D7C-D428-46B4-BFB2-8EA0A6847E9B}">
+							<ChildrenList>
+								<Bus Name="Ambient" ID="{5D256D92-E003-4EE7-B2F7-65F05B937E06}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="GeneralVerb" ID="{EFE14AF8-3CAC-4FF4-8816-FA6EAD3A3291}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+										</Reference>
+									</ReferenceList>
+								</Bus>
+								<Bus Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="GeneralVerb" ID="{EFE14AF8-3CAC-4FF4-8816-FA6EAD3A3291}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+										</Reference>
+									</ReferenceList>
+								</Bus>
+								<Bus Name="Items" ID="{CF4A00C1-25BE-4E44-A802-96CD63B45D36}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="GeneralVerb" ID="{EFE14AF8-3CAC-4FF4-8816-FA6EAD3A3291}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+										</Reference>
+									</ReferenceList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

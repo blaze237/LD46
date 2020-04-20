@@ -28,7 +28,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="732558559" Name="Play_FlamingBarrel_Loop" ObjectPath="\Events\Default Work Unit\Play_FlamingBarrel_Loop" DurationType="Infinite">
+				<Event Id="732558559" Name="Play_FlamingBarrel_Loop" ObjectPath="\Events\Default Work Unit\Play_FlamingBarrel_Loop" MaxAttenuation="100.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="796793075" Language="SFX">
 							<ShortName>SFX_Ambiant_FlameBarrel.wav</ShortName>
@@ -36,7 +36,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3692090582" Name="Play_Generator_Loop" ObjectPath="\Events\Default Work Unit\Play_Generator_Loop" DurationType="Infinite">
+				<Event Id="3692090582" Name="Play_Generator_Loop" ObjectPath="\Events\Default Work Unit\Play_Generator_Loop" MaxAttenuation="100.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="320893332" Language="SFX">
 							<ShortName>SFX_Ambiant_Tower_CloseHum.wav</ShortName>
@@ -52,7 +52,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1408766231" Name="Play_ItemTest" ObjectPath="\Events\Default Work Unit\Play_ItemTest" DurationType="Infinite">
+				<Event Id="1408766231" Name="Play_ItemTest" ObjectPath="\Events\Default Work Unit\Play_ItemTest" MaxAttenuation="100.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="796793075" Language="SFX">
 							<ShortName>SFX_Ambiant_FlameBarrel.wav</ShortName>
@@ -84,7 +84,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4135255572" Name="Play_Pickup_Battery" ObjectPath="\Events\Default Work Unit\Play_Pickup_Battery" DurationType="OneShot" DurationMin="0.909164" DurationMax="0.963226">
+				<Event Id="4135255572" Name="Play_Pickup_Battery" ObjectPath="\Events\Default Work Unit\Play_Pickup_Battery" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.909164" DurationMax="0.963226">
 					<IncludedMemoryFiles>
 						<File Id="100973030" Language="SFX">
 							<ShortName>SFX_Pickup_Battery.wav</ShortName>
@@ -92,7 +92,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="581921785" Name="Play_Pickup_Coffee" ObjectPath="\Events\Default Work Unit\Play_Pickup_Coffee" DurationType="OneShot" DurationMin="0.358872" DurationMax="0.380212">
+				<Event Id="581921785" Name="Play_Pickup_Coffee" ObjectPath="\Events\Default Work Unit\Play_Pickup_Coffee" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.329087" DurationMax="0.348656">
 					<IncludedMemoryFiles>
 						<File Id="920163750" Language="SFX">
 							<ShortName>SFX_Pickup_Coffee.wav</ShortName>
@@ -100,7 +100,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3202284035" Name="Play_Pickup_Petrol" ObjectPath="\Events\Default Work Unit\Play_Pickup_Petrol" DurationType="OneShot" DurationMin="0.741386" DurationMax="1.000000">
+				<Event Id="3202284035" Name="Play_Pickup_Petrol" ObjectPath="\Events\Default Work Unit\Play_Pickup_Petrol" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.741386" DurationMax="1.000000">
 					<IncludedMemoryFiles>
 						<File Id="357996694" Language="SFX">
 							<ShortName>SFX_Pickup_Petrol01.wav</ShortName>
@@ -120,7 +120,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="881265840" Name="Play_RepairTower" ObjectPath="\Events\Default Work Unit\Play_RepairTower" DurationType="OneShot" DurationMin="1.559542" DurationMax="1.629530">
+				<Event Id="881265840" Name="Play_RepairTower" ObjectPath="\Events\Default Work Unit\Play_RepairTower" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="1.559542" DurationMax="1.629530">
 					<IncludedMemoryFiles>
 						<File Id="673415670" Language="SFX">
 							<ShortName>SFX_Ambiant_GeneratorRepair.wav</ShortName>
@@ -188,6 +188,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="246154100" Name="Play_Zombie" ObjectPath="\Events\Default Work Unit\Play_Zombie" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2540355032" Name="Play_Zombie_Large" ObjectPath="\Events\Default Work Unit\Play_Zombie_Large" MaxAttenuation="60.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="234651633" Language="SFX">
@@ -316,10 +317,192 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2362011631" Name="Play_Zombies" ObjectPath="\Events\Default Work Unit\Play_Zombies" MaxAttenuation="60.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="5115319" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-003.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-003_10C4C929.wem</Path>
+						</File>
+						<File Id="16020796" Language="SFX">
+							<ShortName>Zombie_Dan_Attack02.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Attack02_10C4C929.wem</Path>
+						</File>
+						<File Id="75008352" Language="SFX">
+							<ShortName>Zombie_Dan_Vo04.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Vo04_10C4C929.wem</Path>
+						</File>
+						<File Id="94812700" Language="SFX">
+							<ShortName>Zombie_Dan_Breath05.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath05_10C4C929.wem</Path>
+						</File>
+						<File Id="192654587" Language="SFX">
+							<ShortName>Heavy_Groan.wav</ShortName>
+							<Path>SFX\Heavy_Groan_10C4C929.wem</Path>
+						</File>
+						<File Id="202083177" Language="SFX">
+							<ShortName>Zombie_Dan_Vo03.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Vo03_10C4C929.wem</Path>
+						</File>
+						<File Id="234651633" Language="SFX">
+							<ShortName>Growl_Low_03.wav</ShortName>
+							<Path>SFX\Growl_Low_03_10C4C929.wem</Path>
+						</File>
+						<File Id="292196221" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-013.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-013_10C4C929.wem</Path>
+						</File>
+						<File Id="298892388" Language="SFX">
+							<ShortName>SFX_Zombies_SmallWheezy-003.wav</ShortName>
+							<Path>SFX\SFX_Zombies_SmallWheezy-003_10C4C929.wem</Path>
+						</File>
+						<File Id="303842946" Language="SFX">
+							<ShortName>Zombie_Dan_Vo02.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Vo02_10C4C929.wem</Path>
+						</File>
+						<File Id="326925916" Language="SFX">
+							<ShortName>SFX_Zombies_Breathws-002.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Breathws-002_10C4C929.wem</Path>
+						</File>
+						<File Id="339986252" Language="SFX">
+							<ShortName>Zombie_Dan_Breath03.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath03_10C4C929.wem</Path>
+						</File>
+						<File Id="348424282" Language="SFX">
+							<ShortName>SFX_Zombies_Breathws-001.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Breathws-001_10C4C929.wem</Path>
+						</File>
+						<File Id="348510821" Language="SFX">
+							<ShortName>Regular_Groan.wav</ShortName>
+							<Path>SFX\Regular_Groan_10C4C929.wem</Path>
+						</File>
+						<File Id="371315687" Language="SFX">
+							<ShortName>Zombie_Dan_Attack03.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Attack03_10C4C929.wem</Path>
+						</File>
+						<File Id="375541479" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-001.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-001_10C4C929.wem</Path>
+						</File>
+						<File Id="403026170" Language="SFX">
+							<ShortName>Zombie_Dan_Attack06.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Attack06_10C4C929.wem</Path>
+						</File>
+						<File Id="425963128" Language="SFX">
+							<ShortName>Growl_Low_Distorted_01.wav</ShortName>
+							<Path>SFX\Growl_Low_Distorted_01_10C4C929.wem</Path>
+						</File>
+						<File Id="469163079" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-008.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-008_10C4C929.wem</Path>
+						</File>
+						<File Id="526832504" Language="SFX">
+							<ShortName>SFX_Zombies_SmallWheezy-002.wav</ShortName>
+							<Path>SFX\SFX_Zombies_SmallWheezy-002_10C4C929.wem</Path>
+						</File>
+						<File Id="528755332" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-002.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-002_10C4C929.wem</Path>
+						</File>
+						<File Id="550358003" Language="SFX">
+							<ShortName>SFX_Zombies_SmallWheezy-004.wav</ShortName>
+							<Path>SFX\SFX_Zombies_SmallWheezy-004_10C4C929.wem</Path>
+						</File>
+						<File Id="582025657" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-007.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-007_10C4C929.wem</Path>
+						</File>
+						<File Id="599785755" Language="SFX">
+							<ShortName>Zombie_Dan_Breath02.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath02_10C4C929.wem</Path>
+						</File>
+						<File Id="625413609" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-010.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-010_10C4C929.wem</Path>
+						</File>
+						<File Id="628433307" Language="SFX">
+							<ShortName>Zombie_Dan_Attack04.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Attack04_10C4C929.wem</Path>
+						</File>
+						<File Id="650368793" Language="SFX">
+							<ShortName>Zombie_Dan_Attack01.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Attack01_10C4C929.wem</Path>
+						</File>
+						<File Id="747442835" Language="SFX">
+							<ShortName>SFX_Zombies_SmallWheezy-001.wav</ShortName>
+							<Path>SFX\SFX_Zombies_SmallWheezy-001_10C4C929.wem</Path>
+						</File>
+						<File Id="762929217" Language="SFX">
+							<ShortName>SFX_Zombies_MediumGrowl.wav</ShortName>
+							<Path>SFX\SFX_Zombies_MediumGrowl_10C4C929.wem</Path>
+						</File>
+						<File Id="778438487" Language="SFX">
+							<ShortName>Zombie_Dan_Growl03.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Growl03_10C4C929.wem</Path>
+						</File>
+						<File Id="787282806" Language="SFX">
+							<ShortName>SFX_Zombies_LargeLow.wav</ShortName>
+							<Path>SFX\SFX_Zombies_LargeLow_10C4C929.wem</Path>
+						</File>
+						<File Id="811396828" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-009.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-009_10C4C929.wem</Path>
+						</File>
+						<File Id="825543494" Language="SFX">
+							<ShortName>Zombie_Dan_Breath01.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath01_10C4C929.wem</Path>
+						</File>
+						<File Id="858875697" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-012.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-012_10C4C929.wem</Path>
+						</File>
+						<File Id="877864922" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-005.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-005_10C4C929.wem</Path>
+						</File>
+						<File Id="905713032" Language="SFX">
+							<ShortName>Zombie_Dan_Growl02.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Growl02_10C4C929.wem</Path>
+						</File>
+						<File Id="909396024" Language="SFX">
+							<ShortName>Zombie_Dan_Growl01.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Growl01_10C4C929.wem</Path>
+						</File>
+						<File Id="932819294" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-014.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-014_10C4C929.wem</Path>
+						</File>
+						<File Id="933526619" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-011.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-011_10C4C929.wem</Path>
+						</File>
+						<File Id="970133362" Language="SFX">
+							<ShortName>Zombie_Dan_Breath04.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Breath04_10C4C929.wem</Path>
+						</File>
+						<File Id="1010657181" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-006.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-006_10C4C929.wem</Path>
+						</File>
+						<File Id="1012086124" Language="SFX">
+							<ShortName>Zombie_Dan_Attack05.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Attack05_10C4C929.wem</Path>
+						</File>
+						<File Id="1065340141" Language="SFX">
+							<ShortName>Zombie_Dan_Vo01.wav</ShortName>
+							<Path>SFX\Zombie_Dan_Vo01_10C4C929.wem</Path>
+						</File>
+						<File Id="1073694619" Language="SFX">
+							<ShortName>SFX_Zombies_Karen_Footsteps_Highheel-004.wav</ShortName>
+							<Path>SFX\SFX_Zombies_Karen_Footsteps_Highheel-004_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="210502101" Name="Stop_City_Bed" ObjectPath="\Events\Default Work Unit\Stop_City_Bed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3824269441" Name="Stop_FlamingBarrel_Loop" ObjectPath="\Events\Default Work Unit\Stop_FlamingBarrel_Loop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedAuxBusses>
 				<AuxBus Id="2225273953" Name="KarenSteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\KarenSteps"/>
+				<AuxBus Id="2827677392" Name="GeneralVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\GeneralVerb"/>
 			</IncludedAuxBusses>
 			<IncludedMemoryFiles>
 				<File Id="5115319" Language="SFX">
@@ -557,6 +740,7 @@
 			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="2352475335" Name="DistanceToListener" ObjectPath="\Game Parameters\Default Work Unit\DistanceToListener"/>
+				<GameParameter Id="3613647679" Name="m_health" ObjectPath="\Game Parameters\Default Work Unit\m_health"/>
 			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
@@ -565,6 +749,7 @@
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
 				<AuxBus Id="2225273953" Name="KarenSteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\KarenSteps"/>
+				<AuxBus Id="2827677392" Name="GeneralVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\GeneralVerb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
 	</SoundBanks>

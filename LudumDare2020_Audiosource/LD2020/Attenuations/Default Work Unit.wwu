@@ -21,6 +21,11 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
+											<XPos>44.7649</XPos>
+											<YPos>-20.99065</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
 											<XPos>60</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
@@ -90,6 +95,49 @@
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
 								<Curve Name="VolumeDry" ID="{7B66406C-DDC6-444D-A060-FCA95FBECDB6}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="3"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>100</XPos>
+											<YPos>-200</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</VolumeDryUsage>
+						<VolumeWetGameUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetGameUsage>
+						<VolumeWetUserUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetUserUsage>
+						<LowPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</LowPassFilterUsage>
+						<HighPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</HighPassFilterUsage>
+						<SpreadUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</SpreadUsage>
+						<FocusUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</FocusUsage>
+					</CurveUsageInfoList>
+				</Attenuation>
+				<Attenuation Name="Items" ID="{DC2810A0-289E-4B94-A274-D6BCAA5256C9}" ShortID="1057585299">
+					<CurveUsageInfoList>
+						<VolumeDryUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="VolumeDry" ID="{6966E4E4-6031-4488-BFB7-96554222FD75}">
 									<PropertyList>
 										<Property Name="Flags" Type="int32" Value="3"/>
 									</PropertyList>

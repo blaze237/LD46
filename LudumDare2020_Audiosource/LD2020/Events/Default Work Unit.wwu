@@ -297,6 +297,49 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_FlamingBarrel_Loop" ID="{5110AA73-CA73-4903-B450-426EDCE649E8}">
+					<ChildrenList>
+						<Action Name="" ID="{015B4E19-ED69-4704-9169-3DB4490D57D7}" ShortID="527745308">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FlamingBarrel" ID="{F73E5C56-AF71-4EFF-8FF2-DFE95AB76096}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Zombie" ID="{738973D7-6C46-413E-8FFA-AF3435F08CAC}"/>
+				<Event Name="Play_Zombies" ID="{98B94D20-7A5F-4336-AA95-01824953964A}">
+					<ChildrenList>
+						<Action Name="" ID="{3D123D69-2B41-4BD8-A893-1A26DF5CD3CD}" ShortID="247537244">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Zombies" ID="{9C9B770F-4F44-4962-9A26-6D478FB13612}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E124EEDE-7CFB-435D-9F19-55B220D36431}" ShortID="579712559">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Walking_Highheel" ID="{B53805FE-577D-4273-AB9E-6DD0EC6D2B4D}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B634D851-1C70-420F-AB15-68D07128AECC}" ShortID="245938983">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="3.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZombieBreaths" ID="{B21C8289-1820-4B31-A240-E637F53F692A}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

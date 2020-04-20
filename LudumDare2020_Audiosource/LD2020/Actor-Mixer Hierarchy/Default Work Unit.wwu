@@ -78,6 +78,18 @@
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="City_Bed" ID="{42EB76BA-113B-4E72-B13F-ED6766B9CC16}" ShortID="1043706209">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
@@ -271,16 +283,171 @@
 				</ActorMixer>
 				<ActorMixer Name="Items" ID="{0D729546-C4D0-4AB5-BC81-437A47A21625}" ShortID="685198860">
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom>
+								<Attenuation Name="Attenuation (Custom)" ID="{23CBC59E-E477-4292-AB90-81A7BCAB7FDE}" ShortID="399477284">
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{6FEA5537-5B6C-4A2E-BEF2-EF646DBE4786}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+							<ObjectRef Name="Items" ID="{CF4A00C1-25BE-4E44-A802-96CD63B45D36}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="FlamingBarrel" ID="{F73E5C56-AF71-4EFF-8FF2-DFE95AB76096}" ShortID="229240995">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>280</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{79CB137D-EBF5-42B6-8605-1BF1C20DC267}"/>
+										</ModifierInfo>
+									</ModifierList>
+									<RTPCList>
+										<RTPC Name="" ID="{34CBF1B5-0FEB-45FA-AD1D-79708E27CF42}" ShortID="280659685">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<Custom>
+														<ModulatorLfo Name="Modulator LFO (Custom)" ID="{E7A129A4-1834-4F6F-BBF8-E5E9BF6762FF}" ShortID="1025699781">
+															<PropertyList>
+																<Property Name="LfoFrequency" Type="Real64" Value="0"/>
+															</PropertyList>
+														</ModulatorLfo>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{E53A5F38-3DDD-4D7D-ACCD-3112666B1C4E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-88</YPos>
+														<Flags>21</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>88</YPos>
+														<Flags>53</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{6C078079-53A8-4B62-AECF-282CCFFD109D}" ShortID="637894248">
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{3916AE48-A584-48F6-B9D9-21A31A85A37D}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
 								</Reference>
@@ -330,6 +497,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="RepairTower" ID="{87639256-FC01-4773-B1EB-5B69E05FCAAD}" ShortID="535698644">
 							<PropertyList>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -345,7 +513,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>7</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -354,7 +522,10 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+									<ObjectRef Name="Items" ID="{CF4A00C1-25BE-4E44-A802-96CD63B45D36}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="GeneralVerb" ID="{EFE14AF8-3CAC-4FF4-8816-FA6EAD3A3291}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -385,6 +556,9 @@
 						<RandomSequenceContainer Name="Pickup_Coffee" ID="{0379B659-5B6C-4AD3-A728-591D7CD5FBF5}" ShortID="749263474">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>150</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{0FD225BA-FC1A-4407-BB62-D77704AF05BC}">
@@ -397,6 +571,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -408,6 +587,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="SFX_Pickup_Coffee" ID="{F07A37FD-770B-4107-B61F-195CC5FDEACD}" ShortID="849146446">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
@@ -448,7 +634,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>9</Value>
+										<Value>11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -512,6 +698,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -638,250 +829,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Zombie_Small" ID="{634A2036-DD0B-4034-8AC6-8231D6F0D640}" ShortID="517734464">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{81902278-A727-476E-8653-1CC21F9BCDC0}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3.5">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{613BB197-F67F-4316-B233-838FF7AE9859}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="4"/>
-															<Property Name="Min" Type="Real64" Value="-4"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="SFX_Zombies_SmallWheezy-001" ID="{CA89E35C-7228-49D6-BC7D-F57207DA2785}" ShortID="936487604">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Zombies_SmallWheezy-001" ID="{D0F59D8A-35F9-4CBF-9F4D-819511B39CB6}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_Zombies_SmallWheezy-001.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="747442835"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Zombies_SmallWheezy-001" ID="{D0F59D8A-35F9-4CBF-9F4D-819511B39CB6}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_Zombies_SmallWheezy-002" ID="{C4E6D9B3-A906-4137-80D0-65F1EFB545CE}" ShortID="719155736">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Zombies_SmallWheezy-002" ID="{313F90C7-FE21-4CB0-85C3-61D382D0F900}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_Zombies_SmallWheezy-002.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="526832504"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Zombies_SmallWheezy-002" ID="{313F90C7-FE21-4CB0-85C3-61D382D0F900}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_Zombies_SmallWheezy-003" ID="{FAAD44BD-C03B-4A83-B79B-399D9A598091}" ShortID="856970617">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Zombies_SmallWheezy-003" ID="{81DEC97F-406F-4353-8B8F-EE4FB9B8749B}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_Zombies_SmallWheezy-003.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="298892388"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Zombies_SmallWheezy-003" ID="{81DEC97F-406F-4353-8B8F-EE4FB9B8749B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_Zombies_SmallWheezy-004" ID="{FBEDC886-C26D-4AD2-9F72-44C375054E32}" ShortID="871312151">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Zombies_SmallWheezy-004" ID="{9089C9AC-325B-46AF-88DB-C1201910C18C}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_Zombies_SmallWheezy-004.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="550358003"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Zombies_SmallWheezy-004" ID="{9089C9AC-325B-46AF-88DB-C1201910C18C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Regular_Groan" ID="{CC838BC2-11FD-4A4B-B264-8074529388D7}" ShortID="5704953">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>6</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Regular_Groan" ID="{976276C9-0A52-471C-BEA2-83AEC59A8C85}">
-													<Language>SFX</Language>
-													<AudioFile>Regular_Groan.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="348510821"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Regular_Groan" ID="{976276C9-0A52-471C-BEA2-83AEC59A8C85}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Zombie_Medium" ID="{BA6B5F16-A061-44E3-ADC3-305034C1D044}" ShortID="342607595">
-									<PropertyList>
-										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="7">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{47AA64D2-86BC-4EAC-A9C9-CEBA201B3E1D}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="6"/>
-															<Property Name="Min" Type="Real64" Value="-4"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="SFX_Zombies_MediumGrowl" ID="{74A656FA-162E-4C6B-88B1-A8A3A58AF3CA}" ShortID="540007452">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Zombies_MediumGrowl" ID="{1115CC50-88F6-4ED0-B67D-89A4B6B0B500}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_Zombies_MediumGrowl.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="762929217"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Zombies_MediumGrowl" ID="{1115CC50-88F6-4ED0-B67D-89A4B6B0B500}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Heavy_Groan" ID="{4124AB6D-ACD9-4BDC-ABAF-9A1A2AFE34C7}" ShortID="430927865">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>9</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Heavy_Groan" ID="{9E08B361-3165-4318-A6C1-52EB7EAAB7E7}">
-													<Language>SFX</Language>
-													<AudioFile>Heavy_Groan.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="192654587"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Heavy_Groan" ID="{9E08B361-3165-4318-A6C1-52EB7EAAB7E7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="ZombieBreaths" ID="{B21C8289-1820-4B31-A240-E637F53F692A}" ShortID="782171867">
 									<PropertyList>
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
@@ -1076,7 +1023,7 @@
 												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
-														<Value>710</Value>
+														<Value>380</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1097,7 +1044,7 @@
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>7</Value>
+														<Value>-2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1619,6 +1566,40 @@
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Zombie_L" ID="{AE5E28E7-5E2D-44DB-8402-A375CFBC229A}" ShortID="1045462906">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+										</Reference>
+									</ReferenceList>
+								</ActorMixer>
+								<ActorMixer Name="ZombieDan" ID="{50A4E154-3CD6-46C9-8C1B-68519775BD3D}" ShortID="619441435">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+										</Reference>
+									</ReferenceList>
+								</ActorMixer>
+								<RandomSequenceContainer Name="Zombies" ID="{9C9B770F-4F44-4962-9A26-6D478FB13612}" ShortID="934628777">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
@@ -1628,9 +1609,891 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
+										<RandomSequenceContainer Name="Zombie_Small" ID="{634A2036-DD0B-4034-8AC6-8231D6F0D640}" ShortID="517734464">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{81902278-A727-476E-8653-1CC21F9BCDC0}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3.5">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{613BB197-F67F-4316-B233-838FF7AE9859}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="4"/>
+																	<Property Name="Min" Type="Real64" Value="-4"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>70</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+												<Property Name="PriorityDistanceOffset" Type="int16">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Zombies_SmallWheezy-001" ID="{CA89E35C-7228-49D6-BC7D-F57207DA2785}" ShortID="936487604">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Zombies_SmallWheezy-001" ID="{D0F59D8A-35F9-4CBF-9F4D-819511B39CB6}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Zombies_SmallWheezy-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="747442835"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Zombies_SmallWheezy-001" ID="{D0F59D8A-35F9-4CBF-9F4D-819511B39CB6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Zombies_SmallWheezy-002" ID="{C4E6D9B3-A906-4137-80D0-65F1EFB545CE}" ShortID="719155736">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Zombies_SmallWheezy-002" ID="{313F90C7-FE21-4CB0-85C3-61D382D0F900}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Zombies_SmallWheezy-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="526832504"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Zombies_SmallWheezy-002" ID="{313F90C7-FE21-4CB0-85C3-61D382D0F900}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Zombies_SmallWheezy-003" ID="{FAAD44BD-C03B-4A83-B79B-399D9A598091}" ShortID="856970617">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Zombies_SmallWheezy-003" ID="{81DEC97F-406F-4353-8B8F-EE4FB9B8749B}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Zombies_SmallWheezy-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="298892388"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Zombies_SmallWheezy-003" ID="{81DEC97F-406F-4353-8B8F-EE4FB9B8749B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Zombies_SmallWheezy-004" ID="{FBEDC886-C26D-4AD2-9F72-44C375054E32}" ShortID="871312151">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Zombies_SmallWheezy-004" ID="{9089C9AC-325B-46AF-88DB-C1201910C18C}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Zombies_SmallWheezy-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="550358003"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Zombies_SmallWheezy-004" ID="{9089C9AC-325B-46AF-88DB-C1201910C18C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Regular_Groan" ID="{CC838BC2-11FD-4A4B-B264-8074529388D7}" ShortID="5704953">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Regular_Groan" ID="{976276C9-0A52-471C-BEA2-83AEC59A8C85}">
+															<Language>SFX</Language>
+															<AudioFile>Regular_Groan.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="348510821"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Regular_Groan" ID="{976276C9-0A52-471C-BEA2-83AEC59A8C85}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Zombie_Medium" ID="{BA6B5F16-A061-44E3-ADC3-305034C1D044}" ShortID="342607595">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="7">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{47AA64D2-86BC-4EAC-A9C9-CEBA201B3E1D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="6"/>
+																	<Property Name="Min" Type="Real64" Value="-4"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>70</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+												<Property Name="PriorityDistanceOffset" Type="int16">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Zombies_MediumGrowl" ID="{74A656FA-162E-4C6B-88B1-A8A3A58AF3CA}" ShortID="540007452">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Zombies_MediumGrowl" ID="{1115CC50-88F6-4ED0-B67D-89A4B6B0B500}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Zombies_MediumGrowl.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="762929217"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Zombies_MediumGrowl" ID="{1115CC50-88F6-4ED0-B67D-89A4B6B0B500}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Heavy_Groan" ID="{4124AB6D-ACD9-4BDC-ABAF-9A1A2AFE34C7}" ShortID="430927865">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>9</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Heavy_Groan" ID="{9E08B361-3165-4318-A6C1-52EB7EAAB7E7}">
+															<Language>SFX</Language>
+															<AudioFile>Heavy_Groan.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="192654587"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Heavy_Groan" ID="{9E08B361-3165-4318-A6C1-52EB7EAAB7E7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="ZOMBIEDAN" ID="{5100B96F-8BBC-43EE-A7E3-3FF41383DDF6}" ShortID="300086058">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>70</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+												<Property Name="PriorityDistanceOffset" Type="int16">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="ZombieDan_Breath" ID="{C11937D5-3CC7-48F3-B0A8-C9139809EBFC}" ShortID="904148628">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="6.5">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{884AAB94-8BE6-46D5-A6FB-8A8AE71912BA}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="3"/>
+																			<Property Name="Min" Type="Real64" Value="-3"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+														<Property Name="Priority" Type="int16">
+															<ValueList>
+																<Value>70</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+														<Property Name="PriorityDistanceOffset" Type="int16">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Zombie_Dan_Breath01" ID="{63FD0D66-D7A1-4970-B4CD-53EC87E6574D}" ShortID="415184896">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Breath01" ID="{2373F201-B623-4A7F-AF34-A7892A6A8246}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Breath01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="825543494"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Breath01" ID="{2373F201-B623-4A7F-AF34-A7892A6A8246}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Breath02" ID="{1366D825-7AEF-4967-83F1-5A6B507CDE57}" ShortID="940828650">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Breath02" ID="{64C41FE8-5988-4CB5-A675-BE1FF72E81C7}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Breath02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="599785755"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Breath02" ID="{64C41FE8-5988-4CB5-A675-BE1FF72E81C7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Breath03" ID="{BBC01E2F-DCA7-4EBC-A069-53C11D111BBA}" ShortID="658108797">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Breath03" ID="{F4D12966-CB28-4B19-B6B9-97947631CAE9}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Breath03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="339986252"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Breath03" ID="{F4D12966-CB28-4B19-B6B9-97947631CAE9}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Breath04" ID="{029184C6-E80D-4234-96C7-2122BBCF8605}" ShortID="305934215">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Breath04" ID="{82044737-325D-4362-BDA5-A1B67091BFC5}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Breath04.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="970133362"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Breath04" ID="{82044737-325D-4362-BDA5-A1B67091BFC5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Breath05" ID="{2E9CFCF4-D277-400D-9AF2-FCB83BB0E4CE}" ShortID="322095633">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Breath05" ID="{2AD8C06F-1297-4DAE-8E44-ABB9790ED6FA}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Breath05.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="94812700"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Breath05" ID="{2AD8C06F-1297-4DAE-8E44-ABB9790ED6FA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="ZombieDan_Growl" ID="{572F9A80-C57B-497A-B231-4FAE9F5F97AF}" ShortID="643458868">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{65712D24-8CAE-4F65-9BA4-9196BC2BF74E}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="10"/>
+																			<Property Name="Min" Type="Real64" Value="-6"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+														<Property Name="Priority" Type="int16">
+															<ValueList>
+																<Value>70</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+														<Property Name="PriorityDistanceOffset" Type="int16">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Zombie_Dan_Growl01" ID="{0B57A8E4-9D96-498F-8CEB-FC1F54FF2E64}" ShortID="741176535">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Growl01" ID="{86E54DDB-BAF1-4B1D-91DE-95AA12B555FD}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Growl01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="909396024"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Growl01" ID="{86E54DDB-BAF1-4B1D-91DE-95AA12B555FD}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Growl02" ID="{2BA6DC6E-901F-4151-BBFD-9C57EF82D0A2}" ShortID="145627037">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Growl02" ID="{C5D8665C-F188-45A4-846A-51717A8D575A}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Growl02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="905713032"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Growl02" ID="{C5D8665C-F188-45A4-846A-51717A8D575A}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Growl03" ID="{7949DE09-D1C1-4DE6-91EF-2471C866F982}" ShortID="488071435">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Growl03" ID="{346F94DD-E78B-41CE-BD1E-F91E77726430}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Growl03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="778438487"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Growl03" ID="{346F94DD-E78B-41CE-BD1E-F91E77726430}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="ZombieDan_VO" ID="{56076D76-9B04-4919-8950-100B4023E9A8}" ShortID="726384011">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="Priority" Type="int16">
+															<ValueList>
+																<Value>70</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+														<Property Name="PriorityDistanceOffset" Type="int16">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Zombie_Dan_Vo01" ID="{F8E502E7-7769-4980-96CA-BB0B2FFA9454}" ShortID="721705106">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Vo01" ID="{FAF22299-A17C-4A93-9725-463EE816B81B}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Vo01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1065340141"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Vo01" ID="{FAF22299-A17C-4A93-9725-463EE816B81B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Vo02" ID="{BA7D604E-B3CB-410D-8AD3-021B71D58254}" ShortID="156457961">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Vo02" ID="{CAC83F12-0791-4CBA-852D-E7867E2397A6}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Vo02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="303842946"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Vo02" ID="{CAC83F12-0791-4CBA-852D-E7867E2397A6}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Vo03" ID="{A780BCF5-E127-4127-8C38-19FF190FC44A}" ShortID="215589900">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Vo03" ID="{A4C183EE-D00F-4E71-B5A1-5A173E6DD109}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Vo03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="202083177"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Vo03" ID="{A4C183EE-D00F-4E71-B5A1-5A173E6DD109}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Vo04" ID="{DB9BED39-A58B-4C90-A041-DD8B9C35FAC1}" ShortID="513524462">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Vo04" ID="{52DC694B-065A-4044-8E0F-F66C7A5C2734}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Vo04.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="75008352"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Vo04" ID="{52DC694B-065A-4044-8E0F-F66C7A5C2734}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="ZombieDan_Attack" ID="{B355795C-358C-457F-8060-F3577516A429}" ShortID="913437692">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="Priority" Type="int16">
+															<ValueList>
+																<Value>70</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+														<Property Name="PriorityDistanceOffset" Type="int16">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Zombie_Dan_Attack01" ID="{257FCB02-2EF3-49AA-934C-3AC83F5EDFEB}" ShortID="1004791908">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Attack01" ID="{E95829CE-4F41-4A75-91E6-E0AF9B48EB0F}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Attack01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="650368793"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Attack01" ID="{E95829CE-4F41-4A75-91E6-E0AF9B48EB0F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Attack02" ID="{6DECFBCA-9062-4A22-A98E-32820372494B}" ShortID="380402324">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Attack02" ID="{D6F3F398-E2C0-4661-9696-3B362561F52F}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Attack02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="16020796"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Attack02" ID="{D6F3F398-E2C0-4661-9696-3B362561F52F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Attack03" ID="{DD2EBD77-94EF-467B-94DF-6E1DCF467633}" ShortID="366857031">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Attack03" ID="{D589B18A-1EB2-426F-A891-3A89D7546153}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Attack03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="371315687"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Attack03" ID="{D589B18A-1EB2-426F-A891-3A89D7546153}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Attack04" ID="{E7DBFFBB-D85D-466E-BFFC-09787A619AA8}" ShortID="972051110">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Attack04" ID="{71CF9481-5877-433A-8306-192FBE2C94F9}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Attack04.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="628433307"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Attack04" ID="{71CF9481-5877-433A-8306-192FBE2C94F9}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Attack05" ID="{D44A8C42-FF60-4134-8448-1EDED8E25FF2}" ShortID="1007711780">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Attack05" ID="{D3E14CB1-4043-4C9A-B789-E6452A4C5B43}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Attack05.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1012086124"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Attack05" ID="{D3E14CB1-4043-4C9A-B789-E6452A4C5B43}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Zombie_Dan_Attack06" ID="{2090059C-EF50-4623-A981-7C13BFBA86E5}" ShortID="198093703">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Zombie_Dan_Attack06" ID="{12730FC5-A285-48A3-9E46-4587410AE6D7}">
+																	<Language>SFX</Language>
+																	<AudioFile>Zombie_Dan_Attack06.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="403026170"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Zombie_Dan_Attack06" ID="{12730FC5-A285-48A3-9E46-4587410AE6D7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Zombie_Large" ID="{5DC67A7E-68E6-4E90-B8EB-9638E8C5B46E}" ShortID="981771206">
 											<PropertyList>
 												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>-280</Value>
@@ -1658,6 +2521,17 @@
 													</ModifierList>
 												</Property>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>70</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+												<Property Name="PriorityDistanceOffset" Type="int16">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
@@ -1667,7 +2541,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+													<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1775,576 +2649,46 @@
 														<ActiveSource Name="Growl_Low_03" ID="{8FE16741-7F92-48C0-9A72-1A1386DEBBA8}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="Zombie_Large_Attack" ID="{F29227C1-B055-42EB-976D-2A0309C5A2A6}" ShortID="639310988">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-										</RandomSequenceContainer>
-									</ChildrenList>
-								</ActorMixer>
-								<ActorMixer Name="ZombieDan" ID="{50A4E154-3CD6-46C9-8C1B-68519775BD3D}" ShortID="619441435">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<RandomSequenceContainer Name="ZombieDan_Attack" ID="{B355795C-358C-457F-8060-F3577516A429}" ShortID="913437692">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Zombie_Dan_Attack01" ID="{257FCB02-2EF3-49AA-934C-3AC83F5EDFEB}" ShortID="1004791908">
+												<RandomSequenceContainer Name="Zombie_Large_Attack" ID="{F29227C1-B055-42EB-976D-2A0309C5A2A6}" ShortID="639310988">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="Priority" Type="int16">
+															<ValueList>
+																<Value>70</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+														<Property Name="PriorityDistanceOffset" Type="int16">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+															<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
 														</Reference>
 													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Attack01" ID="{E95829CE-4F41-4A75-91E6-E0AF9B48EB0F}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Attack01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="650368793"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Attack01" ID="{E95829CE-4F41-4A75-91E6-E0AF9B48EB0F}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Attack02" ID="{6DECFBCA-9062-4A22-A98E-32820372494B}" ShortID="380402324">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Attack02" ID="{D6F3F398-E2C0-4661-9696-3B362561F52F}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Attack02.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="16020796"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Attack02" ID="{D6F3F398-E2C0-4661-9696-3B362561F52F}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Attack03" ID="{DD2EBD77-94EF-467B-94DF-6E1DCF467633}" ShortID="366857031">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Attack03" ID="{D589B18A-1EB2-426F-A891-3A89D7546153}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Attack03.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="371315687"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Attack03" ID="{D589B18A-1EB2-426F-A891-3A89D7546153}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Attack04" ID="{E7DBFFBB-D85D-466E-BFFC-09787A619AA8}" ShortID="972051110">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Attack04" ID="{71CF9481-5877-433A-8306-192FBE2C94F9}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Attack04.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="628433307"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Attack04" ID="{71CF9481-5877-433A-8306-192FBE2C94F9}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Attack05" ID="{D44A8C42-FF60-4134-8448-1EDED8E25FF2}" ShortID="1007711780">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Attack05" ID="{D3E14CB1-4043-4C9A-B789-E6452A4C5B43}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Attack05.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="1012086124"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Attack05" ID="{D3E14CB1-4043-4C9A-B789-E6452A4C5B43}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Attack06" ID="{2090059C-EF50-4623-A981-7C13BFBA86E5}" ShortID="198093703">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Attack06" ID="{12730FC5-A285-48A3-9E46-4587410AE6D7}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Attack06.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="403026170"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Attack06" ID="{12730FC5-A285-48A3-9E46-4587410AE6D7}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="ZombieDan_Breath" ID="{C11937D5-3CC7-48F3-B0A8-C9139809EBFC}" ShortID="904148628">
-											<PropertyList>
-												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="6.5">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{884AAB94-8BE6-46D5-A6FB-8A8AE71912BA}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="3"/>
-																	<Property Name="Min" Type="Real64" Value="-3"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Zombie_Dan_Breath01" ID="{63FD0D66-D7A1-4970-B4CD-53EC87E6574D}" ShortID="415184896">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Breath01" ID="{2373F201-B623-4A7F-AF34-A7892A6A8246}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Breath01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="825543494"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Breath01" ID="{2373F201-B623-4A7F-AF34-A7892A6A8246}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Breath02" ID="{1366D825-7AEF-4967-83F1-5A6B507CDE57}" ShortID="940828650">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Breath02" ID="{64C41FE8-5988-4CB5-A675-BE1FF72E81C7}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Breath02.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="599785755"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Breath02" ID="{64C41FE8-5988-4CB5-A675-BE1FF72E81C7}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Breath03" ID="{BBC01E2F-DCA7-4EBC-A069-53C11D111BBA}" ShortID="658108797">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Breath03" ID="{F4D12966-CB28-4B19-B6B9-97947631CAE9}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Breath03.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="339986252"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Breath03" ID="{F4D12966-CB28-4B19-B6B9-97947631CAE9}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Breath04" ID="{029184C6-E80D-4234-96C7-2122BBCF8605}" ShortID="305934215">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Breath04" ID="{82044737-325D-4362-BDA5-A1B67091BFC5}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Breath04.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="970133362"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Breath04" ID="{82044737-325D-4362-BDA5-A1B67091BFC5}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Breath05" ID="{2E9CFCF4-D277-400D-9AF2-FCB83BB0E4CE}" ShortID="322095633">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Breath05" ID="{2AD8C06F-1297-4DAE-8E44-ABB9790ED6FA}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Breath05.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="94812700"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Breath05" ID="{2AD8C06F-1297-4DAE-8E44-ABB9790ED6FA}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="ZombieDan_Growl" ID="{572F9A80-C57B-497A-B231-4FAE9F5F97AF}" ShortID="643458868">
-											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
-												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{65712D24-8CAE-4F65-9BA4-9196BC2BF74E}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="10"/>
-																	<Property Name="Min" Type="Real64" Value="-6"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="Priority" Type="int16">
-													<ValueList>
-														<Value>70</Value>
-													</ValueList>
-												</Property>
-												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
-												<Property Name="PriorityDistanceOffset" Type="int16">
-													<ValueList>
-														<Value>-20</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>6</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
-												</Reference>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Zombie_Dan_Growl01" ID="{0B57A8E4-9D96-498F-8CEB-FC1F54FF2E64}" ShortID="741176535">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Growl01" ID="{86E54DDB-BAF1-4B1D-91DE-95AA12B555FD}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Growl01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="909396024"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Growl01" ID="{86E54DDB-BAF1-4B1D-91DE-95AA12B555FD}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Growl02" ID="{2BA6DC6E-901F-4151-BBFD-9C57EF82D0A2}" ShortID="145627037">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Growl02" ID="{C5D8665C-F188-45A4-846A-51717A8D575A}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Growl02.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="905713032"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Growl02" ID="{C5D8665C-F188-45A4-846A-51717A8D575A}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Growl03" ID="{7949DE09-D1C1-4DE6-91EF-2471C866F982}" ShortID="488071435">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Growl03" ID="{346F94DD-E78B-41CE-BD1E-F91E77726430}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Growl03.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="778438487"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Growl03" ID="{346F94DD-E78B-41CE-BD1E-F91E77726430}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="ZombieDan_VO" ID="{56076D76-9B04-4919-8950-100B4023E9A8}" ShortID="726384011">
-											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
-												<Property Name="Priority" Type="int16">
-													<ValueList>
-														<Value>70</Value>
-													</ValueList>
-												</Property>
-												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
-												<Property Name="PriorityDistanceOffset" Type="int16">
-													<ValueList>
-														<Value>-20</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>9</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="_Zombies" ID="{A7E8B7DD-3A0A-4AFE-B831-2524E7307177}" WorkUnitID="{8D76CBFE-9D49-449F-949A-39FA6F000DED}"/>
-												</Reference>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Zombies" ID="{13ADEC8C-8F36-48BD-B4DA-E173BBB97C29}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Zombie_Dan_Vo01" ID="{F8E502E7-7769-4980-96CA-BB0B2FFA9454}" ShortID="721705106">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Vo01" ID="{FAF22299-A17C-4A93-9725-463EE816B81B}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Vo01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="1065340141"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Vo01" ID="{FAF22299-A17C-4A93-9725-463EE816B81B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Vo02" ID="{BA7D604E-B3CB-410D-8AD3-021B71D58254}" ShortID="156457961">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Vo02" ID="{CAC83F12-0791-4CBA-852D-E7867E2397A6}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Vo02.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="303842946"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Vo02" ID="{CAC83F12-0791-4CBA-852D-E7867E2397A6}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Vo03" ID="{A780BCF5-E127-4127-8C38-19FF190FC44A}" ShortID="215589900">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Vo03" ID="{A4C183EE-D00F-4E71-B5A1-5A173E6DD109}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Vo03.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="202083177"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Vo03" ID="{A4C183EE-D00F-4E71-B5A1-5A173E6DD109}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie_Dan_Vo04" ID="{DB9BED39-A58B-4C90-A041-DD8B9C35FAC1}" ShortID="513524462">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie_Dan_Vo04" ID="{52DC694B-065A-4044-8E0F-F66C7A5C2734}">
-															<Language>SFX</Language>
-															<AudioFile>Zombie_Dan_Vo04.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="75008352"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie_Dan_Vo04" ID="{52DC694B-065A-4044-8E0F-F66C7A5C2734}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												</RandomSequenceContainer>
 											</ChildrenList>
 										</RandomSequenceContainer>
 									</ChildrenList>
-								</ActorMixer>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Phone" ID="{C21D1C99-72A3-410F-A77E-42C8A469AB6A}" ShortID="164700795">
 					<PropertyList>
+						<Property Name="3DPosition" Type="int16" Value="2"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -2419,6 +2763,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2454,9 +2803,26 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{E35D402B-1015-4686-9CBD-758BE5D8C8FA}">
+							<ChildrenList>
+								<Path2D Name="Phone_Path" ID="{8007AA24-A6DF-4C45-B057-612DB283C1E3}">
+									<PointList>
+										<Point>
+											<XPos>18.35443</XPos>
+											<YPos>27.707</YPos>
+											<Flags>12</Flags>
+											<Time>0</Time>
+										</Point>
+									</PointList>
+								</Path2D>
+							</ChildrenList>
+						</Position>
+					</PositioningInfo>
 				</ActorMixer>
 				<BlendContainer Name="Generator" ID="{13272E29-36DE-42F6-A59D-FF0019D28891}" ShortID="906184449">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -2464,20 +2830,88 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom>
+								<Attenuation Name="Attenuation (Custom)" ID="{0BC449AD-3BB7-48DA-BB2D-772792C7DAF3}" ShortID="490570751">
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{1F9A92F3-91B0-414D-9DF1-51F420CB317B}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
 						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="GeneralVerb" ID="{EFE14AF8-3CAC-4FF4-8816-FA6EAD3A3291}" WorkUnitID="{FBE6D878-30FA-4378-BEEC-5A7E8DDB6BCE}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="SFX_Ambiant_Tower_CloseHum" ID="{65FADDC7-9D0B-481F-B54B-7DBA816E5A04}" ShortID="474074733">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>18</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-80</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{F5CFF0EE-698B-4BA9-BEDA-99532757DDC2}"/>
@@ -2486,8 +2920,39 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-5</Value>
 									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{82831651-4C3B-4A05-B12E-1DBBABD744C5}" ShortID="578195480">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="DistanceToListener" ID="{249D89D0-03E9-46B6-909F-28B49DB89E23}" WorkUnitID="{EDD000A5-2FF6-4DA4-8E36-34F3E1D29465}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{54922D30-08B7-4F9D-9175-CF554CD57080}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-0.06095</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>29.84671</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -2520,6 +2985,42 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{07C1C439-C000-4834-B606-86169CCD3458}" ShortID="688611652">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="DistanceToListener" ID="{249D89D0-03E9-46B6-909F-28B49DB89E23}" WorkUnitID="{EDD000A5-2FF6-4DA4-8E36-34F3E1D29465}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{E71D6CBC-450F-424D-9162-1CDB80BCFC7A}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>71.7763751127142</XPos>
+														<YPos>-10.9877441720542</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2543,6 +3044,49 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="SFX_Ambiant_Tower_MediumHum" ID="{95EC3B1A-68BC-45BA-9A6F-A87917A7396B}" ShortID="103240745">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>46</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{E160CFD0-9C96-4B96-9739-1414FBA304BF}" ShortID="547459112">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="DistanceToListener" ID="{249D89D0-03E9-46B6-909F-28B49DB89E23}" WorkUnitID="{EDD000A5-2FF6-4DA4-8E36-34F3E1D29465}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{D24A9D4B-FDDE-4925-B464-FAF6EC3275BF}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>49.50405</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22DB7706-8B6D-4028-A591-9DD16349C986}"/>
