@@ -24,12 +24,14 @@ public class Pickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Add to inventory and destroy.");
 
-            //Let our spawner know weve been picked up
-            m_pickupCollectedEventHandler?.Invoke(this, new EventArgs());
+            if (Player.instance.AddToInventory(pickupType))
+            {
+                //Let our spawner know weve been picked up
+                m_pickupCollectedEventHandler?.Invoke(this, new EventArgs());
 
-            gameObject.SetActive(false);
+                gameObject.SetActive(false);
+            }
         }
     }
 }
