@@ -8,6 +8,9 @@ TagManager:
   - Scenary
   - TowerAttatch
   - Sparks
+  - Scenery
+  - TowerUseRange
+  - Safezone
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - 
   - Scenary
   - SexyPostProcessing
-  - 
+  - MiniMap
   - 
   - 
   - 
