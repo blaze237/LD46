@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 488542}
   - component: {fileID: 3393180}
   - component: {fileID: 2366020}
+  - component: {fileID: 4896254776049265759}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Extras
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4896254776049265759
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300018, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &111524
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 469560}
   - component: {fileID: 3398126}
   - component: {fileID: 2356212}
+  - component: {fileID: 4795700318655866291}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Wheel_RL2
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4795700318655866291
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300010, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &119624
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 411832}
   - component: {fileID: 3385370}
   - component: {fileID: 2337620}
+  - component: {fileID: 4316258253338352473}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Wheel_FL
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4316258253338352473
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &129568
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +293,7 @@ GameObject:
   - component: {fileID: 491928}
   - component: {fileID: 3331812}
   - component: {fileID: 2344938}
+  - component: {fileID: 1584765093901138560}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Turret_R
   m_TagString: Untagged
@@ -316,6 +362,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1584765093901138560
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300014, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &139432
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +387,7 @@ GameObject:
   - component: {fileID: 416016}
   - component: {fileID: 3301202}
   - component: {fileID: 2320908}
+  - component: {fileID: 2890314467176607160}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Wheel_RL1
   m_TagString: Untagged
@@ -395,6 +456,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2890314467176607160
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300012, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &156224
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +481,7 @@ GameObject:
   - component: {fileID: 446188}
   - component: {fileID: 3324208}
   - component: {fileID: 2399020}
+  - component: {fileID: 3005378798708494804}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Wheel_FR
   m_TagString: Untagged
@@ -453,7 +529,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 965e421d30d6a2a419dfd5b3597456b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -474,6 +550,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3005378798708494804
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &159414
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +575,7 @@ GameObject:
   - component: {fileID: 465982}
   - component: {fileID: 3350394}
   - component: {fileID: 2348582}
+  - component: {fileID: 1127793862168235696}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Wheel_RR2
   m_TagString: Untagged
@@ -553,6 +644,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1127793862168235696
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159414}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &161450
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +669,7 @@ GameObject:
   - component: {fileID: 435470}
   - component: {fileID: 3341538}
   - component: {fileID: 2342526}
+  - component: {fileID: 4453979943810353925}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Wheel_RR1
   m_TagString: Untagged
@@ -632,6 +738,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4453979943810353925
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161450}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &176864
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +763,7 @@ GameObject:
   - component: {fileID: 402354}
   - component: {fileID: 3380428}
   - component: {fileID: 2395418}
+  - component: {fileID: 2411680541456135760}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck_Turret_F
   m_TagString: Untagged
@@ -711,6 +832,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2411680541456135760
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300016, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}
 --- !u!1 &182698
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +857,7 @@ GameObject:
   - component: {fileID: 482068}
   - component: {fileID: 3359076}
   - component: {fileID: 2348698}
+  - component: {fileID: 4292878748717037197}
   m_Layer: 0
   m_Name: SA_Veh_Garbagetruck
   m_TagString: Untagged
@@ -799,3 +935,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4292878748717037197
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 62cbed2a2d68ecf41b81ce636d39aba7, type: 3}

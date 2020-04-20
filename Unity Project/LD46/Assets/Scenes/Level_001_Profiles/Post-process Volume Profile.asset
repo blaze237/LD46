@@ -113,7 +113,7 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 0.51159996, g: 0.439, b: 1, a: 1}
+    value: {r: 0.47860488, g: 0.44946, b: 0.681, a: 1}
   center:
     overrideState: 1
     value: {x: 0.5, y: 0.5}
@@ -203,7 +203,7 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 3.65
+    value: 3
   aperture:
     overrideState: 1
     value: 12
@@ -266,7 +266,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: -15
+    value: -34.4
   tint:
     overrideState: 0
     value: 0

@@ -1,0 +1,412 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6539824047218913959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3181611385498262218}
+  m_Layer: 0
+  m_Name: ToiletPaper_Stage2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3181611385498262218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539824047218913959}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2461112148673945049}
+  - {fileID: 5917360462659110406}
+  - {fileID: 3362112345638689147}
+  - {fileID: 3339012197806129634}
+  - {fileID: 3889170696665418974}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &464029269109738542
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3181611385498262218}
+    m_Modifications:
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972358059495018497, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_Name
+      value: ToiletPaperPile_Stage1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2507571bae6e4094ab4ded255da173cd, type: 3}
+--- !u!4 &2461112148673945049 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 464029269109738542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &721066030077448213
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3181611385498262218}
+    m_Modifications:
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3659973
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3995595
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.41442025
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972358059495018497, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_Name
+      value: ToiletPaperPile_Stage1 (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2507571bae6e4094ab4ded255da173cd, type: 3}
+--- !u!4 &3339012197806129634 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 721066030077448213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &792544481224132748
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3181611385498262218}
+    m_Modifications:
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.81542027
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972358059495018497, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_Name
+      value: ToiletPaperPile_Stage1 (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2507571bae6e4094ab4ded255da173cd, type: 3}
+--- !u!4 &3362112345638689147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 792544481224132748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1274004640063135017
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3181611385498262218}
+    m_Modifications:
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8407631
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972358059495018497, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_Name
+      value: ToiletPaperPile_Stage1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2507571bae6e4094ab4ded255da173cd, type: 3}
+--- !u!4 &3889170696665418974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1274004640063135017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8523519285896452081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3181611385498262218}
+    m_Modifications:
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8407631
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.81542027
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972358059495018497, guid: 2507571bae6e4094ab4ded255da173cd,
+        type: 3}
+      propertyPath: m_Name
+      value: ToiletPaperPile_Stage1 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2507571bae6e4094ab4ded255da173cd, type: 3}
+--- !u!4 &5917360462659110406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2618614883401355767, guid: 2507571bae6e4094ab4ded255da173cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 8523519285896452081}
+  m_PrefabAsset: {fileID: 0}

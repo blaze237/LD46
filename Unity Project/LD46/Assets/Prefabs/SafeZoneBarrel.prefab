@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lightSource: {fileID: 3639001874670969714}
-  lightTime: 15
-  rechargeTime: 25
+  lightTime: 5
+  rechargeTime: 30
   particleSystem: {fileID: 8519094556671941293}
 --- !u!1 &2096078506764269500
 GameObject:
