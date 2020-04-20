@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Unity Project/LD46/Assets/Prefabs/Pickups/Materials/coffeeIcon.mat.meta
 guid: 018deadd924fcfc47b3ae88fe5d6aa4e
 NativeFormatImporter:
+=======
+guid: fe7aa6113bd0e684e86d07de18843832
+PrefabImporter:
+>>>>>>> 56801795ae343e74f7c1101bc6fbdc3b2cfd7ca6:Unity Project/LD46/Assets/Art/SimpleApocalypse/_Prefabs/Items/ToiletPaper_Stage3.prefab.meta
   externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
