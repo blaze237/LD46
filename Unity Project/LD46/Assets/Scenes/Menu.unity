@@ -1546,9 +1546,10 @@ MonoBehaviour:
     due to severe tanning bed withdrawal, the Karens are highly sensitive to light
     and can be slowed down just by raising your phone torch to them (F). \n\nWhen
     they start to overwhelm you, turn your phone screen to them (G) to destroy them
-    with cold hard facts and logic. \n\nNothing lasts forever though. Collect tools,
-    fuel and batteries shown on the map to keep the tower generator fuelled and your
-    phone charged. Find pumpkin spice lattes to sustain you on your glorious quest."
+    with cold hard facts and logic. \n\nNothing lasts forever though. Collect and
+    use tools (1), fuel (2) and batteries shown on the map to keep the tower generator
+    fuelled and your phone charged. Find pumpkin spice lattes to sustain you on your
+    glorious quest."
 --- !u!222 &1713329037
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1574,7 +1575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1816344823
 RectTransform:
   m_ObjectHideFlags: 0
