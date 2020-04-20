@@ -1,0 +1,103 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 6.5 x64 6.5.0.9182
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl Plastic_Black
+Ka 0.0588235 0.0588235 0.0588235
+Kd 0.0588235 0.0588235 0.0588235
+Ks 0.6 0.6 0.6
+illum 2
+Ns 22.6274
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Paint_Black
+Ka 0.0392157 0.0392157 0.0392157
+Kd 0.0392157 0.0392157 0.0392157
+Ks 0.367059 0.367059 0.367059
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Plastic_Text
+Ka 1 1 1
+Kd 0.5 0.5 0.5
+Ks 0.350588 0.350588 0.350588
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA Text.png
+map_Ns 
+
+newmtl Wh
+Ka 0.0196078 0.0196078 0.0196078
+Kd 0.0196078 0.0196078 0.0196078
+Ks 0.362353 0.362353 0.362353
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Polypropylene__PP_
+Ka 0.87451 0.87451 0.87451
+Kd 0.87451 0.87451 0.87451
+Ks 0.367059 0.367059 0.367059
+illum 2
+Ns 64
+d 0.454
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__92
+Ka 0.0196078 0.0196078 0.0196078
+Kd 0.0196078 0.0196078 0.0196078
+Ks 0.362353 0.362353 0.362353
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
