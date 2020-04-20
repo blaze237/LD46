@@ -75,7 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f19fc44a747034c815d7faf9bbaba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karenPrefab_playerOnly: {fileID: 0}
+  karenPrefab_playerOnly: {fileID: 8328893296500458032, guid: 63322d6b41252b44fa3853bc9fcacc47,
+    type: 3}
   karenPrefab_playerAndTower: {fileID: 0}
   initialPoolSize: 25
 --- !u!1 &2577536753899871176

@@ -42,6 +42,7 @@ public class EnemyState_Attack : NavAgentState
             {
                 Tower.instance.AddDamage(m_owner.m_towerDamage);
                 m_tSinceDmgDealt = 0;
+                m_owner.m_animator.SetBool("Attack", true);
             }
                        
             //If player is close, switch to searching for them
@@ -71,6 +72,7 @@ public class EnemyState_Attack : NavAgentState
             {
                 // m_agent.SetDestination(Player.instance.transform.position);
                 Player.instance.DoDamage(m_owner.m_playerDamage);
+                m_owner.m_animator.SetBool("Attack", true);
                 m_tSinceDmgDealt = 0;
             }
 

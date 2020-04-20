@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MinimapFollow : MonoBehaviour
 {
-    public float hOffset = 5;
+    public bool followRotation = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,14 @@ public class MinimapFollow : MonoBehaviour
     void Update()
     {
         Vector3 playerPos = Player.instance.transform.position;
-        playerPos.y += hOffset;
+        playerPos.y = transform.position.y;// hOffset;
         transform.position = playerPos;
+
+        if(followRotation)
+        {
+            transform.rotation = Player.instance.transform.rotation;
+            transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
+
+        }
     }
 }

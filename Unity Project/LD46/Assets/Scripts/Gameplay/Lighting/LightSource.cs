@@ -31,11 +31,11 @@ public class LightSource : MonoBehaviour
     {
         if(i_enabled)
         {
-            if(navmeshObstabcle != null) navmeshObstabcle.carving = true;           
+            if(navmeshObstabcle != null) navmeshObstabcle.enabled = true;           
         }
         else
         {
-            if (navmeshObstabcle != null) navmeshObstabcle.carving = false;
+            if (navmeshObstabcle != null) navmeshObstabcle.enabled = false;
         }
 
         m_light.enabled = i_enabled;

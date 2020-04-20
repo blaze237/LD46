@@ -85,13 +85,16 @@ public class Tower : MonoBehaviour
     public void AddDamage(int dmg)
     {
         m_health -= dmg;
+        m_health = Mathf.Max(m_health, 0);
         //Update the count and probability in the 4 particle systems
+
+
         damageEventHandler?.Invoke();
         if (m_health <= 0)
         {
             Debug.Log("GAME OVER!");
         }
-        else if(m_health <= lowHealthLevel)
+        else if (m_health <= lowHealthLevel)
         {
             m_lowHealthEventHandler?.Invoke();
         }

@@ -23,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     public int m_playerDamage = 10;
     public float m_attackRate = 1;
     public float pickupSpawnChance = 0.5f;
+    public Animator m_animator;
 
     private int health = 100;
     public bool m_useLosCheck = false;
@@ -111,9 +112,11 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateAnimation();
+
         m_agent.speed = m_baseNavSpeed;
 
-        if(Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             OnDeath();
             m_enemyDeathEventHandler?.Invoke(this, new EventArgs());
@@ -150,6 +153,17 @@ public class EnemyAI : MonoBehaviour
         m_sMachine.Update(Time.deltaTime);
     }
 
+
+    void UpdateAnimation()
+    {
+        Vector3 move = m_agent.desiredVelocity;
+        if (move.magnitude > 1f) move.Normalize();
+        move = transform.InverseTransformDirection(move);
+        move = Vector3.ProjectOnPlane(move, Vector3.up);
+        m_animator.SetFloat("Forward", move.z, 0.1f, Time.deltaTime);
+
+    }
+
     public float GetBaseNavSpeed()
     {
         return m_baseNavSpeed;
@@ -182,7 +196,7 @@ public class EnemyAI : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("TowerAttatch"))
         {

@@ -10,6 +10,7 @@ TagManager:
   - Sparks
   - Scenery
   - TowerUseRange
+  - Safezone
   layers:
   - Default
   - TransparentFX
