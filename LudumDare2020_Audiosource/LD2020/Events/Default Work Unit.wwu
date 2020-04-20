@@ -3,23 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{D6779582-F709-4F10-A394-A56611643C90}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_AmbientTest" ID="{DF43A789-5CB1-4190-9E18-F039043C8987}">
-					<ChildrenList>
-						<Action Name="" ID="{805B4D2B-0A86-4791-9B17-DBED1CA88907}" ShortID="461095598">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Candle" ID="{2A7643D5-BCB1-47D8-9C48-EAFECB38D619}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_ItemTest" ID="{FCF3A647-D013-437D-BD2B-9C2401490B46}">
 					<ChildrenList>
 						<Action Name="" ID="{2A3918A3-6E4F-4B15-8EFF-34CB9147FC8D}" ShortID="604378883">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="ItemTest" ID="{F73E5C56-AF71-4EFF-8FF2-DFE95AB76096}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+									<ObjectRef Name="FlamingBarrel" ID="{F73E5C56-AF71-4EFF-8FF2-DFE95AB76096}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -31,17 +20,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="PlayerTest" ID="{A21541A4-7EB2-42A1-9861-C35B35C6B128}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_16___May_Contain_Metal" ID="{061F3E41-D246-4D0F-94CE-423B67516CAE}">
-					<ChildrenList>
-						<Action Name="" ID="{934521D2-69BA-44A2-ACC0-4E521E2EDEF1}" ShortID="338572880">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="16 - May Contain Metal" ID="{F36861EA-4F5B-485B-A9AB-8E7A5D27D9C8}" WorkUnitID="{73C3664A-623B-4404-88ED-4920F45BB54A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -215,6 +193,105 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="ZombieDan_VO" ID="{56076D76-9B04-4919-8950-100B4023E9A8}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_FlamingBarrel_Loop" ID="{5CD4EC50-2AE9-44D7-90A8-4EB92C1D78EB}">
+					<ChildrenList>
+						<Action Name="" ID="{DF013FB7-BBE0-4F19-9938-E97963031A24}" ShortID="525409776">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FlamingBarrel" ID="{F73E5C56-AF71-4EFF-8FF2-DFE95AB76096}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Phone_BatteryDead" ID="{00A82FDD-03E9-47D4-98B2-9EE856261A7E}">
+					<ChildrenList>
+						<Action Name="" ID="{ECA3C1B6-C1CB-43D0-BB73-70038E61779F}" ShortID="307454190">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Phone_BatteryDead" ID="{DC1D8769-8966-4EA5-965B-8B1AA0A02D6A}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Phone_LowBattery" ID="{4F5FCDA8-0A1B-4E23-8263-8050B4614245}">
+					<ChildrenList>
+						<Action Name="" ID="{59819294-F9F5-4FC9-A349-7471CD3C79F8}" ShortID="402935231">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Phone_LowBattery" ID="{DDC890AF-77C0-4A06-9DEE-57ED2F35E2B6}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Pickup_Battery" ID="{A5B534C1-6E3C-441D-BFB0-3C7AF033C225}">
+					<ChildrenList>
+						<Action Name="" ID="{1DD1FA35-795C-403C-BEC0-B10E45FEE96A}" ShortID="71438313">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_Battery" ID="{FFA2C3B9-12E5-4CE3-9A1D-092D1C79E6A2}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Pickup_Coffee" ID="{7BE5DC7B-194A-441C-B3DF-D66347099AAF}">
+					<ChildrenList>
+						<Action Name="" ID="{701040CA-ED92-4802-823B-82DB2CD2C1C2}" ShortID="347773981">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_Coffee" ID="{0379B659-5B6C-4AD3-A728-591D7CD5FBF5}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Pickup_Petrol" ID="{7D5A2B77-F2D2-4202-9B0D-70A179119B3E}">
+					<ChildrenList>
+						<Action Name="" ID="{4F0257A1-366C-4128-BE10-303FF40AAB1C}" ShortID="370533097">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_Petrol" ID="{48BBC2D4-2366-4F7B-BE71-6EE464BE2B94}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RepairTower" ID="{AD5C8DA8-AE0D-4783-9B89-F66C011B8568}">
+					<ChildrenList>
+						<Action Name="" ID="{533A907F-0419-490D-A93B-A1EC9E0A939A}" ShortID="294911776">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RepairTower" ID="{87639256-FC01-4773-B1EB-5B69E05FCAAD}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Generator_Loop" ID="{C8BDB0AC-B8FB-4D09-9A07-D1E563AA3A68}">
+					<ChildrenList>
+						<Action Name="" ID="{8B1EC4A4-D2A9-4F06-B13C-82BE6A7CCB6C}" ShortID="925011075">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Generator" ID="{13272E29-36DE-42F6-A59D-FF0019D28891}" WorkUnitID="{1B520A94-7C08-4E6F-998B-336AD33439C2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music_Level01" ID="{458C14E8-D945-4E22-9FC2-986CAD768DFF}">
+					<ChildrenList>
+						<Action Name="" ID="{95A1E4EF-CDF5-4375-A715-E55F507E7302}" ShortID="261432881">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level01" ID="{CD293CEC-E22F-442F-9FD9-F47AB63310FF}" WorkUnitID="{73C3664A-623B-4404-88ED-4920F45BB54A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
