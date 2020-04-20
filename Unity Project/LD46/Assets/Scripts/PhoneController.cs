@@ -5,9 +5,13 @@ using TMPro;
 
 public class PhoneController : MonoBehaviour
 {
+    
+    public float baseH = -0.5f;
+    public float heightToSpin = -0.3f;
     bool phoneMovingUp = false;
     bool phoneUp = false;
     bool phoneRotatingTowardsKaren = false;
+    public LightSource lightSource;
     [SerializeField] float phoneRotationSpeed;
     [SerializeField] GameObject flameThrower;
     [SerializeField] AudioSource flameThrowerInOutAudioSource;
@@ -29,34 +33,53 @@ public class PhoneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        lightSource.SetEnabled(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !phoneMovingUp)
+        if(batteryPercentage == 0)
+        {
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.F) && !phoneMovingUp && (batteryPercentage != 0))
         {
             phoneMovingUp = true;
             phoneAudioSource.PlayOneShot(phoneSounds[0]);
+            GetComponent<Renderer>().enabled = true;
+            lightSource.SetEnabled(true);
         }
-        else if (Input.GetKeyDown(KeyCode.F) && phoneMovingUp && !phoneRotatingTowardsKaren)
+        else if (((batteryPercentage == 0) ||( Input.GetKeyDown(KeyCode.F) && phoneMovingUp)) && !phoneRotatingTowardsKaren)
         {
             phoneMovingUp = false;
             phoneAudioSource.PlayOneShot(phoneSounds[1]);
+            lightSource.SetEnabled(false);
         }
 
         if (phoneMovingUp)
         {
-            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(transform.localPosition.x, 0, transform.localPosition.z), Time.deltaTime * 10);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(transform.localPosition.x, baseH, transform.localPosition.z), Time.deltaTime * 10);
+            //Phone is up so torch is on
+            if(phoneMovingUp && !flameThrowerFiring)
+            {
+                batteryPercentage -= Time.deltaTime * batteryDrainTorch;
+                batteryPercentage = Mathf.Clamp(batteryPercentage, 0, 100);
+                int batteryPercentageInt = (int)batteryPercentage;
+                batteryPercentageText.SetText(batteryPercentageInt.ToString() + "%");
+            }
         }
         else if (!phoneMovingUp)
         {
             transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(transform.localPosition.x, -1.5f, transform.localPosition.z), Time.deltaTime * 10);
-            
+            if(transform.localPosition.y <= - 1.4f)
+            {
+                GetComponent<Renderer>().enabled = false;
+            }
         }
 
-        if (transform.localPosition.y >= -0.1f)
+        if (transform.localPosition.y >= heightToSpin)
         {
             phoneUp = true;
 
@@ -89,6 +112,7 @@ public class PhoneController : MonoBehaviour
         // If the phone is facing Karen
         if (transform.localRotation.eulerAngles.y <= 1 && phoneRotatingTowardsKaren && !flameThrowerFiring && phoneUp)
         {
+            lightSource.m_lightSourceType = LightEffectType.Burn;
             flameThrower.SetActive(true);
 
             flameThrowerOutPlaying = false;
@@ -107,12 +131,13 @@ public class PhoneController : MonoBehaviour
             }
 
             batteryPercentage -= Time.deltaTime * batteryDrainFlameThrower;
-            Mathf.Clamp(batteryPercentage, 0, 100);
+            batteryPercentage = Mathf.Clamp(batteryPercentage, 0, 100);
             int batteryPercentageInt = (int)batteryPercentage;
             batteryPercentageText.SetText(batteryPercentageInt.ToString() + "%");
         }
         else if (!phoneMovingUp || !phoneRotatingTowardsKaren)
         {
+            lightSource.m_lightSourceType = LightEffectType.SlowDown;
             flameThrowerLoopAudioSource.Stop();
             if (!flameThrowerOutPlaying)
             {

@@ -26,10 +26,10 @@ public class EnemyState_InPlayerLight : NavAgentState
     {
         m_tSinceStateStart += i_dt;
 
-        if(m_tSinceStateStart >= m_owner.m_tTillDeathFromLight)
-        {
-            Debug.Log("TIME TO DIE");
-        }
+        //if(m_tSinceStateStart >= m_owner.m_tTillDeathFromLight)
+        //{
+        //    Debug.Log("TIME TO DIE");
+        //}
 
         //If player light, then move into frozen state
         if (!m_lightDetectionSystem.QueryFlags(LightEffectType.Burn))

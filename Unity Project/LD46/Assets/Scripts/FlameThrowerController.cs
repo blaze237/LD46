@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlameThrowerController : MonoBehaviour
 {
-
+    public int dmg = 5;
     [SerializeField] GameObject flamesPrefab;
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class FlameThrowerController : MonoBehaviour
         {
             GameObject flames = Instantiate(flamesPrefab, other.transform.position, Quaternion.identity, other.transform);
             Destroy(flames, 3f);
-            other.GetComponent<HealthController>().DealDamage(100);
+            other.GetComponent<HealthController>().DealDamage(dmg);
         }
     }
 

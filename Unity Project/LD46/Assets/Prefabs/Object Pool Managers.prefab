@@ -77,7 +77,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   karenPrefab_playerOnly: {fileID: 8328893296500458032, guid: 63322d6b41252b44fa3853bc9fcacc47,
     type: 3}
-  karenPrefab_playerAndTower: {fileID: 0}
+  karenPrefab_playerAndTower: {fileID: 3470792916280243758, guid: 8c155afe19249514cad4ba7973cd5a49,
+    type: 3}
   initialPoolSize: 25
 --- !u!1 &2577536753899871176
 GameObject:

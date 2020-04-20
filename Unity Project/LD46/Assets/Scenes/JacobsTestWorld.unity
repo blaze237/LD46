@@ -342,6 +342,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 222798336}
     m_Modifications:
+    - target: {fileID: -2535777748110689137, guid: 7dcd09cb4a1a06647917cc578ab717f8,
+        type: 3}
+      propertyPath: batteryDrainTorch
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228623964, guid: 7dcd09cb4a1a06647917cc578ab717f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.495
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369394788, guid: 7dcd09cb4a1a06647917cc578ab717f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.393
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690710729, guid: 7dcd09cb4a1a06647917cc578ab717f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.276
+      objectReference: {fileID: 0}
     - target: {fileID: 444076807799432425, guid: 7dcd09cb4a1a06647917cc578ab717f8,
         type: 3}
       propertyPath: m_LocalPosition.x

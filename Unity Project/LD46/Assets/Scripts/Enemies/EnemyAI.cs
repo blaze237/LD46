@@ -16,15 +16,18 @@ public class EnemyAI : MonoBehaviour
     public float m_playerAttackAnimRadius = 1.5f;
     //How close should they get before starting their voice lines
     public float m_speechRadius = 5;
-    public float m_tTillDeathFromLight = 5f;
+    public int m_flameDmgPS = 33;
+    public int m_playerDamage = 15;
     public AnimationCurve m_lightSlowdownCurve;
     public bool m_seeksTower = false;
     public int m_towerDamage = 5;
-    public int m_playerDamage = 10;
     public float m_attackRate = 1;
     public float pickupSpawnChance = 0.5f;
     public Animator m_animator;
 
+
+
+    private float m_tSinceDmg;
     private int health = 100;
     public bool m_useLosCheck = false;
     //Y offset to apply before doing los checks to player. Needed for enemy avatars whos root is at the base of the model
@@ -34,9 +37,15 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent m_agent;
     private LightDetection m_lightDetectionSystem;
     private bool m_reachedTower = false;
-
     public event EventHandler m_enemyDeathEventHandler;
 
+
+    [SerializeField] GameObject karenExplosionPrefab;
+    [SerializeField] AudioSource karenScreamAudioSource;
+    [SerializeField] AudioClip[] karenScreamAudioClips;
+    bool alive = true;
+    int screamClipIndex = 0;
+    float screamClipLength;
 
 
     void OnDrawGizmos()
@@ -57,6 +66,8 @@ public class EnemyAI : MonoBehaviour
         health = 100;
         gameObject.SetActive(true);
 
+        m_tSinceDmg = 1;
+
     }
 
     // Start is called before the first frame update
@@ -76,6 +87,12 @@ public class EnemyAI : MonoBehaviour
 
         m_lightDetectionSystem = GetComponent<LightDetection>();
 
+    }
+
+    void SpawnExplosion()
+    {
+        GameObject explosion = Instantiate(karenExplosionPrefab, transform.position, Quaternion.identity);
+        Destroy(explosion, 10);
     }
 
     void OnDeath()
@@ -103,10 +120,36 @@ public class EnemyAI : MonoBehaviour
                     break;
             }
 
-
             Pickup pickup = PickupPoolManager.instance.GetPickup(type);
             pickup.transform.position = transform.position;
         }
+
+
+        //This will now play whilst taking damage
+        //screamClipIndex = UnityEngine.Random.Range(0, karenScreamAudioClips.Length);
+        //screamClipLength = karenScreamAudioClips[screamClipIndex].length;
+        //karenScreamAudioSource.PlayOneShot(karenScreamAudioClips[screamClipIndex]);
+
+        //if (screamClipLength > 1.5f)
+        //{
+        //    screamClipLength = 1.5f;
+        //}
+
+
+        m_enemyDeathEventHandler?.Invoke(this, new EventArgs());
+        gameObject.SetActive(false);
+        SpawnExplosion();
+      
+    }
+
+    void TakeDamage()
+    {
+        health -= m_flameDmgPS;
+        if(health <= 0)
+        {
+            OnDeath();
+        }
+        
     }
 
     // Update is called once per frame
@@ -119,8 +162,7 @@ public class EnemyAI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             OnDeath();
-            m_enemyDeathEventHandler?.Invoke(this, new EventArgs());
-            gameObject.SetActive(false);
+            
         }
 
         //Check for the presence of light
@@ -129,8 +171,15 @@ public class EnemyAI : MonoBehaviour
             //If player light, then move into frozen state
             if (m_lightDetectionSystem.QueryFlags(LightEffectType.Burn))
             {
-                Debug.Log("PLAYER is burning me");
-                m_sMachine.SetState(new EnemyState_InPlayerLight(m_sMachine, this));
+                OnDeath();
+
+                //m_tSinceDmg += Time.deltaTime;
+                //if(m_tSinceDmg >= 1)
+                //{
+                //    TakeDamage();
+                //    m_tSinceDmg = 0;
+                //}
+                
             }
             else if (m_lightDetectionSystem.QueryFlags(LightEffectType.Stop))
             {
