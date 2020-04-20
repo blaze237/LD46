@@ -3,7 +3,7 @@
 	<RootPaths>
 		<ProjectRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\</ProjectRoot>
 		<SourceFilesRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<SoundBanksRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\Unity Project\LD46\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>C:\Users\ReBorn002\Documents\GitKraken\LD46\LudumDare2020_Audiosource\LD2020\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
