@@ -16,7 +16,7 @@ public class PickupSpawnPoint : MonoBehaviour
     void OnDrawGizmos()
     {
         // Draw a yellow sphere at the transform's position
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         Gizmos.DrawSphere(transform.position, 0.5f);
     }
 

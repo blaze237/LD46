@@ -46,6 +46,9 @@ public class Player : MonoBehaviour
     private Inventory m_inventory = new Inventory();
     private bool m_nearTower = false;
 
+    public AudioClip towerRepair;
+    public AudioClip towerRefuel;
+    public AudioSource audioSource;
 
     public int GetHealth()
     {
@@ -73,7 +76,7 @@ public class Player : MonoBehaviour
                 }
                 break;
             case PickupType.Coffee:
-                if(m_health != 0)
+                if(m_health != 100)
                 {
                     m_health += m_healthPackValue;
                     m_health = Mathf.Min(m_health, 100);
@@ -167,6 +170,7 @@ public class Player : MonoBehaviour
                 {
                     --m_inventory.m_tools;
                     m_inventoryUseEvent?.Invoke(this, new InventoryUseEvent(PickupType.Tool));
+                    audioSource.PlayOneShot(towerRepair);
                 }
                 else
                 {
@@ -179,6 +183,7 @@ public class Player : MonoBehaviour
                 {
                     --m_inventory.m_fuelCans;
                     m_inventoryUseEvent?.Invoke(this, new InventoryUseEvent(PickupType.Fuel));
+                    audioSource.PlayOneShot(towerRefuel);
                 }
                 else
                 {

@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 33642524150bad48a89b866eab46a4e7
     GuidInternal: 
-    m_lastTime: -8586142819448036405
+    m_lastTime: -8586142788478281938
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 78d8e6fbfa307843beec5a7e8ddb6bce
     GuidInternal: 
-    m_lastTime: -8586142819458043796
+    m_lastTime: -8586141846492464004
     List:
     - name: Ambient
       guid: 926d255d03e0e74eb2f765f05b937e06
@@ -34,24 +34,41 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Master Audio Bus
         ObjectType: 2
+      - ElementName: Music
+        ObjectType: 2
+      - ElementName: SFX
+        ObjectType: 2
       - ElementName: Ambient
         ObjectType: 2
-      Path: Default Work Unit\Master Audio Bus\Ambient
-    - name: Enemies
-      guid: e7cbd361f5ddc74f9778d425c90d60b6
-      id: 2242381963
+      Path: Default Work Unit\Master Audio Bus\Music\SFX\Ambient
+    - name: GeneralVerb
+      guid: f84ae1efac3cf44f8816fa6ead3a3291
+      id: 2827677392
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Master Audio Bus
         ObjectType: 2
-      - ElementName: Ambient
+      - ElementName: Music
         ObjectType: 2
-      - ElementName: Zombies
+      - ElementName: GeneralVerb
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\Music\GeneralVerb
+    - name: Items
+      guid: c1004acfbe25444ea80296cd63b45d36
+      id: 2151963051
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
         ObjectType: 2
-      - ElementName: Enemies
+      - ElementName: Music
         ObjectType: 2
-      Path: Default Work Unit\Master Audio Bus\Ambient\Zombies\Enemies
+      - ElementName: SFX
+        ObjectType: 2
+      - ElementName: Items
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Music\SFX\Items
     - name: KarenSteps
       guid: b418bc85f851c043a8b4214433bc66c9
       id: 2225273953
@@ -72,6 +89,30 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 6f28c84ee96bf64fa7dd63c95bc0a6f9
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Music
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Music
+    - name: SFX
+      guid: 7c5d259728d4b446bfb28ea0a6847e9b
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Music
+        ObjectType: 2
+      - ElementName: SFX
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Music\SFX
     - name: Zombies
       guid: 8cecad13368fbd48b4dae173bbb97c29
       id: 4113933398
@@ -80,17 +121,19 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Master Audio Bus
         ObjectType: 2
-      - ElementName: Ambient
+      - ElementName: Music
+        ObjectType: 2
+      - ElementName: SFX
         ObjectType: 2
       - ElementName: Zombies
         ObjectType: 2
-      Path: Default Work Unit\Master Audio Bus\Ambient\Zombies
+      Path: Default Work Unit\Master Audio Bus\Music\SFX\Zombies
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: e19df6b06041ac45af6b15541fcec94c
     GuidInternal: 
-    m_lastTime: -8586142819448091416
+    m_lastTime: -8586141819281805333
     List:
     - name: MainSoundbank
       guid: 8727a24824fec740ba0a5068735d19c5
@@ -106,32 +149,8 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 829577d609f7104fa394a56611643c90
     GuidInternal: 
-    m_lastTime: -8586142819463569873
+    m_lastTime: -8586141846492503974
     List:
-    - name: Play_16___May_Contain_Metal
-      guid: 413e1f0646d20f4d94ce423b67516cae
-      id: 3033383690
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_16___May_Contain_Metal
-        ObjectType: 3
-      Path: Default Work Unit\Play_16___May_Contain_Metal
-      maxAttenuation: 100
-      maxDuration: 64.401566
-      minDuration: 64.401566
-    - name: Play_AmbientTest
-      guid: 89a743dfb15c90419e18f039043c8987
-      id: 4029336046
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_AmbientTest
-        ObjectType: 3
-      Path: Default Work Unit\Play_AmbientTest
-      maxAttenuation: 0
-      maxDuration: 41.877335
-      minDuration: 41.877335
     - name: Play_City_Bed
       guid: 9e712be0583023489cfc3b237586c4c0
       id: 1966587683
@@ -144,6 +163,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_FlamingBarrel_Loop
+      guid: 50ecd45ce92ad74490a84eb92c1d78eb
+      id: 732558559
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_FlamingBarrel_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Play_FlamingBarrel_Loop
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Generator_Loop
+      guid: acb0bdc8fbb8094d9a07d1e563aa3a68
+      id: 3692090582
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Generator_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Play_Generator_Loop
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
     - name: Play_ItemTest
       guid: 47a6f3fc13d07d43bd2b9c2401490b46
       id: 1408766231
@@ -153,9 +196,81 @@ MonoBehaviour:
       - ElementName: Play_ItemTest
         ObjectType: 3
       Path: Default Work Unit\Play_ItemTest
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Music_Level01
+      guid: e8148c4545d9224e9fc2986cad768dff
+      id: 3711381197
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Music_Level01
+        ObjectType: 3
+      Path: Default Work Unit\Play_Music_Level01
       maxAttenuation: 0
-      maxDuration: 17.647165
-      minDuration: 17.647165
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Phone_BatteryDead
+      guid: dd2fa800e903d44798b29ee856261a7e
+      id: 1100482298
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Phone_BatteryDead
+        ObjectType: 3
+      Path: Default Work Unit\Play_Phone_BatteryDead
+      maxAttenuation: 0
+      maxDuration: 2.193583
+      minDuration: 2.193583
+    - name: Play_Phone_LowBattery
+      guid: a8cd5f4f1b0a234e82638050b4614245
+      id: 3837069120
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Phone_LowBattery
+        ObjectType: 3
+      Path: Default Work Unit\Play_Phone_LowBattery
+      maxAttenuation: 0
+      maxDuration: 1.364172
+      minDuration: 1.364172
+    - name: Play_Pickup_Battery
+      guid: c134b5a53c6e1d44bfb03c7af033c225
+      id: 4135255572
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Pickup_Battery
+        ObjectType: 3
+      Path: Default Work Unit\Play_Pickup_Battery
+      maxAttenuation: 100
+      maxDuration: 0.963226
+      minDuration: 0.909164
+    - name: Play_Pickup_Coffee
+      guid: 7bdce57b4a191c44b3dfd66347099aaf
+      id: 581921785
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Pickup_Coffee
+        ObjectType: 3
+      Path: Default Work Unit\Play_Pickup_Coffee
+      maxAttenuation: 100
+      maxDuration: 0.348656
+      minDuration: 0.329087
+    - name: Play_Pickup_Petrol
+      guid: 772b5a7dd2f202429b0d70a179119b3e
+      id: 3202284035
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Pickup_Petrol
+        ObjectType: 3
+      Path: Default Work Unit\Play_Pickup_Petrol
+      maxAttenuation: 100
+      maxDuration: 1
+      minDuration: 0.741386
     - name: Play_PlayerTest
       guid: b24d41013e773e4c8385434d79370f28
       id: 3141342825
@@ -168,6 +283,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 26.453333
       minDuration: 26.453333
+    - name: Play_RepairTower
+      guid: a88d5cad0dae83479b89f66c011b8568
+      id: 881265840
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_RepairTower
+        ObjectType: 3
+      Path: Default Work Unit\Play_RepairTower
+      maxAttenuation: 100
+      maxDuration: 1.62953
+      minDuration: 1.559542
     - name: Play_Walking_Highheel
       guid: d6e1e12970bd6f4d900648c653bd9568
       id: 3555340024
@@ -180,6 +307,18 @@ MonoBehaviour:
       maxAttenuation: 60
       maxDuration: -1
       minDuration: -1
+    - name: Play_Zombie
+      guid: d7738973466c3e418ffaaf3435f08cac
+      id: 246154100
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Zombie
+        ObjectType: 3
+      Path: Default Work Unit\Play_Zombie
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Zombie_Large
       guid: 8172029cac1d0a4b9969bcbb64f7e366
       id: 2540355032
@@ -228,6 +367,18 @@ MonoBehaviour:
       maxAttenuation: 60
       maxDuration: -1
       minDuration: -1
+    - name: Play_Zombies
+      guid: 204db9985f7a3643aa9501824953964a
+      id: 2362011631
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Zombies
+        ObjectType: 3
+      Path: Default Work Unit\Play_Zombies
+      maxAttenuation: 60
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_City_Bed
       guid: 29244333d04a854cbebed07cbd2fdaf2
       id: 210502101
@@ -240,12 +391,24 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_FlamingBarrel_Loop
+      guid: 73aa105173ca0349b450426edce649e8
+      id: 3824269441
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_FlamingBarrel_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Stop_FlamingBarrel_Loop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: a500d0edf62fa44d8e3634f3e1d29465
     GuidInternal: 
-    m_lastTime: -8586142819463554872
+    m_lastTime: -8586141846492503974
     List:
     - name: DistanceToListener
       guid: d0899d24e903b646909f28b49db89e23
@@ -256,12 +419,21 @@ MonoBehaviour:
       - ElementName: DistanceToListener
         ObjectType: 13
       Path: Default Work Unit\DistanceToListener
+    - name: m_health
+      guid: 90085607985a5b4284f9b6947a3fea1f
+      id: 3613647679
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: m_health
+        ObjectType: 13
+      Path: Default Work Unit\m_health
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 1093c1b73741c94b98cdc61c93505f1c
     GuidInternal: 
-    m_lastTime: -8586142819448066405
+    m_lastTime: -8586142788478301921
     List:
     - name: Space
       guid: a08f6950789502418816d88777734d7b
@@ -305,7 +477,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c3a35795b2736940a6c7b29314d8bce0
     GuidInternal: 
-    m_lastTime: -8586142819448056411
+    m_lastTime: -8586142788478291930
     List:
     - name: Soundtrack
       guid: 22b61f2816653e40a8ac57f059152255
@@ -337,12 +509,11 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0726654b3c652941887a3bc8ec2e5c94
     GuidInternal: 
-    m_lastTime: -8586142819448046407
+    m_lastTime: -8586142788478281938
     List: []
   ExpandedItems:
   - /LD2020
   - /LD2020/Events
   - /LD2020/Events/Default Work Unit
-  - /LD2020/Switches
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

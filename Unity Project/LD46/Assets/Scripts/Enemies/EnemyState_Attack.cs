@@ -23,6 +23,12 @@ public class EnemyState_Attack : NavAgentState
 
     public override void Execute(float i_dt)
     {
+
+        if(!m_owner.audioSource.isPlaying)
+        {
+            m_owner.PlayRandomVLine();
+        }
+
         m_tSinceDmgDealt += i_dt;
 
         //If goal is tower, do some damage to it and keep walking till reach min dist

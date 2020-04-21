@@ -98,6 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupType: 1
+  batteryAudio: {fileID: 8300000, guid: 7e77e15ee5c65ed4ca81ca28dd7ba2c9, type: 3}
+  coffeeAudio: {fileID: 8300000, guid: a8f172137f8817f479d1fbbbe6628259, type: 3}
+  toolAudio: {fileID: 8300000, guid: eaca1dfb8c0028241921ae8a6c1510d8, type: 3}
+  fuelAudio: {fileID: 8300000, guid: 3d4c974b06745d54db3a3512acebacaa, type: 3}
 --- !u!54 &-2262699780459549323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,6 +132,18 @@ CapsuleCollider:
   m_Height: 1.1407095
   m_Direction: 1
   m_Center: {x: 0, y: 0.5708552, z: 0}
+--- !u!114 &8681298949833519532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5568548377330700104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a92afc701ef9b499145ba6f51d30ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &697876336
 PrefabInstance:
   m_ObjectHideFlags: 0

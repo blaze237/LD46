@@ -29,6 +29,12 @@ public class LightDetection : MonoBehaviour
         return m_lightFlags != 0;
     }
 
+    public void Reset()
+    {
+        m_lightFlags = 0;
+        m_collidingLights.Clear();
+    }
+
     public void OnLightSourceEnableEvent(LightEffectType i_type)
     {
         switch(i_type)

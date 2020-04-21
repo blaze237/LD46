@@ -5,7 +5,8 @@ using TMPro;
 
 public class PhoneController : MonoBehaviour
 {
-    
+     AudioSource audioSource;
+    public AudioClip lowBat, noBat;
     public float baseH = -0.5f;
     public float heightToSpin = -0.3f;
     bool phoneMovingUp = false;
@@ -34,6 +35,7 @@ public class PhoneController : MonoBehaviour
     void Start()
     {
         lightSource.SetEnabled(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,14 +49,14 @@ public class PhoneController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && !phoneMovingUp && (batteryPercentage != 0))
         {
             phoneMovingUp = true;
-            phoneAudioSource.PlayOneShot(phoneSounds[0]);
+         //   phoneAudioSource.PlayOneShot(phoneSounds[0]);
             GetComponent<Renderer>().enabled = true;
             lightSource.SetEnabled(true);
         }
         else if (((batteryPercentage == 0) ||( Input.GetKeyDown(KeyCode.F) && phoneMovingUp)) && !phoneRotatingTowardsKaren)
         {
             phoneMovingUp = false;
-            phoneAudioSource.PlayOneShot(phoneSounds[1]);
+           // phoneAudioSource.PlayOneShot(phoneSounds[1]);
             lightSource.SetEnabled(false);
         }
 
@@ -68,6 +70,12 @@ public class PhoneController : MonoBehaviour
                 batteryPercentage = Mathf.Clamp(batteryPercentage, 0, 100);
                 int batteryPercentageInt = (int)batteryPercentage;
                 batteryPercentageText.SetText(batteryPercentageInt.ToString() + "%");
+
+                if(batteryPercentage == 0)
+                {
+                    audioSource.PlayOneShot(noBat);
+                }
+               
             }
         }
         else if (!phoneMovingUp)
@@ -142,7 +150,7 @@ public class PhoneController : MonoBehaviour
             if (!flameThrowerOutPlaying)
             {
                 flameThrowerLoopAudioSource.Stop();
-                flameThrowerInOutAudioSource.PlayOneShot(flameThrowerSounds[2]);
+            //    flameThrowerInOutAudioSource.PlayOneShot(flameThrowerSounds[2]);
                 flameThrowerInPlaying = false;
                 flameThrowerOutPlaying = true;
                 flameThrowerLoopPlaying = false;

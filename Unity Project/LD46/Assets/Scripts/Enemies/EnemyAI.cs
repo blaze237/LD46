@@ -24,8 +24,10 @@ public class EnemyAI : MonoBehaviour
     public float m_attackRate = 1;
     public float pickupSpawnChance = 0.5f;
     public Animator m_animator;
+    public AudioSource audioSource;
 
-
+    public AudioClip[] voiceLines;
+   
 
     private float m_tSinceDmg;
     private int health = 100;
@@ -47,6 +49,13 @@ public class EnemyAI : MonoBehaviour
     int screamClipIndex = 0;
     float screamClipLength;
 
+
+    public void PlayRandomVLine()
+    {
+        int index = UnityEngine.Random.Range(0, voiceLines.Length);
+        audioSource.PlayOneShot(voiceLines[index]);
+
+    }
 
     void OnDrawGizmos()
     {
@@ -125,15 +134,8 @@ public class EnemyAI : MonoBehaviour
         }
 
 
-        //This will now play whilst taking damage
-        //screamClipIndex = UnityEngine.Random.Range(0, karenScreamAudioClips.Length);
-        //screamClipLength = karenScreamAudioClips[screamClipIndex].length;
-        //karenScreamAudioSource.PlayOneShot(karenScreamAudioClips[screamClipIndex]);
-
-        //if (screamClipLength > 1.5f)
-        //{
-        //    screamClipLength = 1.5f;
-        //}
+        m_lightDetectionSystem.Reset();
+       
 
 
         m_enemyDeathEventHandler?.Invoke(this, new EventArgs());
@@ -144,6 +146,16 @@ public class EnemyAI : MonoBehaviour
 
     void TakeDamage()
     {
+        //This will now play whilst taking damage
+        screamClipIndex = UnityEngine.Random.Range(0, karenScreamAudioClips.Length);
+        screamClipLength = karenScreamAudioClips[screamClipIndex].length;
+        karenScreamAudioSource.PlayOneShot(karenScreamAudioClips[screamClipIndex]);
+
+        if (screamClipLength > 1.5f)
+        {
+            screamClipLength = 1.5f;
+        }
+
         health -= m_flameDmgPS;
         if(health <= 0)
         {
@@ -173,6 +185,8 @@ public class EnemyAI : MonoBehaviour
                     TakeDamage();
                     m_tSinceDmg = 0;
                 }
+
+
 
             }
             else if (m_lightDetectionSystem.QueryFlags(LightEffectType.Stop))

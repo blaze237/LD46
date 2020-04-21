@@ -110,6 +110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupType: 2
+  batteryAudio: {fileID: 8300000, guid: 7e77e15ee5c65ed4ca81ca28dd7ba2c9, type: 3}
+  coffeeAudio: {fileID: 8300000, guid: a8f172137f8817f479d1fbbbe6628259, type: 3}
+  toolAudio: {fileID: 8300000, guid: eaca1dfb8c0028241921ae8a6c1510d8, type: 3}
+  fuelAudio: {fileID: 8300000, guid: 3d4c974b06745d54db3a3512acebacaa, type: 3}
 --- !u!54 &-2262699780459549323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,6 +130,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6195045038221711373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4654595609911642548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a92afc701ef9b499145ba6f51d30ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &924750527707560120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264,6 +280,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 624e3ce12c4b73343ab5e2d35d751522, type: 3}
+--- !u!1 &4654595609911642548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6715787461348641004, guid: 624e3ce12c4b73343ab5e2d35d751522,
+    type: 3}
+  m_PrefabInstance: {fileID: 2137863018050290008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4654595609911642551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6715787461348641007, guid: 624e3ce12c4b73343ab5e2d35d751522,
