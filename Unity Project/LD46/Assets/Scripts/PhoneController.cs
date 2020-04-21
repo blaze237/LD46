@@ -44,6 +44,10 @@ public class PhoneController : MonoBehaviour
         if(batteryPercentage == 0)
         {
 
+            phoneMovingUp = false;
+            phoneRotatingTowardsKaren = false;
+            // phoneAudioSource.PlayOneShot(phoneSounds[1]);
+            lightSource.SetEnabled(false);
         }
 
         if (Input.GetKeyDown(KeyCode.F) && !phoneMovingUp && (batteryPercentage != 0))
@@ -53,7 +57,7 @@ public class PhoneController : MonoBehaviour
             GetComponent<Renderer>().enabled = true;
             lightSource.SetEnabled(true);
         }
-        else if (((batteryPercentage == 0) ||( Input.GetKeyDown(KeyCode.F) && phoneMovingUp)) && !phoneRotatingTowardsKaren)
+        else if ((( Input.GetKeyDown(KeyCode.F) && phoneMovingUp)) && !phoneRotatingTowardsKaren)
         {
             phoneMovingUp = false;
            // phoneAudioSource.PlayOneShot(phoneSounds[1]);
