@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Tower : MonoBehaviour
 {
@@ -61,6 +62,7 @@ public class Tower : MonoBehaviour
             m_tSinceFuelTick = 0;
             if (m_fuel <= 0)
             {
+                SceneManager.LoadScene(1);
                 m_noFuelEventHandler?.Invoke();
             }
             else if(m_fuel <= lowFuelLevel)
@@ -92,7 +94,7 @@ public class Tower : MonoBehaviour
         damageEventHandler?.Invoke();
         if (m_health <= 0)
         {
-            Debug.Log("GAME OVER!");
+            SceneManager.LoadScene(1);
         }
         else if (m_health <= lowHealthLevel)
         {
