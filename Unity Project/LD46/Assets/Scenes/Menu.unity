@@ -1507,8 +1507,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -225}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 0, y: -200}
+  m_SizeDelta: {x: 500, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713329036
 MonoBehaviour:
@@ -1545,11 +1545,12 @@ MonoBehaviour:
     the last 5G tower on Earth and a relentless horde of ravenous Karens. \n\nFortunately,
     due to severe tanning bed withdrawal, the Karens are highly sensitive to light
     and can be slowed down just by raising your phone torch to them (F). \n\nWhen
-    they start to overwhelm you, turn your phone screen to them (G) to destroy them
+    they start to overwhelm you, turn your phone screen to them (R) to destroy them
     with cold hard facts and logic. \n\nNothing lasts forever though... Collect and
     use \nTools to repair the tower (1),\nFuel to power the generator next to the
-    tower (2) and \nBatteries to charge your phone as shown on the map. \nFind Pumpkin
-    Spice Lattes to sustain you on your glorious quest."
+    tower (2) and \nBatteries to charge your phone and stop it screeching at 0% charge
+    as shown on the map. \nFind Pumpkin Spice Lattes to sustain you on your glorious
+    quest."
 --- !u!222 &1713329037
 CanvasRenderer:
   m_ObjectHideFlags: 0

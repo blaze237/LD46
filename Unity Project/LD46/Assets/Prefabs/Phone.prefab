@@ -170,7 +170,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1673,6 +1673,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafa760006695e247bc4e11f486287d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowBat: {fileID: 0}
+  noBat: {fileID: 0}
+  baseH: -0.5
+  heightToSpin: -0.3
+  lightSource: {fileID: 0}
   phoneRotationSpeed: 720
   flameThrower: {fileID: 8843362410851794652}
   flameThrowerInOutAudioSource: {fileID: 1228623964}
@@ -1856,6 +1861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03702e8936c13af4e98c838ca8633ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 5
   flamesPrefab: {fileID: 100000, guid: 756d99540142b5e4a8d174e18a6310d9, type: 3}
 --- !u!1 &8443698473664422461
 GameObject:
@@ -1915,6 +1921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03702e8936c13af4e98c838ca8633ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 5
   flamesPrefab: {fileID: 0}
 --- !u!1 &8843362410851794652
 GameObject:
