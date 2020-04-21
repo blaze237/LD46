@@ -44,11 +44,11 @@
 						</File>
 						<File Id="539067718" Language="SFX">
 							<ShortName>SFX_Ambiant_Tower_FarPulse.wav</ShortName>
-							<Path>SFX\SFX_Ambiant_Tower_FarPulse_10C4C929.wem</Path>
+							<Path>SFX\SFX_Ambiant_Tower_FarPulse_D79FB2B7.wem</Path>
 						</File>
 						<File Id="794325641" Language="SFX">
 							<ShortName>SFX_Ambiant_Tower_MediumHum.wav</ShortName>
-							<Path>SFX\SFX_Ambiant_Tower_MediumHum_10C4C929.wem</Path>
+							<Path>SFX\SFX_Ambiant_Tower_MediumHum_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -615,7 +615,7 @@
 				</File>
 				<File Id="539067718" Language="SFX">
 					<ShortName>SFX_Ambiant_Tower_FarPulse.wav</ShortName>
-					<Path>SFX\SFX_Ambiant_Tower_FarPulse_10C4C929.wem</Path>
+					<Path>SFX\SFX_Ambiant_Tower_FarPulse_D79FB2B7.wem</Path>
 				</File>
 				<File Id="550358003" Language="SFX">
 					<ShortName>SFX_Zombies_SmallWheezy-004.wav</ShortName>
@@ -671,7 +671,7 @@
 				</File>
 				<File Id="794325641" Language="SFX">
 					<ShortName>SFX_Ambiant_Tower_MediumHum.wav</ShortName>
-					<Path>SFX\SFX_Ambiant_Tower_MediumHum_10C4C929.wem</Path>
+					<Path>SFX\SFX_Ambiant_Tower_MediumHum_D79FB2B7.wem</Path>
 				</File>
 				<File Id="796793075" Language="SFX">
 					<ShortName>SFX_Ambiant_FlameBarrel.wav</ShortName>
