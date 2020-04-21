@@ -315,10 +315,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 5
-  m_RunSpeed: 10
+  m_WalkSpeed: 3
+  m_RunSpeed: 6
   m_RunstepLenghten: 0.7
-  m_JumpSpeed: 5
+  m_JumpSpeed: 4
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
@@ -557,6 +557,9 @@ MonoBehaviour:
   m_healthPackValue: 25
   m_maxTools: 3
   m_maxFuels: 3
+  towerRepair: {fileID: 0}
+  towerRefuel: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &5487357358302412413
 GameObject:
   m_ObjectHideFlags: 0
